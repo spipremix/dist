@@ -221,7 +221,8 @@ function formulaires_signature_reponse_confirmation_dist($var_confirm = '') {
 
 		// invalider les pages ayant des boucles signatures
 		include_spip('inc/invalideur');
-		suivre_invalideur("id='varia/pet$id_article'");
+		suivre_invalideur("id='signature/$id_signature'");
+		suivre_invalideur("id='article/$id_article'");
 	}
 
 	// Conserver la reponse dans la session du visiteur
@@ -299,10 +300,9 @@ function signature_a_confirmer($id_article, $url_page, $nom, $mail, $site, $url,
 		$statut = 'publie';
 		// invalider le cache !
 		include_spip('inc/invalideur');
-		suivre_invalideur("id='varia/pet$id_article'");
+		suivre_invalideur("id='article/$id_article'");
 
-		// message de reussite : en ajax, preciser qu'il faut recharger la page
-		// pour voir le resultat
+		// message de reussite
 		return
 			_T('form_pet_signature_validee');
 	}
