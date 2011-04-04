@@ -22,11 +22,11 @@ version="1.0"[ encoding="(#CHARSET)"]?>
 ]
 
 <BOUCLE_10recents(ARTICLES) {lang ?}{branche ?}{id_mot ?}{id_auteur ?} {par date}{inverse}{0,10}{unique}>
-<INCLURE{fond=inc-rss-item}{id_article}>
+<INCLURE{fond=inc-rss-item, id_article} />
 </BOUCLE_10recents>
 
 <BOUCLE_tres_recents(ARTICLES){lang ?}{branche ?}{id_mot ?}{id_auteur ?} {par date}{inverse}{age<3}{unique}>
-<INCLURE{fond=inc-rss-item}{id_article}>
+<INCLURE{fond=inc-rss-item, id_article} />
 </BOUCLE_tres_recents>
 
 </channel>
