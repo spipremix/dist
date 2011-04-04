@@ -6,14 +6,14 @@
 <head>
 <title>[(#NOM_SITE_SPIP|textebrut)]</title>
 [<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|textebrut)" />]
-<INCLURE{fond=inc-head}>
+<INCLURE{fond=inc-head} />
 </head>
 
 <body class="page_sommaire">
 <div id="page">
 
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inc-entete}>
+	<INCLURE{fond=inc-entete} />
 
 	[(#REM) Contenu principal : derniers articles publies ]
 	<div class="hfeed" id="conteneur">
@@ -69,7 +69,7 @@
 	<div id="navigation">
 		
 		[(#REM) Menu de navigation par rubriques ]
-		<INCLURE{fond=inc-rubriques}>
+		<INCLURE{fond=inc-rubriques} />
 		
 		#FORMULAIRE_RECHERCHE
 
@@ -84,7 +84,7 @@
 	</div><!--#extra-->
 	
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inc-pied}{skel=#SQUELETTE}>
+	<INCLURE{fond=inc-pied, skel=#SQUELETTE} />
 	
 </div><!--#page-->
 </body>
