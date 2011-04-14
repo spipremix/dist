@@ -12,6 +12,6 @@
 		</multi>
 	</description>
 	<lien>http://www.spip.net/fr_article3784.html</lien>
-	<prefix>dist_2007</prefix>
+	<prefix>dist</prefix>
 	<necessite id="SPIP" version="[2.1.0 dev;)" />
 </plugin>
