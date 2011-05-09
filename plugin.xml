@@ -15,4 +15,5 @@
 	<lien>http://www.spip.net/fr_article3784.html</lien>
 	<prefix>dist</prefix>
 	<necessite id="SPIP" version="[2.1.0 dev;)" />
+	<categorie>squelette</categorie>
 </plugin>
