@@ -6,6 +6,11 @@
 	<version>2.0</version>
 	<etat>stable</etat>
 	<categorie>squelette</categorie>
+	<slogan><multi>
+		[fr] Jeu de squelettes fournis par d&eacute;faut dans SPIP
+		[en] Default template set in SPIP
+		[es] Juego de esqueletos por defecto en SPIP
+	</multi></slogan>
 	<description><multi>
 		[fr] Jeu de squelettes fournis par d&eacute;faut dans SPIP 2.0 et SPIP 2.1. Ces squelettes sont bas&eacute;s sur Layout Gala et ont une vocation p&eacute;dagogique. Ils int&egrave;grent les microformats.
 		[en] Default template set in SPIP 2.0 and SPIP 2.1. These templates are based on Layout Gala and intend to be pedagogical. They also make use of microformats.
