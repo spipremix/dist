@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG" dir="#LANG_DIR">
 <head>
 <title><:poster_message:> - [(#NOM_SITE_SPIP|textebrut)]</title>
-<INCLURE{fond=inc-head} />
+<INCLURE{fond=inclure/head} />
 <meta name="robots" content="none" />
 </head>
 
@@ -10,7 +10,7 @@
 <div id="page">
 
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inc-entete} />
+	<INCLURE{fond=inclure/entete} />
 
 	[(#REM) Contenu : poster un message dans le forum ]
     <div id="conteneur">
@@ -111,7 +111,7 @@
     <div id="navigation">
 
         [(#REM) Menu de navigation par rubriques ]
-        <INCLURE{fond=inc-rubriques} />
+        <INCLURE{fond=inclure/rubriques} />
 		
 		#FORMULAIRE_RECHERCHE
 
@@ -123,7 +123,7 @@
 	</div><!--#extra-->
 
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inc-pied, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/pied, skel=#SQUELETTE} />
 
 </div><!--#page-->
 </body>

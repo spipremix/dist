@@ -4,7 +4,7 @@
 <head>
 	<title><:icone_agenda:> - [(#NOM_SITE_SPIP|textebrut)]</title>
 	[<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|attribut_html)" />]
-	<INCLURE{fond=inc-head} />
+	<INCLURE{fond=inclure/head} />
 	<meta name="robots" content="none" />
 </head>
 
@@ -12,12 +12,12 @@
 <div id="page">
 
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inc-entete} />
+	<INCLURE{fond=inclure/entete} />
 
 	<INCLURE{fond=contenu/calendrier,env} />
 
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inc-pied, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/pied, skel=#SQUELETTE} />
 
 </div><!--#page-->
 </body>
