@@ -7,17 +7,17 @@
 </head>
 
 <body class="page_forum">
-<div id="page">
+<div class="page">
 
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inclure/entete} />
+	<INCLURE{fond=inclure/header} />
 
 	[(#REM) Contenu : poster un message dans le forum ]
-    <div id="conteneur">
-    <div id="contenu">
+    <div class="wrapper">
+    <div class="content" id="content">
     
         [(#REM) Fil d'Ariane ]
-        <div id="hierarchie"><a href="#URL_SITE_SPIP/"><:accueil_site:></a>
+        <div class="breadcrumb"><a href="#URL_SITE_SPIP/"><:accueil_site:></a>
     
             <BOUCLE_contexte_article(ARTICLES) {id_article}>
             <BOUCLE_ariane_article(HIERARCHIE) {id_article}>
@@ -59,7 +59,7 @@
     
             &gt; <strong class="on"><:poster_message:></strong>
             
-        </div><!--#hierarchie-->
+        </div><!--.breadcrumb-->
 
         <div class="cartouche">
             <h1><:poster_message:></h1>
@@ -104,27 +104,25 @@
 
         #FORMULAIRE_FORUM
 
-	</div><!--#contenu-->
-	</div><!--#conteneur-->
+	</div><!--.content-->
+	</div><!--.wrapper-->
 
     [(#REM) Menu de navigation laterale ]
-    <div id="navigation">
+    <div class="aside">
 
         [(#REM) Menu de navigation par rubriques ]
         <INCLURE{fond=inclure/rubriques} />
 		
 		#FORMULAIRE_RECHERCHE
 
-    </div><!--#navigation-->
+    
 	
-	[(#REM) Menu de navigation laterale ]
-	<div id="extra">
-	&nbsp;
-	</div><!--#extra-->
+	
+	</div><!--.aside-->
 
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inclure/pied, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
 
-</div><!--#page-->
+</div><!--.page-->
 </body>
 </html>

@@ -11,17 +11,17 @@
 </head>
 
 <body class="page_mot">
-<div id="page">
+<div class="page">
 
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inclure/entete} />
+	<INCLURE{fond=inclure/header} />
 
 	[(#REM) Contenu principal : contenu du mot-cle ]
-    <div id="conteneur">
-    <div id="contenu">
+    <div class="wrapper">
+    <div class="content" id="content">
     
         [(#REM) Fil d'Ariane ]
-        <div id="hierarchie"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <:mots_clefs:><BOUCLE_ariane(GROUPES_MOTS){id_groupe}> &gt; [(#TITRE|couper{80})]</BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</div>
+        <div class="breadcrumb"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <:mots_clefs:><BOUCLE_ariane(GROUPES_MOTS){id_groupe}> &gt; [(#TITRE|couper{80})]</BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</div>
 
         <div class="cartouche">
             [(#LOGO_MOT|image_reduire{200,200})]
@@ -96,21 +96,16 @@
 
         [<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
 
-	</div><!--#contenu-->
-	</div><!--#conteneur-->
+	</div><!--.content-->
+	</div><!--.wrapper-->
 
     [(#REM) Menu de navigation laterale ]
-    <div id="navigation">
+    <div class="aside">
 
         [(#REM) Menu de navigation par rubriques ]
         <INCLURE{fond=inclure/rubriques} />
 		
 		#FORMULAIRE_RECHERCHE
-
-    </div><!--#navigation-->
-
-    [(#REM) Menu de navigation laterale ]
-    <div id="extra">
 
         [(#REM) Menu de navigation mots-cles : les autres mots cles du meme groupe ]
         <B_mots_freres>
@@ -140,12 +135,12 @@
         </div>
         </B_groupes_freres>
         
-    </div><!--#extra-->
+    </div><!--.aside-->
 
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inclure/pied, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
 
-</div><!--#page-->
+</div><!--.page-->
 </body>
 </html>
 </BOUCLE_principale>

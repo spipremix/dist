@@ -8,17 +8,17 @@
 </head>
 
 <body class="page_plan">
-<div id="page">
+<div class="page">
 	
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inclure/entete} />
+	<INCLURE{fond=inclure/header} />
 	
 	[(#REM) Le plan de site ci-dessous est a adapter selon les besoins. En particulier, on n'aura pas necessairement besoin de tous les elements (sous-rubriques, articles, breves et sites) ]
-    <div id="conteneur">
-    <div id="contenu">
+    <div class="wrapper">
+    <div class="content" id="content">
         
         [(#REM) Fil d'Ariane ]
-        <div id="hierarchie"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <strong class="on"><:plan_site:></strong></div>
+        <div class="breadcrumb"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <strong class="on"><:plan_site:></strong></div>
     
         <div class="cartouche">
             <h1><:plan_site:></h1>
@@ -26,27 +26,22 @@
         
         #MODELE{plan}
 
-	</div><!--#contenu-->
-	</div><!--#conteneur-->
+	</div><!--.content-->
+	</div><!--.wrapper-->
 
     [(#REM) Menu de navigation laterale ]
-    <div id="navigation">
+    <div class="aside">
 
         [(#REM) Menu de navigation par rubriques ]
         <INCLURE{fond=inclure/rubriques} />
 		
 		#FORMULAIRE_RECHERCHE
-
-    </div><!--#navigation-->
 	
-	[(#REM) Menu de navigation laterale ]
-	<div id="extra">
-	&nbsp;
-	</div><!--#extra-->
+	</div><!--.aside-->
 
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inclure/pied, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
 
-</div><!--#page-->
+</div><!--.page-->
 </body>
 </html>

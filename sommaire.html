@@ -10,14 +10,14 @@
 </head>
 
 <body class="page_sommaire">
-<div id="page">
+<div class="page">
 
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inclure/entete} />
+	<INCLURE{fond=inclure/header} />
 
 	[(#REM) Contenu principal : derniers articles publies ]
-	<div class="hfeed" id="conteneur">
-	<div id="contenu">
+	<div class="hfeed wrapper">
+	<div class="content" id="content">
 		
 		<div class="cartouche invisible">
 			<h1 class="invisible">#NOM_SITE_SPIP</h1>
@@ -62,30 +62,25 @@
 		</div>
 		</B_syndic>
 	
-	</div><!--#contenu-->
-	</div><!--#conteneur-->
+	</div><!--.content-->
+	</div><!--.wrapper-->
 	
 	[(#REM) Menu de navigation laterale ]
-	<div id="navigation">
+	<div class="aside">
 		
 		[(#REM) Menu de navigation par rubriques ]
 		<INCLURE{fond=inclure/rubriques} />
 		
 		#FORMULAIRE_RECHERCHE
 
-    </div><!--#navigation-->
-	
-	[(#REM) Menu de navigation laterale ]
-	<div id="extra">
-		
 		[(#REM) Inscription au site ]
 		#FORMULAIRE_INSCRIPTION
 		
-	</div><!--#extra-->
+	</div><!--.aside-->
 	
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inclure/pied, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
 	
-</div><!--#page-->
+</div><!--.page-->
 </body>
 </html>
