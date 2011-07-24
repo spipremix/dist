@@ -1,0 +1,51 @@
+/* --------------------------------------------------------------
+
+   layout.css
+   Disposition des blocs principaux
+   cf.: http://romy.tetue.net/structure-html-de-base
+
+-------------------------------------------------------------- */
+
+body { text-align: center; background: #EEE url(img/background.gif); }
+.page { position: relative; width: 940px; margin: 0 auto 1.5em; padding: 0 20px; background-color: #FFF; text-align: left;
+ -moz-box-shadow: 0 0 4em #666; -webkit-box-shadow: 0 0 4em #666; box-shadow: 0 0 4em #666; }
+
+.header { width: 100%; margin: 0; padding: 1.5em 0 0 0; }
+.wrapper { clear: both; float: left; width: 65%; overflow: hidden; }
+.content { min-height: 300px; }
+.aside { float: right; width: 30%; overflow: hidden; }
+.footer { clear: both; width: 100%; margin: 1.5em 0 0; padding: 1.5em 0; border-top: 4px solid; }
+
+/* Gabarit d'impression */
+@media print {
+	.nav,
+	.aside,
+	.footer { display: none; }
+	.page,
+	.content { width: auto; }
+}
+
+
+/* Entete et barre de navigation
+------------------------------------------ */
+
+.header {}
+.header #logo { margin: 0; line-height: 1; font-weight: bold; text-decoration: none; }
+.header #logo,
+.header #logo a,
+.header #logo a:hover { background: transparent; text-decoration: none; color: #222; }
+.header p {}
+.header .bando { border-top: 4px solid; }
+
+.formulaire_menu_lang { position: absolute; right: 0; top: .9em; display: block; width: 30%; }
+
+.nav { margin-bottom: 1.5em; background: #222; }
+.nav ul {}
+.nav ul li {}
+.nav ul li a { float: left; display: block; padding: .5em 1em; background: #C30; border-right: 1px solid #FFF; color: #FFF; text-decoration: none; }
+.nav ul li.on a { background: #fff; color: #222; }
+
+.formulaire_recherche { position: absolute; top: 1.5em; right: 1.5em; }
+.formulaire_recherche * { display: inline; }
+
+/* end */
