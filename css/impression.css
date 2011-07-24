@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; font-size: 1em; font-weight: nor
 
 /*  Ne pas imprimer : on elimine les elements de navigation (display: none; )
 ---------------------------------------------- */
-#entete, #hierarchie, #navigation, #extra, #pied { display: none; }
+.header, .breadcrumb, .nav, .aside, .footer { display: none; }
 .repondre, .repondre, .formulaire_spip { display: none; }
 .spip-admin, .spip-admin-float, .spip-previsu, .invisible { display: none; }
 
@@ -67,6 +67,6 @@ ul .forum-message { background: #EEE; border: 1pt solid #CCC; padding: 1em; marg
 
 /*  Plan du site
 ---------------------------------------------- */
-.page_plan #contenu h2 { font-size: 1.15em; font-weight: bold; }
-.page_plan #contenu ul { margin-left: 1em; margin-bottom: 1em; }
-.page_plan #contenu li { list-style: square; }
+.page_plan .content h2 { font-size: 1.15em; font-weight: bold; }
+.page_plan .content ul { margin-left: 1em; margin-bottom: 1em; }
+.page_plan .content li { list-style: square; }

@@ -1,4 +1,4 @@
-<BOUCLE_principale(ARTICLES) {id_article}>
+<BOUCLE_principale(ARTICLES){id_article}>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG" dir="#LANG_DIR">
 <head>
@@ -9,17 +9,17 @@
 </head>
 
 <body class="page_article">
-<div id="page">
+<div class="page">
 
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inclure/entete} />
+	<INCLURE{fond=inclure/header} />
 
 	[(#REM) Contenu principal : contenu de l'article ]
-    <div class="hfeed" id="conteneur">
-    <div class="hentry" id="contenu">
+    <div class="hfeed wrapper">
+    <div class="hentry content" id="content">
     
         [(#REM) Fil d'Ariane ]
-        <div id="hierarchie"><a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_article}> &gt; <a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</div>
+        <div class="breadcrumb"><a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_article}> &gt; <a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</div>
 
         <div class="cartouche">
             <div class="surlignable">
@@ -37,15 +37,12 @@
 		
         <div class="surlignable">
 			[<div class="#EDIT{chapo} chapo">(#CHAPO|image_reduire{500,0})</div>]
-			[<div class="#EDIT{texte} texte entry-content">(#TEXTE|image_reduire{500,0})</div>]
+			[<div class="#EDIT{texte} texte entry-content" id="content">(#TEXTE|image_reduire{500,0})</div>]
 		</div>
-
 
 		[<p class="#EDIT{hyperlien} hyperlien"><:voir_en_ligne:> : <a href="(#URL_SITE)" class="spip_out">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
         
 		[<div class="ps surlignable"><h2 class="pas_surlignable"><:info_ps:></h2><div class="#EDIT{ps}">(#PS|image_reduire{500,0})</div></div>]
-
-
 
 		[(#REM) Gestion du portfolio et des documents
 			Le critere {env} permet de passer d'autres arguments de la page
@@ -66,22 +63,17 @@
 		<INCLURE{fond=inclure/forum, id_article} />
 		[<p class="repondre"><a href="(#PARAMETRES_FORUM|url_reponse_forum)" rel="noindex nofollow"><:repondre_article:></a></p>] 
 
-	</div><!--#contenu-->
-	</div><!--#conteneur-->
+	</div><!--.content-->
+	</div><!--.wrapper-->
 
 
     [(#REM) Menu de navigation laterale ]
-    <div id="navigation">
+    <div class="aside">
 
         [(#REM) Menu de navigation par rubriques ]
         <INCLURE{fond=inclure/rubriques, id_rubrique} />
 	
 		#FORMULAIRE_RECHERCHE
-
-    </div><!--#navigation-->
-    
-    [(#REM) Menu de navigation laterale ]
-    <div id="extra">
 
         [(#REM) Articles dans la meme rubrique ]
         <B_articles_rubrique>
@@ -98,13 +90,12 @@
         [(#REM) Menu de navigation mots-cles ]
         #MODELE{article_mots}
         
-    </div><!--#extra-->
+    </div><!--.aside-->
 
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inclure/pied, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
 
-</div><!--#page-->
+</div><!--.page-->
 </body>
 </html>
-</BOUCLE_principale>[(#INCLURE{fond=404, erreur=<:aucun_article:>})]
-<//B_principale>
+</BOUCLE_principale>[(#INCLURE{fond=404, erreur=<:aucun_article:>})]<//B_principale>

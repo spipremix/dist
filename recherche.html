@@ -7,17 +7,17 @@
 </head>
 
 <body class="page_recherche pas_surlignable">
-<div id="page">
+<div class="page">
 
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inclure/entete} />
+	<INCLURE{fond=inclure/header} />
 	
 	[(#REM) Contenu principal : Resultats de la recherche ]
-	<div id="conteneur">
-	<div id="contenu pas_surlignable">
+	<div class="wrapper">
+	<div class="content pas_surlignable">
 		
 		[(#REM) Fil d'Ariane ]
-		<div id="hierarchie"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <:info_rechercher:>[ &gt; <strong class="on">(#RECHERCHE)</strong>]</div>
+		<div class="breadcrumb"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <:info_rechercher:>[ &gt; <strong class="on">(#RECHERCHE)</strong>]</div>
 		
 		[<div class="cartouche">
 			<h1><:resultats_recherche:></h1>
@@ -108,27 +108,25 @@
 		</div>
 		</B_sites>
 		
-	</div><!--#contenu-->
-	</div><!--#conteneur-->
+	</div><!--.content-->
+	</div><!--.wrapper-->
 	
 	[(#REM) Menu de navigation laterale ]
-	<div id="navigation">
+	<div class="aside">
 	
 		[(#REM) Menu de navigation par rubriques ]
 		<INCLURE{fond=inclure/rubriques, id_rubrique} />
 		
 		#FORMULAIRE_RECHERCHE
 
-    </div><!--#navigation-->
+    
 	
-	[(#REM) Menu de navigation laterale ]
-	<div id="extra">
-	&nbsp;
-	</div><!--#extra-->
+	
+	</div><!--.aside-->
 	
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inclure/pied, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
     
-</div><!--#page-->
+</div><!--.page-->
 </body>
 </html>
