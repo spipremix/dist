@@ -5,7 +5,7 @@
 <title>[(#TITRE|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
 [<meta name="description" content="(#DESCRIPTIF|couper{150}|attribut_html)" />]
 [<link rel="canonical" href="(#URL_MOT|url_absolue)" />]
-<INCLURE{fond=inc-head} />
+<INCLURE{fond=inclure/head} />
 [(#REM) Lien vers le flux RSS des articles du mot cle ]
 <link rel="alternate" type="application/rss+xml"[ title="(#TITRE|attribut_html)"] href="[(#URL_PAGE{backend}|parametre_url{id_mot,#ID_MOT})]" />
 </head>
@@ -14,7 +14,7 @@
 <div id="page">
 
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inc-entete} />
+	<INCLURE{fond=inclure/entete} />
 
 	[(#REM) Contenu principal : contenu du mot-cle ]
     <div id="conteneur">
@@ -103,7 +103,7 @@
     <div id="navigation">
 
         [(#REM) Menu de navigation par rubriques ]
-        <INCLURE{fond=inc-rubriques} />
+        <INCLURE{fond=inclure/rubriques} />
 		
 		#FORMULAIRE_RECHERCHE
 
@@ -143,7 +143,7 @@
     </div><!--#extra-->
 
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inc-pied, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/pied, skel=#SQUELETTE} />
 
 </div><!--#page-->
 </body>

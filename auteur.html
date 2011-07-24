@@ -5,7 +5,7 @@
 <title>[(#NOM|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
 [<meta name="description" content="(#BIO|couper{150}|attribut_html)" />]
 [<link rel="canonical" href="(#URL_AUTEUR|url_absolue)" />]
-<INCLURE{fond=inc-head} />
+<INCLURE{fond=inclure/head} />
 
 [(#REM) Favicon personnalisee a partir du logo (si filtres d'image) ]
 [(#MODELE{favicon}{favicon=#LOGO_AUTEUR})]
@@ -18,7 +18,7 @@
 <div id="page">
 
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inc-entete} />
+	<INCLURE{fond=inclure/entete} />
 
 	[(#REM) Contenu principal : affichage de l'auteur ]
     <div id="conteneur">
@@ -62,7 +62,7 @@
     <div id="navigation">
 
         [(#REM) Menu de navigation par rubriques ]
-        <INCLURE{fond=inc-rubriques} />
+        <INCLURE{fond=inclure/rubriques} />
 		
 		#FORMULAIRE_RECHERCHE
 
@@ -88,7 +88,7 @@
     </div><!--#extra-->
 
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inc-pied, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/pied, skel=#SQUELETTE} />
 
 </div><!--#page-->
 </body>

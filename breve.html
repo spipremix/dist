@@ -5,7 +5,7 @@
 <title>[(#TITRE|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
 [<meta name="description" content="(#INTRODUCTION{150}|attribut_html)" />]
 [<link rel="canonical" href="(#URL_BREVE|url_absolue)" />]
-<INCLURE{fond=inc-head} />
+<INCLURE{fond=inclure/head} />
 [(#REM) Lien vers le flux RSS des breves ]
 <link rel="alternate" type="application/rss+xml" title="<:dernieres_breves:>" href="#URL_PAGE{backend-breves}" />
 </head>
@@ -14,7 +14,7 @@
 <div id="page">
 
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inc-entete} />
+	<INCLURE{fond=inclure/entete} />
 
 	[(#REM) Contenu : corps de la breve ]
     <div id="conteneur">
@@ -36,7 +36,7 @@
         [(#REM) Forum de la breve
         NB : pour desactiver les forums de breve, supprimez simplement les lignes ci-dessous ]
         <a href="#forum" name="forum" id="forum"></a>
-        <INCLURE{fond=inc-forum, id_breve} />
+        <INCLURE{fond=inclure/forum, id_breve} />
         [<p class="repondre"><a href="(#PARAMETRES_FORUM|url_reponse_forum)" rel="noindex nofollow"><:repondre_breve:></a></p>]
 
 	</div><!--#contenu-->
@@ -46,7 +46,7 @@
     <div id="navigation">
 
         [(#REM) Menu de navigation par rubriques ]
-        <INCLURE{fond=inc-rubriques, id_rubrique} />
+        <INCLURE{fond=inclure/rubriques, id_rubrique} />
 		
 		#FORMULAIRE_RECHERCHE
 
@@ -82,7 +82,7 @@
     </div><!--#extra-->
 
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inc-pied, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/pied, skel=#SQUELETTE} />
 
 </div><!--#page-->
 </body>

@@ -5,14 +5,14 @@
 <title>[(#TITRE|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
 [<meta name="description" content="(#INTRODUCTION{150}|attribut_html)" />]
 [<link rel="canonical" href="(#URL_ARTICLE|url_absolue)" />]
-<INCLURE{fond=inc-head} />
+<INCLURE{fond=inclure/head} />
 </head>
 
 <body class="page_article">
 <div id="page">
 
 	[(#REM) Entete de la page + titre du site ]
-	<INCLURE{fond=inc-entete} />
+	<INCLURE{fond=inclure/entete} />
 
 	[(#REM) Contenu principal : contenu de l'article ]
     <div class="hfeed" id="conteneur">
@@ -51,19 +51,19 @@
 			Le critere {env} permet de passer d'autres arguments de la page
 			par exemple l'id_document choisi pour un affichage complet
 		]
-		[(#INCLURE{fond=inc-documents, id_article, env})]
+		[(#INCLURE{fond=inclure/documents, id_article, env})]
 
 
 		[(#REM) Petition :
 		La petition ayant une PAGINATION il faut absolument {env}
 		et pourquoi pas ajax
-		][(#PETITION|?{' '})<INCLURE{fond=inc-petition, id_article, env, ajax} />]
+		][(#PETITION|?{' '})<INCLURE{fond=inclure/petition, id_article, env, ajax} />]
 
         [<div class="notes surlignable"><h2 class="pas_surlignable"><:info_notes:></h2>(#NOTES)</div>]
 
 		[(#REM) Forum de l'article ]
 		<a href="#forum" name="forum" id="forum"></a>
-		<INCLURE{fond=inc-forum, id_article} />
+		<INCLURE{fond=inclure/forum, id_article} />
 		[<p class="repondre"><a href="(#PARAMETRES_FORUM|url_reponse_forum)" rel="noindex nofollow"><:repondre_article:></a></p>] 
 
 	</div><!--#contenu-->
@@ -74,7 +74,7 @@
     <div id="navigation">
 
         [(#REM) Menu de navigation par rubriques ]
-        <INCLURE{fond=inc-rubriques, id_rubrique} />
+        <INCLURE{fond=inclure/rubriques, id_rubrique} />
 	
 		#FORMULAIRE_RECHERCHE
 
@@ -101,7 +101,7 @@
     </div><!--#extra-->
 
 	[(#REM) Pied de page ]
-	<INCLURE{fond=inc-pied, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/pied, skel=#SQUELETTE} />
 
 </div><!--#page-->
 </body>
