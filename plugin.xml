@@ -1,23 +1,22 @@
 <plugin>
-	<nom>Squelettes de la "dist" 2.0 (2007)</nom>
-	<icon>dist_2007.png</icon>
+	<nom>Squelettes &laquo;&nbsp;dist&nbsp;&raquo;</nom>
+	<icon>icon/skel.png</icon>
 	<auteur>Collectif SPIP</auteur>
 	<licence>GNU/GPL</licence>
 	<version>2.0</version>
-	<etat>stable</etat>
+	<etat>dev</etat>
 	<categorie>squelette</categorie>
 	<slogan><multi>
-		[fr] Jeu de squelettes fournis par d&eacute;faut dans SPIP
-		[en] Default template set in SPIP
-		[es] Juego de esqueletos por defecto en SPIP
+		[fr] Squelettes par d&eacute;faut de SPIP&nbsp;3
+		[en] Default template set in SPIP&nbsp;3
+		[es] Juego de esqueletos por defecto en SPIP&nbsp;3
 	</multi></slogan>
 	<description><multi>
-		[fr] Jeu de squelettes fournis par d&eacute;faut dans SPIP 2.0 et SPIP 2.1. Ces squelettes sont bas&eacute;s sur Layout Gala et ont une vocation p&eacute;dagogique. Ils int&egrave;grent les microformats.
-		[en] Default template set in SPIP 2.0 and SPIP 2.1. These templates are based on Layout Gala and intend to be pedagogical. They also make use of microformats.
-		[es] Juego de esqueletos por defecto en SPIP 2.0 y SPIP 2.1. Esos esqueletos son basados en Layout Gala y su proposito es pedag&oacute;gico. Incorporan los microformatos.
+		[fr] Jeu de squelettes distribu&eacute; avec SPIP&nbsp;3.
+		[en] Default template set in SPIP&nbsp;3.
+		[es] Juego de esqueletos por defecto en SPIP&nbsp;3.
 		</multi>
 	</description>
-	<lien>http://www.spip.net/fr_article3784.html</lien>
 	<prefix>dist</prefix>
-	<necessite id="SPIP" version="[2.1.0 dev;)" />
+	<necessite id="SPIP" version="[3.0.0-dev;)" />
 </plugin>
