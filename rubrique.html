@@ -16,8 +16,10 @@
 <body class="page_rubrique">
 <div class="page">
 
-	[(#REM) Entete de la page + titre du site ]
+	[(#REM) Entete de la page ]
 	<INCLURE{fond=inclure/header} />
+	<INCLURE{fond=inclure/nav,env} />
+	#FORMULAIRE_RECHERCHE
 
 	[(#REM) Contenu principal : contenu de la rubrique ]
     <div class="wrapper">
@@ -145,13 +147,7 @@
     <div class="aside">
 
         [(#REM) Menu de navigation par rubriques ]
-        <INCLURE{fond=inclure/rubriques, id_rubrique} />
-		
-		#FORMULAIRE_RECHERCHE
-
-    
-    
-    [(#REM) Menu de navigation laterale ]
+        <INCLURE{fond=inclure/rubriques, id_rubrique} />[(#REM) Menu de navigation laterale ]
     
 
         [(#REM) Menu de navigation mots-cles ]
