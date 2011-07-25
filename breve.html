@@ -13,8 +13,10 @@
 <body class="page_breve">
 <div class="page">
 
-	[(#REM) Entete de la page + titre du site ]
+	[(#REM) Entete de la page ]
 	<INCLURE{fond=inclure/header} />
+	<INCLURE{fond=inclure/nav,env} />
+	#FORMULAIRE_RECHERCHE
 
 	[(#REM) Contenu : corps de la breve ]
     <div class="wrapper">
@@ -46,11 +48,7 @@
     <div class="aside">
 
         [(#REM) Menu de navigation par rubriques ]
-        <INCLURE{fond=inclure/rubriques, id_rubrique} />
-		
-		#FORMULAIRE_RECHERCHE
-
-        [(#REM) Breves dans la meme rubrique ]
+        <INCLURE{fond=inclure/rubriques, id_rubrique} />[(#REM) Breves dans la meme rubrique ]
         <B_breves>
         <div class="menu">
             <h2><:autres_breves:></h2>

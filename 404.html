@@ -11,8 +11,10 @@
 <body class="page_404">
 	<div class="page">
 
-	[(#REM) Entete de la page + titre du site ]
+	[(#REM) Entete de la page ]
 	<INCLURE{fond=inclure/header} />
+	<INCLURE{fond=inclure/nav,env} />
+	#FORMULAIRE_RECHERCHE
 
 	<div class="wrapper">
     <div class="content" id="content">
@@ -34,8 +36,6 @@
         [(#REM) Menu de navigation par rubriques ]
         <INCLURE{fond=inclure/rubriques} />
 		
-		#FORMULAIRE_RECHERCHE
-	
 	</div><!--.aside-->
 
 	[(#REM) Pied de page ]

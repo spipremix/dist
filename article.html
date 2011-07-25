@@ -11,8 +11,10 @@
 <body class="page_article">
 <div class="page">
 
-	[(#REM) Entete de la page + titre du site ]
+	[(#REM) Entete de la page ]
 	<INCLURE{fond=inclure/header} />
+	<INCLURE{fond=inclure/nav,env} />
+	#FORMULAIRE_RECHERCHE
 
 	[(#REM) Contenu principal : contenu de l'article ]
     <div class="hfeed wrapper">
@@ -71,11 +73,7 @@
     <div class="aside">
 
         [(#REM) Menu de navigation par rubriques ]
-        <INCLURE{fond=inclure/rubriques, id_rubrique} />
-	
-		#FORMULAIRE_RECHERCHE
-
-        [(#REM) Articles dans la meme rubrique ]
+        <INCLURE{fond=inclure/rubriques, id_rubrique} />[(#REM) Articles dans la meme rubrique ]
         <B_articles_rubrique>
         <div class="menu">
             <h2><a href="#URL_RUBRIQUE"><:meme_rubrique:></a></h2>

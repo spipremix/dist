@@ -12,8 +12,10 @@
 <body class="page_sommaire">
 <div class="page">
 
-	[(#REM) Entete de la page + titre du site ]
+	[(#REM) Entete de la page ]
 	<INCLURE{fond=inclure/header} />
+	<INCLURE{fond=inclure/nav,env} />
+	#FORMULAIRE_RECHERCHE
 
 	[(#REM) Contenu principal : derniers articles publies ]
 	<div class="hfeed wrapper">
@@ -69,11 +71,7 @@
 	<div class="aside">
 		
 		[(#REM) Menu de navigation par rubriques ]
-		<INCLURE{fond=inclure/rubriques} />
-		
-		#FORMULAIRE_RECHERCHE
-
-		[(#REM) Inscription au site ]
+		<INCLURE{fond=inclure/rubriques} />[(#REM) Inscription au site ]
 		#FORMULAIRE_INSCRIPTION
 		
 	</div><!--.aside-->

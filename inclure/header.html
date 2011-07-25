@@ -1,3 +1,7 @@
-<div class="header">
-<a rel="start home" href="#URL_SITE_SPIP/" title="<:accueil_site:>" class="accueil">[(#LOGO_SITE_SPIP|image_reduire{300,100}) ]<strong id="nom_site_spip">#NOM_SITE_SPIP</strong></a>
+<div class="clearfix header">
+	[(#ENV{home,'non'}|=={oui}|?{
+	<h1 id="logo">[(#LOGO_SITE_SPIP|image_reduire{40,*}) ]#NOM_SITE_SPIP</h1>
+	,
+	<strong class="h1" id="logo"><a rel="start home" href="#URL_SITE_SPIP/" title="<:accueil_site:>">[(#LOGO_SITE_SPIP|image_reduire{40,*}) ]#NOM_SITE_SPIP</a></strong>
+	})][<p>(#SLOGAN_SITE_SPIP)</p>]
 </div>
