@@ -10,6 +10,13 @@
 /* Habillage des elements du contenu
 /* ------------------------------------------ */
 
+h1,.h1 { font-size: 2em; line-height: 1; margin-bottom: 0; }
+h2,.h2 { font-size: 1.5em; line-height: 1; margin-bottom: .75em; }
+h3,.h3 { font-size: 1.2em; line-height: 1.1; margin-bottom: 1.1em; }
+h4,.h4 { font-size: 1.1em; line-height: 1.25; margin-bottom: 1em; }
+h5,.h5 { font-size: 1em; font-weight: bold; }
+h6,.h6 { font-size: 1em; font-weight: bold; }
+
 .breadcrumb { clear: both; font-size: .9em; }
 
 .cartouche h1 { margin-bottom: 0; }
@@ -134,11 +141,6 @@ ul ul ul ul ul .forum-chapo { background: #FFF; }
 .pagination a { background: #EEE; text-decoration: none; }
 .pagination .on { font-weight: bold; background: #333; color: #fff; }
 .pagination .sep { display: none; }
-
-/* Rubriques */
-.rubriques { display: none; }
-.rubriques ul { border: 0; }
-.rubriques ul li { background: #EEE; border: 0; }
 
 /* Listes d'articles et extraits introductifs */
 .articles ul li { clear: both; padding: 0.40em 0.20em; }
