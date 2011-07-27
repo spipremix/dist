@@ -40,7 +40,7 @@
 	<ul>
 		<BOUCLE_documents_joints(DOCUMENTS) {id_article} {extension !IN gif,jpg,png} {vu=non}{par num titre, date}>[
 		<li>
-			<strong><a href="(#URL_DOCUMENT)" title="<:bouton_download:>" type="#MIME_TYPE">[(#TITRE|sinon{<:info_document:>})]</a></strong>
+			<strong><a href="(#URL_DOCUMENT)" title="<:bouton_download:>" type="#MIME_TYPE">[(#TITRE|sinon{<:medias:info_document:>})]</a></strong>
 			<small>(<span>#TYPE_DOCUMENT[ &ndash; (#TAILLE|taille_en_octets)]</span>)</small>
 			#DESCRIPTIF
 		]</li>
