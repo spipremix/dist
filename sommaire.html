@@ -1,6 +1,3 @@
-[(#REM)
-	Un cache plus court, pour la boucle syndic_articles
-]#CACHE{3600}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 [(#REM) Cf.: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ ]
 <!--[if lt IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie6"> <![endif]-->
@@ -10,36 +7,35 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
 <head>
 <script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
-<title>[(#NOM_SITE_SPIP|textebrut)]</title>
+<title>[(#NOM_SITE_SPIP|textebrut)][ - (#SLOGAN_SITE_SPIP|textebrut)]</title>
 [<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|textebrut)" />]
 <INCLURE{fond=inclure/head} />
 </head>
 
-<body class="page_sommaire">
+<body class="pas_surlignable page_sommaire">
 <div class="page">
 
-	[(#REM) Entete de la page ]
-	<INCLURE{fond=inclure/header} />
+	<INCLURE{fond=inclure/header}{home=oui} />
 	<INCLURE{fond=inclure/nav,env} />
 	#FORMULAIRE_RECHERCHE
 
-	[(#REM) Contenu principal : derniers articles publies ]
-	<div class="hfeed wrapper">
+	<div class="wrapper hfeed">
 	<div class="content" id="content">
-		
-		<div class="cartouche invisible">
-			<h1 class="invisible">#NOM_SITE_SPIP</h1>
-		</div>
-		
 		[<div class="chapo">(#DESCRIPTIF_SITE_SPIP)</div>]
-		
 		<INCLURE{fond=inclure/recents,env,ajax} />
+	</div><!--.content-->
+	</div><!--.wrapper-->
+	
+	
+	<div class="aside">
+		<INCLURE{fond=inclure/navsub} />
+		
 		[(#REM) Breves ]
 		<B_breves>
 		<div class="menu">
 			<h2><:dernieres_breves:></h2>
 			<ul>
-				<BOUCLE_breves(BREVES) {par date}{inverse} {0,5}>
+				<BOUCLE_breves(BREVES) {!par date} {0,5}>
 				<li>[(#DATE|affdate_jourcourt) &ndash; ]<a href="#URL_BREVE">#TITRE</a></li>
 				</BOUCLE_breves>
 			</ul>
@@ -51,7 +47,7 @@
 		<div class="menu">
 			<h2><:derniers_commentaires:></h2>
 			<ul>
-				<BOUCLE_forums_liens(FORUMS?) {plat} {par date}{inverse} {0,8}>
+				<BOUCLE_forums_liens(FORUMS?) {plat} {!par date} {0,5}>
 				<li>[(#DATE|affdate_jourcourt) &ndash; ]<a href="#URL_FORUM"[ title="(#TITRE|attribut_html|couper{80})"]>[(#TEXTE|couper{80})]</a></li>
 				</BOUCLE_forums_liens>
 			</ul>
@@ -63,26 +59,16 @@
 		<div class="menu">
 			<h2><:nouveautes_web:></h2>
 			<ul>
-				<BOUCLE_syndic(SYNDIC_ARTICLES) {age<180} {par date}{inverse} {0,6}>
+				<BOUCLE_syndic(SYNDIC_ARTICLES) {age<180} {!par date} {0,5}>
 				<li>[(#DATE|affdate_jourcourt) &ndash; ]<a href="#URL_ARTICLE"[ title="(#NOM_SITE|attribut_html|couper{80})"] class="spip_out">#TITRE</a></li>
 				</BOUCLE_syndic>
 			</ul>
 		</div>
 		</B_syndic>
-	
-	</div><!--.content-->
-	</div><!--.wrapper-->
-	
-	[(#REM) Menu de navigation laterale ]
-	<div class="aside">
 		
-		[(#REM) Menu de navigation par rubriques ]
-		<INCLURE{fond=inclure/navsub} />[(#REM) Inscription au site ]
 		#FORMULAIRE_INSCRIPTION
-		
 	</div><!--.aside-->
 	
-	[(#REM) Pied de page ]
 	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
 	
 </div><!--.page-->

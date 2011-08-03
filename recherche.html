@@ -12,20 +12,17 @@
 <meta name="robots" content="none" />
 </head>
 
-<body class="page_recherche pas_surlignable">
+<body class="pas_surlignable page_recherche">
 <div class="page">
 
-	[(#REM) Entete de la page ]
 	<INCLURE{fond=inclure/header} />
 	<INCLURE{fond=inclure/nav,env} />
 	#FORMULAIRE_RECHERCHE
 	
 	[(#REM) Contenu principal : Resultats de la recherche ]
 	<div class="wrapper">
-	<div class="content pas_surlignable">
-		
-		[(#REM) Fil d'Ariane ]
-		<div class="breadcrumb"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <:info_rechercher:>[ &gt; <strong class="on">(#RECHERCHE)</strong>]</div>
+	<div class="content" id="content">
+		<p class="breadcrumb"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <:info_rechercher:>[ &gt; <strong class="on">(#RECHERCHE)</strong>]</p>
 		
 		[<div class="cartouche">
 			<h1><:resultats_recherche:></h1>
@@ -38,7 +35,7 @@
 			#ANCRE_PAGINATION
 			<h2><:articles:> (#GRAND_TOTAL)</h2>
 			<ul>
-				<BOUCLE_articles(ARTICLES) {recherche} {par points}{inverse} {pagination}>
+				<BOUCLE_articles(ARTICLES) {recherche} {!par points} {pagination}>
 				<li><a href="#URL_ARTICLE">#TITRE</a></li>
 				</BOUCLE_articles>
 			</ul>
@@ -52,7 +49,7 @@
 			#ANCRE_PAGINATION
 			<h2><:rubriques:> (#GRAND_TOTAL)</h2>
 			<ul>
-				<BOUCLE_rubriques(RUBRIQUES) {recherche} {par points}{inverse} {pagination 5}>
+				<BOUCLE_rubriques(RUBRIQUES) {recherche} {!par points} {pagination 5}>
 				<li><a href="#URL_RUBRIQUE">#TITRE</a></li>
 				</BOUCLE_rubriques>
 			</ul>
@@ -66,7 +63,7 @@
 			#ANCRE_PAGINATION
 			<h2><:mots_clefs:> (#GRAND_TOTAL)</h2>
 			<ul>
-				<BOUCLE_mots(MOTS) {recherche} {par points}{inverse} {pagination 5}>
+				<BOUCLE_mots(MOTS) {recherche} {!par points} {pagination 5}>
 				<li><a href="#URL_MOT">#TITRE</a></li>
 				</BOUCLE_mots>
 			</ul>
@@ -80,7 +77,7 @@
 			#ANCRE_PAGINATION
 			<h2><:breves:> (#GRAND_TOTAL)</h2>
 			<ul>
-				<BOUCLE_breves(BREVES) {recherche} {par points}{inverse} {pagination 5}>
+				<BOUCLE_breves(BREVES) {recherche} {!par points} {pagination 5}>
 				<li><a href="#URL_BREVE">#TITRE</a></li>
 				</BOUCLE_breves>
 			</ul>
@@ -94,7 +91,7 @@
 			#ANCRE_PAGINATION
 			<h2><:messages_forum:> (#GRAND_TOTAL)</h2>
 			<ul>
-				<BOUCLE_messages(FORUMS?) {recherche} {par points}{inverse} {pagination 5}>
+				<BOUCLE_messages(FORUMS?) {recherche} {!par points} {pagination 5}>
 				<li><a href="#URL_FORUM"[ title="(#TITRE|attribut_html|couper{80})"]>[(#TEXTE|couper{80})]</a></li>
 				</BOUCLE_messages>
 			</ul>
@@ -108,7 +105,7 @@
 			#ANCRE_PAGINATION
 			<h2><:sites_web:> (#GRAND_TOTAL)</h2>
 			<ul>
-				<BOUCLE_sites(SITES) {recherche} {par points}{inverse} {pagination 5}>
+				<BOUCLE_sites(SITES) {recherche} {!par points} {pagination 5}>
 				<li><a href="[(#ID_SYNDIC|generer_url_entite{site,'','',#CONNECT})]">#NOM_SITE</a></li>
 				</BOUCLE_sites>
 			</ul>
@@ -119,13 +116,11 @@
 	</div><!--.content-->
 	</div><!--.wrapper-->
 	
-	[(#REM) Menu de navigation laterale ]
+	
 	<div class="aside">
+		<INCLURE{fond=inclure/navsub, id_rubrique} />
+	</div><!--.aside-->
 	
-		[(#REM) Menu de navigation par rubriques ]
-		<INCLURE{fond=inclure/navsub, id_rubrique} /></div><!--.aside-->
-	
-	[(#REM) Pied de page ]
 	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
     
 </div><!--.page-->

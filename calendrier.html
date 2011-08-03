@@ -14,17 +14,15 @@
 	<meta name="robots" content="none" />
 </head>
 
-<body class="page_agenda">
+<body class="pas_surlignable page_agenda">
 <div class="page">
 
-	[(#REM) Entete de la page ]
 	<INCLURE{fond=inclure/header} />
 	<INCLURE{fond=inclure/nav,env} />
 	#FORMULAIRE_RECHERCHE
 
 	<INCLURE{fond=contenu/calendrier,env} />
 
-	[(#REM) Pied de page ]
 	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
 
 </div><!--.page-->
