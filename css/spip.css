@@ -32,7 +32,7 @@ dl.spip dd {}
 table.spip {}
 table.spip caption {}
 table.spip tr.row_first th {}
-table.spip tr.row_odd td { background: #e5ecf9; }
+table.spip tr.row_odd td {}
 table.spip tr.row_even td {}
 
 /* Citations, code et poesie */
