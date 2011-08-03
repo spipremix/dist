@@ -8,7 +8,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
 <head>
 <script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
-<title>[(#TITRE|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+<title>[(#TITRE|couper{80}|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
 [<meta name="description" content="(#DESCRIPTIF|couper{150}|attribut_html)" />]
 [<link rel="canonical" href="(#URL_MOT|url_absolue)" />]
 <INCLURE{fond=inclure/head} />
@@ -16,10 +16,9 @@
 <link rel="alternate" type="application/rss+xml"[ title="(#TITRE|attribut_html)"] href="[(#URL_PAGE{backend}|parametre_url{id_mot,#ID_MOT})]" />
 </head>
 
-<body class="page_mot">
+<body class="pas_surlignable page_mot">
 <div class="page">
 
-	[(#REM) Entete de la page ]
 	<INCLURE{fond=inclure/header} />
 	<INCLURE{fond=inclure/nav,env} />
 	#FORMULAIRE_RECHERCHE
@@ -27,12 +26,10 @@
 	[(#REM) Contenu principal : contenu du mot-cle ]
     <div class="wrapper">
     <div class="content" id="content">
-    
-        [(#REM) Fil d'Ariane ]
-        <div class="breadcrumb"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <:mots_clefs:><BOUCLE_ariane(GROUPES_MOTS){id_groupe}> &gt; [(#TITRE|couper{80})]</BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</div>
+        <p class="breadcrumb"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <:mots_clefs:><BOUCLE_ariane(GROUPES_MOTS){id_groupe}> &gt; [(#TITRE|couper{80})]</BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</p>
 
         <div class="cartouche">
-            [(#LOGO_MOT|image_reduire{200,200})]
+            [(#LOGO_MOT|image_reduire{40,*})]
             <h1 class="#EDIT{titre}">#TITRE</h1>
         </div>
 
@@ -44,10 +41,11 @@
             #ANCRE_PAGINATION
             <h2><:articles:></h2>
             <ul>
-                <BOUCLE_articles(ARTICLES) {id_mot} {par popularite}{inverse} {pagination 10}>
+                <BOUCLE_articles(ARTICLES) {id_mot} {!par popularite} {pagination 10}>
                 <li>
-                <h3><a href="#URL_ARTICLE">#TITRE</a></h3>
-                <small>[(#DATE|affdate_jourcourt)][, <:par_auteur:> (#LESAUTEURS)]</small></li>
+                    <strong><a href="#URL_ARTICLE">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{40,*}) ]#TITRE</a></strong>
+                    <br /><small>[(#DATE|affdate_jourcourt)][, <:par_auteur:> (#LESAUTEURS)]</small>
+                </li>
                 </BOUCLE_articles>
             </ul>
             [<p class="pagination">(#PAGINATION)</p>]
@@ -83,7 +81,7 @@
         <div class="menu">
             <h2><:messages_forum:></h2>
             <ul>
-                <BOUCLE_forums_liens(FORUMS?) {id_mot} {plat} {par date}{inverse}>
+                <BOUCLE_forums_liens(FORUMS?) {id_mot} {plat} {!par date}>
                 <li>[(#DATE|affdate_jourcourt) &ndash; ]<a href="#URL_FORUM">[(#TEXTE|couper{80})]</a></li>
                 </BOUCLE_forums_liens>
             </ul>
@@ -102,16 +100,16 @@
         </div>
         </B_sites>
 
-        [<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
+        [<div class="notes"><hr />(#NOTES)</div>]
 
 	</div><!--.content-->
 	</div><!--.wrapper-->
 
-    [(#REM) Menu de navigation laterale ]
     <div class="aside">
 
-        [(#REM) Menu de navigation par rubriques ]
-        <INCLURE{fond=inclure/navsub} />[(#REM) Menu de navigation mots-cles : les autres mots cles du meme groupe ]
+        <INCLURE{fond=inclure/navsub} />
+		
+        [(#REM) Menu de navigation mots-cles : les autres mots cles du meme groupe ]
         <B_mots_freres>
         <div class="menu">
             #ANCRE_PAGINATION
@@ -141,7 +139,6 @@
         
     </div><!--.aside-->
 
-	[(#REM) Pied de page ]
 	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
 
 </div><!--.page-->

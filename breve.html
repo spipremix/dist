@@ -8,7 +8,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
 <head>
 <script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
-<title>[(#TITRE|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+<title>[(#TITRE|couper{80}|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
 [<meta name="description" content="(#INTRODUCTION{150}|attribut_html)" />]
 [<link rel="canonical" href="(#URL_BREVE|url_absolue)" />]
 <INCLURE{fond=inclure/head} />
@@ -16,10 +16,9 @@
 <link rel="alternate" type="application/rss+xml" title="<:dernieres_breves:>" href="#URL_PAGE{backend-breves}" />
 </head>
 
-<body class="page_breve">
+<body class="pas_surlignable page_breve">
 <div class="page">
 
-	[(#REM) Entete de la page ]
 	<INCLURE{fond=inclure/header} />
 	<INCLURE{fond=inclure/nav,env} />
 	#FORMULAIRE_RECHERCHE
@@ -27,39 +26,37 @@
 	[(#REM) Contenu : corps de la breve ]
     <div class="wrapper">
     <div class="content" id="content">
-
-        [(#REM) Fil d'Ariane ]
-        <div class="breadcrumb"><a href="#URL_SITE_SPIP/" ><:accueil_site:></a><BOUCLE_ariane(RUBRIQUES){id_rubrique}> &gt; <a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</div>
+        <p class="breadcrumb"><a href="#URL_SITE_SPIP/" ><:accueil_site:></a><BOUCLE_ariane(RUBRIQUES){id_rubrique}> &gt; <a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</p>
 
         <div class="cartouche">
-            [(#LOGO_BREVE|image_reduire{200,200})]
+            [(#LOGO_BREVE_RUBRIQUE|image_reduire{40,*})]
             <h1 class="#EDIT{titre}">#TITRE</h1>
             <p><small><abbr class="published" title="[(#DATE|date_iso)]">[(#DATE|nom_jour) ][(#DATE|affdate)]</abbr></small></p>
         </div>
         
         [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
-        [<p class="lien"><:voir_en_ligne:> : <a href="(#URL_SITE)" class="spip_out">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
-        [<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
+        [<hr /><p class="#EDIT{hyperlien} hyperlien"><:voir_en_ligne:> : <a href="(#URL_SITE)">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
+        [<div class="notes"><hr />(#NOTES)</div>]
         
         [(#REM) Forum de la breve
         NB : pour desactiver les forums de breve, supprimez simplement les lignes ci-dessous ]
         <a href="#forum" name="forum" id="forum"></a>
         <INCLURE{fond=inclure/forum, id_breve} />
-        [<p class="repondre"><a href="(#PARAMETRES_FORUM|url_reponse_forum)" rel="noindex nofollow"><:repondre_breve:></a></p>]
+        #FORMULAIRE_FORUM
 
 	</div><!--.content-->
 	</div><!--.wrapper-->
 
-    [(#REM) Menu de navigation laterale ]
     <div class="aside">
 
-        [(#REM) Menu de navigation par rubriques ]
-        <INCLURE{fond=inclure/navsub, id_rubrique} />[(#REM) Breves dans la meme rubrique ]
+        <INCLURE{fond=inclure/navsub, id_rubrique} />
+
+        [(#REM) Breves dans la meme rubrique ]
         <B_breves>
         <div class="menu">
             <h2><:autres_breves:></h2>
             <ul>
-                <BOUCLE_breves(BREVES) {id_rubrique} {par date}{inverse} {0,10}>
+                <BOUCLE_breves(BREVES) {id_rubrique} {!par date} {0,10}>
                 <li>[(#DATE|affdate_jourcourt) &ndash; ]<a href="#URL_BREVE"[ class="(#EXPOSE)"]>#TITRE</a></li>
                 </BOUCLE_breves>
             </ul>
@@ -80,7 +77,6 @@
         
     </div><!--.aside-->
 
-	[(#REM) Pied de page ]
 	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
 
 </div><!--.page-->

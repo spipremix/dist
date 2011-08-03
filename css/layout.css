@@ -48,7 +48,4 @@ body { text-align: center; background: #EEE url(img/background.gif); }
 .formulaire_recherche { position: absolute; top: 75px; right: 75px; }
 .formulaire_recherche * { display: inline; }
 
-.footer .colophon {float: left; width: 70%; }
-.footer .generator { float: right; }
-
 /* end */
