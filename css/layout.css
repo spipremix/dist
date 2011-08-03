@@ -7,10 +7,10 @@
 -------------------------------------------------------------- */
 
 body { text-align: center; background: #EEE url(img/background.gif); }
-.page { position: relative; width: 940px; margin: 0 auto 1.5em; padding: 0 20px; background-color: #FFF; text-align: left;
+.page { position: relative; width: 850px; margin: 0 auto 1.5em; padding: 75px; background-color: #FFF; text-align: left;
  -moz-box-shadow: 0 0 4em #666; -webkit-box-shadow: 0 0 4em #666; box-shadow: 0 0 4em #666; }
 
-.header { width: 100%; margin: 0; padding: 1.5em 0 0 0; }
+.header { width: 100%; }
 .wrapper { clear: both; float: left; width: 65%; overflow: hidden; }
 .content { min-height: 300px; }
 .aside { float: right; width: 30%; overflow: hidden; }
@@ -45,7 +45,10 @@ body { text-align: center; background: #EEE url(img/background.gif); }
 .nav ul li a { float: left; display: block; padding: .5em 1em; background: #C30; border-right: 1px solid #FFF; color: #FFF; text-decoration: none; }
 .nav ul li.on a { background: #fff; color: #222; }
 
-.formulaire_recherche { position: absolute; top: 1.5em; right: 1.5em; }
+.formulaire_recherche { position: absolute; top: 75px; right: 75px; }
 .formulaire_recherche * { display: inline; }
+
+.footer .colophon {float: left; width: 70%; }
+.footer .generator { float: right; }
 
 /* end */
