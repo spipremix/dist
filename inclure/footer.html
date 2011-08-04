@@ -1,11 +1,13 @@
 <div class="footer">
-	<a href="http://www.spip.net/" title="<:site_realise_avec_spip:>"><img src="#CHEMIN{img/spip.gif}" alt="SPIP" width="63" height="40" /></a> | 
-	<a href="#ENV{skel}" title="<:voir_squelette:>" rel="nofollow"><:squelette:></a>[
-	(#SESSION{id_auteur}|?{' '})| <a href="#URL_LOGOUT" rel="nofollow"><:icone_deconnecter:></a>
-	][(#SESSION{id_auteur}|?{'',' '})| <a href="[(#URL_PAGE{login}|parametre_url{url,#SELF})]" rel="nofollow" class='login_modal'><:lien_connecter:></a>][
-	(#AUTORISER{ecrire})| <a href="#EVAL{_DIR_RESTREINT_ABS}"><:espace_prive:></a>] | 
-	<a rel="contents" href="#URL_PAGE{plan}"><:plan_site:></a> | 
-	<a href="#URL_PAGE{backend}" rel="alternate" title="<:syndiquer_site:>">RSS&nbsp;2.0</a>
+	<p class="colophon">
+		<BOUCLE_annee(ARTICLES){par date}{0,1}>[(#DATE|annee)]</BOUCLE_annee>-</B_annee>[(#DATE|annee) ]#NOM_SITE_SPIP | 
+		<a rel="contents" href="#URL_PAGE{plan}"><:plan_site:></a>[
+		(#SESSION{id_auteur}|oui) | <a href="#URL_LOGOUT" rel="nofollow"><:icone_deconnecter:></a>
+		][(#SESSION{id_auteur}|non) | <a href="[(#URL_PAGE{login}|parametre_url{url,#SELF})]" rel="nofollow" class='login_modal'><:lien_connecter:></a>][
+		(#AUTORISER{ecrire})| <a href="#EVAL{_DIR_RESTREINT_ABS}"><:espace_prive:></a>] | 
+		<a href="#URL_PAGE{backend}" rel="alternate" title="<:syndiquer_site:>">RSS&nbsp;2.0</a>
+	</p>
+	<small class="generator"><a href="http://www.spip.net/" title="<:site_realise_avec_spip:>" class="spip_out"><img src="#CHEMIN{img/spip.gif}" alt="SPIP" width="63" height="40" /></a><span class="sep"> | </span><a href="#ENV{skel}" title="<:voir_squelette:>" rel="nofollow"><img src="#CHEMIN{img/squelette.png}" alt="<:squelette:>" /></a></small>
 </div>
 [(#REM)
 	Cette balise permet de deporter les calculs lourds (indexation etc)

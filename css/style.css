@@ -17,7 +17,7 @@ h4,.h4 { font-size: 1.1em; line-height: 1.25; margin-bottom: 1em; }
 h5,.h5 { font-size: 1em; font-weight: bold; }
 h6,.h6 { font-size: 1em; font-weight: bold; }
 
-.breadcrumb { clear: both; font-size: .9em; }
+.arbo { clear: both; font-size: .9em; }
 
 .cartouche h1 { margin-bottom: 0; }
 .cartouche { margin-bottom: 1.5em; }
@@ -34,9 +34,11 @@ h6,.h6 { font-size: 1em; font-weight: bold; }
 abbr.published { border: 0; }
 
 /* Citations */
-blockquote, pre, div.spip_code, .spip_cadre { padding: 1.5em; background: #F8F8F8; }
-pre,code,kbd,samp,var,tt,.spip_code, .spip_cadre { font-family: "Courier New", Courier, monospace; }
-.spip_cadre { width: 100%; border: 0; overflow: hidden; }
+blockquote, pre, div.spip_code, .spip_cadre { padding: 1.5em; }
+blockquote { padding-left: 50px; background: #F8F8F8 url(img/quote.png) no-repeat 2px 1em; }
+pre, code, kbd, samp, var, tt, .spip_code, .spip_cadre { font-family: "Courier New", Courier, monospace; }
+pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #F4F8F8; }
+.spip_cadre { width: 100%; padding-right: 0; padding-bottom: 0; border: 0; overflow: scroll; }
 
 /* Portfolio */
 #documents_portfolio { clear: both; margin: 1.5em auto; text-align: center; }
@@ -51,7 +53,14 @@ pre,code,kbd,samp,var,tt,.spip_code, .spip_cadre { font-family: "Courier New", C
 .formulaire_spip { margin-bottom: 1.5em; padding: 1.5em; background-color: #F5F5F5; }
 label { display: block; }
 .erreur_message { display: block; }
-input.text,textarea { width: 100%; border: 4px solid #E6E6E6; }
+input.text,textarea {
+width: 100%;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+border: 4px solid #EEE;
+}
 
 /* Formulaire de forum */
 .formulaire_forum .saisie_titre input.text,

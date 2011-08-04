@@ -26,7 +26,7 @@
 	[(#REM) Contenu principal : contenu de la rubrique ]
     <div class="wrapper">
     <div class="content" id="content">
-        <p class="breadcrumb"><a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_rubrique}> &gt; <a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</p><!--.breadcrumb-->
+        <p class="arbo"><a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_rubrique}> &gt; <a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</p><!--.arbo-->
 
         <div class="cartouche">
             [(#LOGO_RUBRIQUE|image_reduire{40,*})]
@@ -85,7 +85,7 @@
         [(#REM) Documents joints a la rubrique ]
         <B_documents_joints>
         <div class="menu" id="documents_joints">
-            <h2><:titre_documents_joints:></h2>
+            <h2><:medias:titre_documents_joints:></h2>
             <ul>
                 <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {mode=document} {par num titre, date} {doublons}>
                 <li>
