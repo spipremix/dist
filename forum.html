@@ -24,7 +24,7 @@
     <div class="wrapper">
     <div class="content" id="content">
 
-        <p class="breadcrumb"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; ... &gt; <strong class="on"><:forum:> #ID_FORUM</strong></p><!--.breadcrumb-->
+        <p class="arbo"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; ... &gt; <strong class="on"><:forum:> #ID_FORUM</strong></p><!--.arbo-->
 
         <div class="cartouche">
             <h1>#TITRE</h1>
@@ -37,7 +37,7 @@
 
 			<BOUCLE_doc(DOCUMENTS){id_forum}>
 			[(#EXTENSION|match{'^(gif|jpg|png)$'}|?{
-				[(#MODELE{emb}|image_reduire{600,*})]
+				[(#MODELE{emb}|image_reduire{500,*})]
 			,
 				#LOGO_DOCUMENT{#URL_DOCUMENT}
 			})]
