@@ -34,9 +34,10 @@ h6,.h6 { font-size: 1em; font-weight: bold; }
 abbr.published { border: 0; }
 
 /* Citations */
-blockquote, pre, div.spip_code, .spip_cadre { padding: 1.5em; }
-blockquote { padding-left: 50px; background: #F8F8F8 url(img/quote.png) no-repeat 2px 1em; }
-pre, code, kbd, samp, var, tt, .spip_code, .spip_cadre { font-family: "Courier New", Courier, monospace; }
+blockquote, pre, div.spip_code, .spip_cadre { padding: 1.5em 50px; }
+blockquote { padding-bottom: .1em; background: #F8F8F8 url(img/quote.png) no-repeat 3px 1.5em; }
+.spip_poesie { padding-bottom: 1.5em; }
+pre, code, kbd, samp, var, tt, .spip_code, .spip_cadre { font-family: 'Courier New', Courier, monospace; }
 pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #F4F8F8; }
 .spip_cadre { width: 100%; padding-right: 0; padding-bottom: 0; border: 0; overflow: scroll; }
 
@@ -48,9 +49,9 @@ pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #F4F8F8; }
 #documents_portfolio a:hover .spip_logos,
 #documents_portfolio a:active .spip_logos { border-color: #8B6F92; }
 
-/* Formulmaires : variantes et cas particuliers
+/* Formulaires : variantes et cas particuliers
 ----------------------------------------------- */
-.formulaire_spip { margin-bottom: 1.5em; padding: 1.5em; background-color: #F5F5F5; }
+.formulaire_spip { margin-bottom: 1.5em; padding: 1.5em 50px; background-color: #F5F5F5; }
 label { display: block; }
 .erreur_message { display: block; }
 input.text,textarea {
@@ -81,7 +82,7 @@ ul.choix_mots { display: block; margin: 0; padding: 0; list-style: none; }
 ul.choix_mots li { clear: none; float: left; display: block; width: 30%; padding: 1%; }
 ul.choix_mots li label { display: inline; font-weight: normal; }
 
-.formulaire_spip .bugajaxie { display: none; } /* Bug IE/Win */
+.formulaire_spip .bugajaxie { display: none; } /*IE/Win*/
 
 /* Formulaire de login dans une page */
 .formulaire_login ul li {clear:left;}
@@ -96,15 +97,15 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 ul.forum { display: block; clear: both; margin: 0; padding: 0; }
 ul.forum, ul.forum ul { list-style: none; }
 .forum-fil { margin-top: 1.5em; }
-.forum-fil ul { display: block; margin: 0; padding: 0; margin-left: 1.5em; }
+.forum-fil ul { display: block; margin: 0; padding: 0; margin-left: 50px; }
 .forum-chapo .forum-titre,
 .forum-chapo .forum-titre a { margin: 0; padding: 0; font-weight: bold; color: #333; }
 .forum-texte { margin: 0; padding: 1.5em; color: #333; }
 .forum-texte .hyperlien {}
-.forum-texte .repondre { margin: 0; padding: 0.10em 0; text-align: right; }
+.forum-texte .repondre { margin: 0; padding: .10em 0; text-align: right; }
 
 /* Boite d'un forum : eclaircissement progressif des bords */
-ul .forum-message { border: 1px solid #666; margin: 0 0 1.5em 0; padding: 0; }
+ul .forum-message { background: #fff; border: 1px solid #666; margin: 0 0 1.5em 0; padding: 0; }
 ul ul .forum-message { border: 1px solid #A4A4A4; }
 ul ul ul .forum-message { border: 1px solid #B8B8B8; }
 ul ul ul ul .forum-message { border: 1px solid #CCC; }
@@ -124,7 +125,7 @@ ul ul ul ul ul .forum-chapo { background: #FFF; }
 #signatures { clear: both; margin: 0 0 2em 0; padding: 0; background: none; }
 #signatures table { width: 100%; margin: 1em 0 0 0; }
 #signatures thead { text-align: center; color: #555; }
-#signatures td { padding: 0.50em; border: 2px solid #FEFEFE; vertical-align: top; }
+#signatures td { padding: .50em; border: 2px solid #FEFEFE; vertical-align: top; }
 #signatures td.signature-date { background: #E4F0F0; text-align: center; white-space: nowrap; }
 #signatures td.signature-nom { background: #ECF4F4; text-align: center; }
 #signatures td.signature-nom small { display: block; }
@@ -152,14 +153,14 @@ ul ul ul ul ul .forum-chapo { background: #FFF; }
 .pagination .sep { display: none; }
 
 /* Listes d'articles et extraits introductifs */
-.articles ul li { clear: both; padding: 0.40em 0.20em; }
-.articles ul li h3 { margin: 0.30em 0; }
+.articles ul li { clear: both; padding: .40em .20em; }
+.articles ul li h3 { margin: .30em 0; }
 .articles .spip_logos {}
 .articles ul li .enclosures { float: right; text-align: right; max-width: 60%; margin: 0; }
-.articles ul li .introduction { margin-top: 0.30em; }
+.articles ul li .introduction { margin-top: .30em; }
 
 
-/* Couleurs des liens
+/* Hyperliens
 ---------------------------------------------- */
 a { color: #C30; text-decoration: none; }
 a:focus,
@@ -173,8 +174,11 @@ a:active { background: #C30; color: #FFF; text-decoration: none; }
 @media print {
 
 /*  Ne pas imprimer */
-.spip-admin, .spip-admin-float, .spip-previsu { display: none; }
-.repondre, .formulaire_spip { display: none; }
+.spip-admin,
+.spip-admin-float,
+.spip-previsu { display: none; }
+.repondre,
+.formulaire_spip { display: none; }
 
 /* Souligner et expliciter les liens */
 a { color: #520; text-decoration: underline !important; }
