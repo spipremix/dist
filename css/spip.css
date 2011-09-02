@@ -13,7 +13,7 @@
  text-indent: 50px;
  font-family: Georgia, Cambria, Times New Roman, Times, serif;
  background-color : #FFFFFF;
- color: #222222;
+ color: #222;
 */
 
 /* Listes SPIP */
@@ -44,8 +44,8 @@ blockquote.spip {}
 
 /* Enluminures typo V3 / Cf.: http://www.spip-contrib.net/3118 */
 sc, .sc { font-variant: small-caps; }
-.caractencadre-spip { background-color: #FFFFCC; color: purple; }
-.caractencadre2-spip { background-color: #FFFFCC; color: orange; }
+.caractencadre-spip { background-color: #FEC; color: purple; }
+.caractencadre2-spip { background-color: #FEC; color: orange; }
 .texteencadre-spip { display: block; margin: 1.5em 50px; padding: 1.5em; background: #EEE; }
 
 /* Logos, documents et images */
