@@ -6,28 +6,18 @@
 -------------------------------------------------------------- */
 
 
-/* ------------------------------------------
-/* Habillage des elements du contenu
-/* ------------------------------------------ */
-
-h1,.h1 { font-size: 2em; line-height: 1; margin-bottom: 0; }
-h2,.h2 { font-size: 1.5em; line-height: 1; margin-bottom: .75em; }
-h3,.h3 { font-size: 1.2em; line-height: 1.1; margin-bottom: 1.1em; }
-h4,.h4 { font-size: 1.1em; line-height: 1.25; margin-bottom: 1em; }
-h5,.h5 { font-size: 1em; font-weight: bold; }
-h6,.h6 { font-size: 1em; font-weight: bold; }
-
-.arbo { clear: both; font-size: .9em; }
-
+/* Titraille */
 .cartouche h1 { margin-bottom: 0; }
 .cartouche { margin-bottom: 1.5em; }
 .surtitre { display: none; }
 .soustitre {}
 .cartouche .traductions { font-size: .9em; }
 
+.arbo { clear: both; font-size: .9em; }
+
 .chapo { font-weight: bold; }
 .texte {}
-.hyperlien { display: block; background: #F8F8F8; padding: 1.5em; font-weight: bold; }
+.hyperlien { display: block; background: #EEE; padding: 1.5em; font-weight: bold; }
 .ps, .notes { margin-bottom: 1.5em; }
 .notes { clear: both; }
 
@@ -35,10 +25,10 @@ abbr.published { border: 0; }
 
 /* Citations */
 blockquote, pre, div.spip_code, .spip_cadre { padding: 1.5em 50px; }
-blockquote { padding-bottom: .1em; background: #F8F8F8 url(img/quote.png) no-repeat 3px 1.5em; }
+blockquote { padding-bottom: .1em; background: #EEE url(img/quote.png) no-repeat 3px 1.5em; }
 .spip_poesie { padding-bottom: 1.5em; }
 pre, code, kbd, samp, var, tt, .spip_code, .spip_cadre { font-family: 'Courier New', Courier, monospace; }
-pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #F4F8F8; }
+pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #EEE; }
 .spip_cadre { width: 100%; padding-right: 0; padding-bottom: 0; border: 0; overflow: scroll; }
 
 /* Portfolio */
@@ -162,10 +152,10 @@ ul ul ul ul ul .forum-chapo { background: #FFF; }
 
 /* Hyperliens
 ---------------------------------------------- */
-a { color: #C30; text-decoration: none; }
+a { color: #900; text-decoration: none; }
 a:focus,
 a:hover,
-a:active { background: #C30; color: #FFF; text-decoration: none; }
+a:active { background-color: #900; color: #FFF; text-decoration: none; }
 
 /* ------------------------------------------
 /* Autres medias
@@ -181,7 +171,7 @@ a:active { background: #C30; color: #FFF; text-decoration: none; }
 .formulaire_spip { display: none; }
 
 /* Souligner et expliciter les liens */
-a { color: #520; text-decoration: underline !important; }
+a { color: #600; text-decoration: underline !important; }
 a.spip_out:after,
 a.spip_glossaire:after,
 a.spip_mail:after { display: inline; content: " [" attr(href) "]"; }
