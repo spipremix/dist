@@ -7,7 +7,7 @@
 -------------------------------------------------------------- */
 
 body { text-align: center; background: #EEE url(img/background.jpg) fixed; }
-.page { position: relative; width: 850px; margin: 0 auto 1.5em; padding: 50px 75px; background: #FFF; text-align: left;
+.page { position: relative; width: 800px; margin: 0 auto 1.5em; padding: 50px; background: #FFF; text-align: left;
  -moz-box-shadow: 0 0 4em #666; -webkit-box-shadow: 0 0 4em #666; box-shadow: 0 0 4em #666; }
 
 .header { width: 100%; }
@@ -46,10 +46,10 @@ body { text-align: center; background: #EEE url(img/background.jpg) fixed; }
 .nav ul li a:hover,
 .nav ul li a:active { background: #222; color: #FFF; }
 
-.formulaire_recherche { position: absolute; top: 50px; right: 75px; }
+.formulaire_recherche { position: absolute; top: 50px; right: 50px; }
 .formulaire_recherche * { display: inline; }
 
-.footer .colophon { float: left; width: 70%; height: 40px; }
+.footer .colophon { float: left; height: 40px; }
 .footer .generator { float: right; text-align: right; }
 .footer .generator .sep { display: none; }
 .footer .generator a { display: block; margin: 0 0 10px 10px; }
