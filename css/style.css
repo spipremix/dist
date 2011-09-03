@@ -5,6 +5,8 @@
 
 -------------------------------------------------------------- */
 
+.spip_logos { margin: 0 10px 10px 0; }
+
 .arbo { clear: both; font-size: .9em; }
 
 .cartouche h1 { margin-bottom: 0; }
@@ -20,6 +22,11 @@ abbr.published { border: 0; }
 .hyperlien { display: block; background: #EEE; padding: 1.5em; font-weight: bold; }
 .ps, .notes { margin-bottom: 1.5em; }
 .notes { clear: both; }
+
+/* Listes et tableaux */
+dl.spip {}
+dl.spip dt { background: url(img/def.png) no-repeat 25px .5em; }
+dl.spip dd
 
 table.spip caption { background-color: #DDD; }
 table.spip thead th { background: none; border: 1px solid; border-width: 1px 0; }
@@ -67,7 +74,7 @@ border: 4px solid #EEE;
 .formulaire_recherche { margin: 0; padding: 0; background: none; }
 .formulaire_recherche * { display: inline; vertical-align: middle; }
 .formulaire_recherche label {}
-.formulaire_recherche input.text { width: 10em; padding-left: 25px; background: #FFF url(img/rechercher.gif) no-repeat left center; }
+.formulaire_recherche input.text { width: 10em; padding-left: 20px; background: #FFF url(img/recherche.png) no-repeat left center; }
 .formulaire_recherche input.submit {}
 
 /* Choix des mots-clefs */
