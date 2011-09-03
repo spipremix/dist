@@ -1,6 +1,6 @@
 /* --------------------------------------------------------------
 
-   spip.css
+   spip.css.html
    Styles associes au code genere par SPIP
    Cf.: http://www.spip-contrib.net/3821
 
@@ -13,14 +13,15 @@
  text-indent: 50px;
  font-family: Georgia, Cambria, Times New Roman, Times, serif;
  background-color : #FFFFFF;
- color: #222;
+ color: #222222;
 */
 
 /* Listes SPIP */
 ul.spip,
 ol.spip { margin-left: 50px; }
-ul.spip { list-style-type: disc; }
-li ul.spip { list-style-type: circle; }
+ul.spip { list-style-type: square; }
+li ul.spip { list-style-type: disc; }
+li li ul.spip { list-style-type: circle; }
 ol.spip { list-style-type: decimal; }
 
 dl.spip dt,
@@ -32,7 +33,7 @@ dl.spip dd {}
 table.spip {}
 table.spip caption {}
 table.spip tr.row_first th {}
-table.spip tr.row_odd td {}
+table.spip tr.row_odd td { background: #e5ecf9; }
 table.spip tr.row_even td {}
 
 /* Citations, code et poesie */
@@ -44,8 +45,8 @@ blockquote.spip {}
 
 /* Enluminures typo V3 / Cf.: http://www.spip-contrib.net/3118 */
 sc, .sc { font-variant: small-caps; }
-.caractencadre-spip { background-color: #FEC; color: purple; }
-.caractencadre2-spip { background-color: #FEC; color: orange; }
+.caractencadre-spip { background-color: #FFFFCC; color: purple; }
+.caractencadre2-spip { background-color: #FFFFCC; color: orange; }
 .texteencadre-spip { display: block; margin: 1.5em 50px; padding: 1.5em; background: #EEE; }
 
 /* Logos, documents et images */
