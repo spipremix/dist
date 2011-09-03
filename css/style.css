@@ -5,15 +5,15 @@
 
 -------------------------------------------------------------- */
 
+.arbo { clear: both; font-size: .9em; }
 
-/* Titraille */
 .cartouche h1 { margin-bottom: 0; }
 .cartouche { margin-bottom: 1.5em; }
 .surtitre { display: none; }
 .soustitre {}
 .cartouche .traductions { font-size: .9em; }
 
-.arbo { clear: both; font-size: .9em; }
+abbr.published { border: 0; }
 
 .chapo { font-weight: bold; }
 .texte {}
@@ -21,7 +21,10 @@
 .ps, .notes { margin-bottom: 1.5em; }
 .notes { clear: both; }
 
-abbr.published { border: 0; }
+table.spip caption { background-color: #DDD; }
+table.spip thead th { background: none; border: 1px solid; border-width: 1px 0; }
+table.spip tr td { background: none; }
+table.spip tr.row_odd td { background: #EEE; }
 
 /* Citations */
 blockquote, pre, div.spip_code, .spip_cadre { padding: 1.5em 50px; }
