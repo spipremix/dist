@@ -29,11 +29,12 @@ body { text-align: center; background: #EEE url(img/background.jpg) fixed; }
 /* Entete et barre de navigation
 ------------------------------------------ */
 
-.header {}
+.header { padding-bottom: 1.5em; border-bottom: 1px solid; }
 .header #logo { margin: 0; line-height: 1; font-weight: bold; text-decoration: none; font-weight: normal; }
 .header #logo,
 .header #logo a,
 .header #logo a:hover { background: transparent; text-decoration: none; color: #222; }
+.header #slogan { margin: 0; }
 
 .formulaire_menu_lang { position: absolute; right: 0; top: .9em; display: block; width: 30%; }
 
