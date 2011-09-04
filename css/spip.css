@@ -81,7 +81,7 @@ fieldset.previsu legend { color: #F57900; }
 
 li.erreur input[type="text"], li.erreur input.text,
 li.erreur input[type="password"], li.erreur input.password,
-li.erreur textarea { background-color: #fbe3e4; }
+li.erreur textarea { background-color: #fbe3e4; border-color: #fbc2c4; }
 
 .spip_surligne { background-color: yellow; }
 
