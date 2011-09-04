@@ -11,9 +11,9 @@ body { text-align: center; background: #EEE url(img/background.jpg) fixed; }
  -moz-box-shadow: 0 0 4em #666; -webkit-box-shadow: 0 0 4em #666; box-shadow: 0 0 4em #666; }
 
 .header { width: 100%; }
-.wrapper { clear: both; float: left; width: 65%; overflow: hidden; }
+.wrapper { clear: both; float: left; width: 70%; overflow: hidden; }
 .content { min-height: 300px; }
-.aside { float: right; width: 30%; overflow: hidden; }
+.aside { float: right; width: 25%; overflow: hidden; }
 .footer { clear: both; width: 100%; margin: 1.5em 0 0; padding: 1.5em 0; border-top: 4px solid; }
 
 /* Gabarit d'impression */
