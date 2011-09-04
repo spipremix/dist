@@ -6,16 +6,6 @@
 
 -------------------------------------------------------------- */
 
-/* Valeurs :
- font-size: 1em;
- line-height: 1.5em;
- margin-bottom: 1.5em;
- text-indent: 50px;
- font-family: Georgia, Cambria, Times New Roman, Times, serif;
- background-color : #FFFFFF;
- color: #222222;
-*/
-
 /* Listes SPIP */
 ul.spip,
 ol.spip { margin-left: 50px; }
@@ -50,7 +40,7 @@ sc, .sc { font-variant: small-caps; }
 .texteencadre-spip { display: block; margin: 1.5em 50px; padding: 1.5em; background: #EEE; }
 
 /* Logos, documents et images */
-.spip_logos { float: left; margin: 0  1.5em 1.5em 0; padding: 0; border: none; }
+.spip_logos { float: left; margin: 0 10px 10px 0; padding: 0; border: none; }
 
 .spip_documents { margin-bottom: 1.5em; padding: 0; background: none; }
 .spip_documents,
