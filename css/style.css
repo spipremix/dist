@@ -41,7 +41,7 @@ pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #EEE; }
 
 /* Formulaires : variantes et cas particuliers
 ----------------------------------------------- */
-.formulaire_spip { margin-bottom: 1.5em; padding: 1.5em 50px; background-color: #F5F5F5; }
+.formulaire_spip { margin-bottom: 1.5em; }
 label { display: block; }
 .erreur_message { display: block; }
 input.text,textarea {
@@ -50,12 +50,9 @@ width: 100%;
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
 box-sizing: border-box;
+background-color: #EEE;
 border: 4px solid #EEE;
 }
-
-/* Formulaire de forum */
-.formulaire_forum .saisie_titre input.text,
-.formulaire_forum .saisie_titre textarea { width: 98%; }
 
 /* Selection des langues */
 .formulaire_menu_lang { margin: 0; padding: 0; background: none; }
@@ -64,7 +61,7 @@ border: 4px solid #EEE;
 .formulaire_recherche { margin: 0; padding: 0; background: none; }
 .formulaire_recherche * { display: inline; vertical-align: middle; }
 .formulaire_recherche label {}
-.formulaire_recherche input.text { width: 10em; padding-left: 20px; background: #FFF url(img/recherche.png) no-repeat left center; }
+.formulaire_recherche input.text { width: 10em; padding-left: 20px; background-image: url(img/recherche.png); background-repeat: no-repeat; background-position: left center; }
 .formulaire_recherche input.submit {}
 
 /* Choix des mots-clefs */
