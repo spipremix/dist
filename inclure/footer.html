@@ -5,6 +5,7 @@
 		(#SESSION{id_auteur}|oui) | <a href="#URL_LOGOUT" rel="nofollow"><:icone_deconnecter:></a>
 		][(#SESSION{id_auteur}|non) | <a href="[(#URL_PAGE{login}|parametre_url{url,#SELF})]" rel="nofollow" class='login_modal'><:lien_connecter:></a>][
 		(#AUTORISER{ecrire})| <a href="#EVAL{_DIR_RESTREINT_ABS}"><:espace_prive:></a>] | 
+		<a rel="nofollow" href="#URL_PAGE{contact}"><:contact:></a> |
 		<a href="#URL_PAGE{backend}" rel="alternate" title="<:syndiquer_site:>">RSS&nbsp;2.0</a>
 	</p>
 	<small class="generator"><a href="http://www.spip.net/" title="<:site_realise_avec_spip:>" class="spip_out"><img src="#CHEMIN{img/spip.gif}" alt="SPIP" width="63" height="40" /></a></small>
