@@ -39,14 +39,6 @@ pre, code, kbd, samp, var, tt, .spip_code, .spip_cadre { font-family: 'Courier N
 pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #EEE; }
 .spip_cadre { width: 100%; padding-right: 0; padding-bottom: 0; border: 0; overflow: scroll; }
 
-/* Portfolio */
-#documents_portfolio { clear: both; margin: 1.5em auto; text-align: center; }
-#documents_portfolio .spip_logos { border: 1px solid #DDD; }
-#documents_portfolio a.on .spip_logos { border-color: #F57900; }
-#documents_portfolio a:focus .spip_logos,
-#documents_portfolio a:hover .spip_logos,
-#documents_portfolio a:active .spip_logos { border-color: #8B6F92; }
-
 /* Formulaires : variantes et cas particuliers
 ----------------------------------------------- */
 .formulaire_spip { margin-bottom: 1.5em; padding: 1.5em 50px; background-color: #F5F5F5; }
