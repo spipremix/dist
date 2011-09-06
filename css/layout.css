@@ -7,8 +7,7 @@
 -------------------------------------------------------------- */
 
 body { text-align: center; background: #EEE url(img/background.jpg) fixed; }
-.page { position: relative; width: 800px; margin: 0 auto 1.5em; padding: 50px; background: #FFF; text-align: left;
--webkit-box-shadow: 0 0 4em #666; -moz-box-shadow: 0 0 4em #666; box-shadow: 0 0 4em #666; }
+.page { position: relative; width: 900px; margin: 0 auto; padding: 50px; text-align: left;  }
 
 .header { width: 100%; }
 .wrapper { clear: both; float: left; width: 70%; overflow: hidden; }
@@ -19,9 +18,12 @@ body { text-align: center; background: #EEE url(img/background.jpg) fixed; }
 /* Gabarit d'impression */
 @media print {
 	.nav,
+	.arbo,
 	.aside,
 	.footer { display: none; }
+	.header { margin-bottom: 1.5em; }
 	.page,
+	.wrapper,
 	.content { width: auto; }
 }
 
@@ -30,7 +32,7 @@ body { text-align: center; background: #EEE url(img/background.jpg) fixed; }
 ------------------------------------------ */
 
 .header { padding-bottom: 1.5em; border-bottom: 1px solid; }
-.header #logo { margin: 0; line-height: 1; font-weight: bold; text-decoration: none; font-weight: normal; }
+.header #logo { margin: 0; line-height: 1; font-weight: bold; font-weight: normal; }
 .header #logo,
 .header #logo a,
 .header #logo a:hover { background: transparent; text-decoration: none; color: #222; }
