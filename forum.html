@@ -23,29 +23,24 @@
 	[(#REM) Contenu : poster un message dans le forum ]
     <div class="wrapper">
     <div class="content" id="content">
-
         <p class="arbo"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; ... &gt; <strong class="on"><:forum:forum:> #ID_FORUM</strong></p><!--.arbo-->
 
         <div class="cartouche">
-            <h1>#TITRE</h1>
-			<small>[(#DATE|affdate_jourcourt)][&nbsp;(#DATE|heures)][:(#DATE|minutes)][, <:par_auteur:> <span class="#EDIT{qui}">(#NOM|couper{80})</span>]</small>
+            [<h1>(#TITRE|sinon{<:forum:forum:> #ID_FORUM})</h1>]
         </div>
-		<div class="#EDIT{texte}">
-			[(#TEXTE|lignes_longues)]
-			[<div class="notes" id="notes">(#NOTES|lignes_longues)</div>]
-			[<p class="#EDIT{hyperlien} hyperlien"><:voir_en_ligne:> : <a href="(#URL_SITE)" class="spip_out">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
-
-			<BOUCLE_doc(DOCUMENTS){id_forum}>
-			[(#EXTENSION|match{'^(gif|jpg|png)$'}|?{
-				[(#MODELE{emb}|image_reduire{500,*})]
-			,
-				#LOGO_DOCUMENT{#URL_DOCUMENT}
-			})]
-			</BOUCLE_doc>
+		<p class="comment-meta">
+			<small><abbr class="dtreviewed"[ title="(#DATE|date_iso)"]>[(#DATE|affdate_jourcourt)][, (#DATE|heures)][:(#DATE|minutes)]</abbr>[<span class="sep">, </span><:par_auteur:> <span class="#EDIT{qui}">(#NOM|couper{80})</span>]</small></a>
+		</p>
+		<div class="comment-content">
+			[<div class="#EDIT{texte} comment-texte">(#TEXTE|lignes_longues)</div>]
+			[<div class="comment-notes">(#NOTES|lignes_longues)</div>]
+			[<p class="#EDIT{hyperlien} hyperlien"><:voir_en_ligne:> : <a href="(#URL_SITE|attribut_html)" class="spip_out">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
+			[<div class="comment-doc"><:medias:info_document:> : (#ENV{ajouter_document}|table_valeur{name})</div>]
+			<B_mots><p class="comment-mots"><:forum:forum_avez_selectionne:> <BOUCLE_mots(MOTS){id_mot IN #ENV**{ajouter_mot}}{par num type}{par type}{par num titre}{par titre}{', '}>#TITRE</BOUCLE_mots></p></B_mots>
 		</div>
-
-
-        #FORMULAIRE_FORUM
+		
+		[<h2><:forum:form_pet_message_commentaire:></h2>
+		(#FORMULAIRE_FORUM)]
 
 	</div><!--.content-->
 	</div><!--.wrapper-->
