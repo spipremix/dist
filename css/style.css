@@ -9,7 +9,7 @@
 /* Habillage des elements du contenu
 /* ------------------------------------------ */
 
-.arbo { clear: both; font-size: .9em; color: #DCC; }
+.arbo { clear: both; font-size: .9em; color: #DDC; }
 .arbo * { font-weight: normal; }
 
 .cartouche { margin-bottom: 1.5em; }
@@ -145,8 +145,10 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 
 /* Listes d'articles et extraits introductifs */
 .menu_articles li { clear: both; margin-bottom: 1.5em; }
+.menu_articles li h3,
+.menu_articles li h2 { margin: 0; }
 .menu_articles li p { margin: 0; }
-.menu_articles li small { display: block; font-style: italic; }
+.menu_articles li small { display: block; margin: .45em 0; font-style: italic; }
 .menu_articles li .enclosures { float: right; text-align: right; max-width: 60%; margin: 0; }
 
 /* Hyperliens
