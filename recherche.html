@@ -31,10 +31,10 @@
 		
 		[(#REM) Articles trouves ]
 		<B_articles>
-		<div class="menu articles">
+		<div class="menu">
 			#ANCRE_PAGINATION
 			<h2><:articles:> (#GRAND_TOTAL)</h2>
-			<ul>
+			<ul class="spip">
 				<BOUCLE_articles(ARTICLES) {recherche} {!par points} {pagination}>
 				<li><a href="#URL_ARTICLE">#TITRE</a></li>
 				</BOUCLE_articles>
@@ -45,10 +45,10 @@
 		
 		[(#REM) Rubriques trouvees ]
 		<B_rubriques>
-		<div class="menu rubriques">
+		<div class="menu">
 			#ANCRE_PAGINATION
 			<h2><:rubriques:> (#GRAND_TOTAL)</h2>
-			<ul>
+			<ul class="spip">
 				<BOUCLE_rubriques(RUBRIQUES) {recherche} {!par points} {pagination 5}>
 				<li><a href="#URL_RUBRIQUE">#TITRE</a></li>
 				</BOUCLE_rubriques>
@@ -62,7 +62,7 @@
 		<div class="menu">
 			#ANCRE_PAGINATION
 			<h2><:mots_clefs:> (#GRAND_TOTAL)</h2>
-			<ul>
+			<ul class="spip">
 				<BOUCLE_mots(MOTS) {recherche} {!par points} {pagination 5}>
 				<li><a href="#URL_MOT">#TITRE</a></li>
 				</BOUCLE_mots>
@@ -76,7 +76,7 @@
 		<div class="menu">
 			#ANCRE_PAGINATION
 			<h2><:breves:breves:> (#GRAND_TOTAL)</h2>
-			<ul>
+			<ul class="spip">
 				<BOUCLE_breves(BREVES) {recherche} {!par points} {pagination 5}>
 				<li><a href="#URL_BREVE">#TITRE</a></li>
 				</BOUCLE_breves>
@@ -90,7 +90,7 @@
 		<div class="menu">
 			#ANCRE_PAGINATION
 			<h2><:messages_forum:> (#GRAND_TOTAL)</h2>
-			<ul>
+			<ul class="spip">
 				<BOUCLE_messages(FORUMS?) {recherche} {!par points} {pagination 5}>
 				<li><a href="#URL_FORUM"[ title="(#TITRE|attribut_html|couper{80})"]>[(#TEXTE|couper{80})]</a></li>
 				</BOUCLE_messages>
@@ -104,7 +104,7 @@
 		<div class="menu">
 			#ANCRE_PAGINATION
 			<h2><:sites_web:> (#GRAND_TOTAL)</h2>
-			<ul>
+			<ul class="spip">
 				<BOUCLE_sites(SITES) {recherche} {!par points} {pagination 5}>
 				<li><a href="[(#ID_SYNDIC|generer_url_entite{site,'','',#CONNECT})]">#NOM_SITE</a></li>
 				</BOUCLE_sites>

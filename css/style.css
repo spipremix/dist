@@ -125,17 +125,14 @@ ul .forum-chapo { margin: 0; font-weight: bold; }
 
 /* Pagination */
 .pagination a,
-.pagination .on  { padding: .2em .5em; }
+.pagination .on  { padding: .2em .5em; margin: 0 1px; }
 .pagination a { background: #EEE; text-decoration: none; }
 .pagination .on { font-weight: bold; background: #222; color: #fff; }
 .pagination .sep { display: none; }
 
 /* Listes d'articles et extraits introductifs */
-.articles ul li { clear: both; padding: .40em .20em; }
-.articles ul li h3 { margin: .30em 0; }
-.articles .spip_logos {}
+.articles ul li { clear: both; margin-bottom: 1.5em; }
 .articles ul li .enclosures { float: right; text-align: right; max-width: 60%; margin: 0; }
-.articles ul li .introduction { margin-top: .30em; }
 
 /* Hyperliens
 ---------------------------------------------- */
