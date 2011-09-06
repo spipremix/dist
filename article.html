@@ -27,11 +27,9 @@
         <p class="arbo"><a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_article}> &gt; <a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</p>
 
 		<div class="cartouche">
-			[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{40,*})]
 			[<p class="#EDIT{surtitre} surtitre">(#SURTITRE)</p>]
-			<h1 class="h1 #EDIT{titre}">#TITRE</h1>
+			<h1 class="h1 #EDIT{titre}">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{40,*}) ]#TITRE</h1>
 			[<p class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</p>]
-	
 			<p class="info-publi"><abbr class="published" title="[(#DATE|date_iso)]">[(#DATE|nom_jour) ][(#DATE|affdate)]</abbr>[<span class="sep">, </span><span class="auteurs"><:par_auteur:> (#LESAUTEURS)</span>]</p>
 			[(#REM) Inclure le modele des liens de traductions ]
 			#MODELE{article_traductions}
@@ -83,7 +81,7 @@
         
     </div><!--.aside-->
 
-	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/footer} />
 
 </div><!--.page-->
 </body>

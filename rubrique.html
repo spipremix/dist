@@ -38,13 +38,13 @@
 
         [(#REM) Articles de la rubrique ]
         <B_articles>
-        <div class="menu articles">
+        <div class="menu menu_articles">
             #ANCRE_PAGINATION
             <ul>
                 <BOUCLE_articles(ARTICLES) {id_rubrique} {!par date} {pagination}>
                 <li>
                     <strong><a href="#URL_ARTICLE">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{40,*}) ]#TITRE</a></strong>
-                    <br /><small>[(#DATE|affdate_jourcourt)][, <:par_auteur:> (#LESAUTEURS)]</small>
+                    <br /><small>[(#DATE|affdate_jourcourt)][, <:par_auteur:> (#LESAUTEURS|supprimer_tags)]</small>
                 </li>
                 </BOUCLE_articles>
             </ul>
@@ -54,19 +54,19 @@
 
         [(#REM) Si aucun article, affiche un plan de la rubrique ]
         <B_sous_rubriques>
-        <div class="menu rubriques">
+        <div class="menu menu_rubriques">
             <h2><:sous_rubriques:></h2>
             <ul>
                 <BOUCLE_sous_rubriques(RUBRIQUES) {id_parent} {par num titre}{!par date}>
                 <li>
-                    <a href="#URL_RUBRIQUE">[(#TITRE)]</a>
+                    <a href="#URL_RUBRIQUE">#TITRE</a>
 
                     [(#REM) Une boucle recursive pour le mini plan]
                     <B_miniplan>
                     <ul>
                         <BOUCLE_miniplan(RUBRIQUES) {id_parent} {par num titre}{!par date}>
                         <li>
-                            <a href="#URL_RUBRIQUE">[(#TITRE)]</a>
+                            <a href="#URL_RUBRIQUE">#TITRE</a>
                             <BOUCLE_m2(BOUCLE_miniplan)></BOUCLE_m2>
                         </li>
                         </BOUCLE_miniplan>
@@ -157,7 +157,7 @@
         
     </div><!--.aside-->
 
-	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/footer} />
 
 </div><!--.page-->
 </body>

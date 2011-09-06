@@ -44,7 +44,7 @@ body { text-align: center; background: #FFF url(img/background.jpg); }
 .nav ul {}
 .nav ul li {}
 .nav ul li a { float: left; display: block; padding: .5em 1em; border-right: 1px solid #222; text-decoration: none; }
-.nav ul li.on a { background: #EEE; color: #222; }
+.nav ul li.on a { background: #EEE; color: #222; font-weight: normal; }
 .nav ul li a:focus,
 .nav ul li a:hover,
 .nav ul li a:active { background: #222; color: #FFF; }
