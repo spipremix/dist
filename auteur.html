@@ -38,10 +38,10 @@
 
         [(#REM) Articles de l'auteur ]
         <B_articles>
-        <div class="menu articles">
+        <div class="menu">
             #ANCRE_PAGINATION
             <h2><:articles_auteur:> (#GRAND_TOTAL)</h2>
-            <ul>
+            <ul class="spip">
                 <BOUCLE_articles(ARTICLES) {id_auteur} {!par popularite} {pagination 10}>
                 <li><a href="#URL_ARTICLE">#TITRE</a></li>
                 </BOUCLE_articles>
@@ -77,7 +77,7 @@
 
     </div><!--.aside-->
 
-	<INCLURE{fond=inclure/footer, skel=#SQUELETTE} />
+	<INCLURE{fond=inclure/footer} />
 
 </div><!--.page-->
 </body>
