@@ -29,14 +29,13 @@ abbr.published { border: 0; }
 .notes { clear: both; }
 
 /* Listes et tableaux */
-dl.spip {}
 dl.spip dt { background: url(img/def.png) no-repeat 25px .5em; }
 dl.spip dd {}
 
 table.spip caption {  background: none; border-bottom: 1px solid; text-align: left; font-weight: bold; }
 table.spip thead th { background: none; border: 1px solid; border-width: 1px 0; }
 table.spip tr td { background: none; }
-table.spip tr.row_odd td { background: #F5F5F5; }
+table.spip tr.odd td { background: #F5F5F5; }
 table.spip tfoot { border-top: 1px solid; }
 
 /* Citations */
