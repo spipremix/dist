@@ -28,19 +28,19 @@ abbr.published { border: 0; }
 /* Listes et tableaux */
 dl.spip {}
 dl.spip dt { background: url(img/def.png) no-repeat 25px .5em; }
-dl.spip dd
+dl.spip dd {}
 
-table.spip caption { background-color: #DDD; }
+table.spip caption {  background: none; border-bottom: 1px solid; text-align: left; font-weight: bold; }
 table.spip thead th { background: none; border: 1px solid; border-width: 1px 0; }
 table.spip tr td { background: none; }
-table.spip tr.row_odd td { background: #EEE; }
+table.spip tr.row_odd td { background: #F5F5F5; }
+table.spip tfoot { border-top: 1px solid; }
 
 /* Citations */
-blockquote, pre, div.spip_code, .spip_cadre { padding: 1.5em 50px; }
-blockquote { padding-bottom: .1em; background: #EEE url(img/quote.png) no-repeat 3px 1.5em; }
-.spip_poesie { padding-bottom: 1.5em; }
+blockquote { min-height: 40px; background: url(img/quote.png) no-repeat 3px 0; }
+pre, div.spip_code, .spip_cadre { padding: 1.5em 50px; }
 pre, code, kbd, samp, var, tt, .spip_code, .spip_cadre { font-family: 'Courier New', Courier, monospace; }
-pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #EEE; }
+pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #F5F5F5; }
 .spip_cadre { width: 100%; padding-right: 0; padding-bottom: 0; border: 0; overflow: scroll; }
 
 /* Formulaires : variantes et cas particuliers
@@ -90,13 +90,12 @@ ul.forum, ul.forum ul { list-style: none; }
 .forum-fil { margin-top: 1.5em; }
 .forum-fil ul { display: block; margin: 0; padding: 0; }
 .forum-chapo .forum-titre,
-.forum-chapo .forum-titre a { margin: 0; padding: 0; color: #333; }
-.forum-texte { margin: 0; color: #333; }
+.forum-chapo .forum-titre a { margin: 0; padding: 0; color: #222; }
+.forum-texte { margin: 0; color: #222; }
 .forum-texte .hyperlien { padding: 0; background: transparent; font-weight: normal; }
 
 ul .forum-message { margin: 0 0 2em; padding: 0; }
 ul .forum-chapo { margin: 0; font-weight: bold; }
-
 
 
 /* Habillage des petitions
@@ -128,7 +127,7 @@ ul .forum-chapo { margin: 0; font-weight: bold; }
 .pagination a,
 .pagination .on  { padding: .2em .5em; }
 .pagination a { background: #EEE; text-decoration: none; }
-.pagination .on { font-weight: bold; background: #333; color: #fff; }
+.pagination .on { font-weight: bold; background: #222; color: #fff; }
 .pagination .sep { display: none; }
 
 /* Listes d'articles et extraits introductifs */
