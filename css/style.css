@@ -34,7 +34,9 @@ dl.spip dd {}
 
 table.spip caption {  background: none; border-bottom: 1px solid; text-align: left; font-weight: bold; }
 table.spip thead th { background: none; border: 1px solid; border-width: 1px 0; }
+table.spip tbody tr th,
 table.spip tr td { background: none; }
+table.spip tbody tr.odd th,
 table.spip tr.odd td { background: #F5F5F5; }
 table.spip tfoot { border-top: 1px solid; }
 
@@ -48,10 +50,15 @@ pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #F5F5F5; }
 /* Formulaires : variantes et cas particuliers
 ----------------------------------------------- */
 .formulaire_spip { margin-bottom: 1.5em; }
+.aside .formulaire_spip { padding-top: 1.3em; border-top: 4px solid; }
+fieldset { width: 100%; margin: 0;
+-ms-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box; }
+legend { display: none; }
 label { display: block; }
 .erreur_message { display: block; }
 input.text,textarea {
-width: 100%;
 -ms-box-sizing: border-box;
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
@@ -59,15 +66,13 @@ box-sizing: border-box;
 background-color: #EED;
 border: 4px solid #EED;
 }
-fieldset { margin: 0; }
+input.text { width: 50%; }
+textarea { width: 100%; }
 
 /* Selection des langues */
 .formulaire_menu_lang { margin: 0; padding: 0; background: none; }
 
 /* Formulaires de recherche (site / petitions) */
-.formulaire_recherche { margin: 0; padding: 0; background: none; }
-.formulaire_recherche * { display: inline; vertical-align: middle; }
-.formulaire_recherche label {}
 .formulaire_recherche input.text { width: 10em; padding-left: 20px; background-image: url(img/recherche.png); background-repeat: no-repeat; background-position: left center; }
 .formulaire_recherche input.submit {}
 
@@ -82,6 +87,10 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .formulaire_login ul li { clear: left; }
 .formulaire_login .editer_password .details { display: block; }
 .formulaire_login #spip_logo_auteur { float: right; }
+
+/* Fomulaire de contact */
+.formulaire_ecrire_auteur {}
+.formulaire_ecrire_auteur .saisie_sujet_message_auteur input.text { width: 100%; }
 
 /* Habillage des forums
 ---------------------------------------------- */
@@ -100,11 +109,10 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 /* Formulaire de forum */
 .formulaire_forum {}
 .formulaire_forum legend { display: none; }
-.formulaire_forum input.text { width: 50%; }
 .formulaire_forum .saisie_titre input.text { width: 100% }
 .formulaire_forum .session_qui { display: none; }
 .formulaire_forum .saisie_texte .explication { font-size: .9em; font-style: italic; }
-.markItUpSeparator { display: none; }
+
 .markItUp .markItUpHeader ul li { margin: 0 10px 10px 0; }
 .markItUp .markItUpHeader ul a { margin: 0; padding: 4px; border-radius: 3px; box-shadow: 0 1px 2px #CCC; }
 .markItUp .markItUpHeader ul a:focus,
@@ -113,17 +121,12 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 
 /* Habillage des petitions
 ---------------------------------------------- */
-#signatures { clear: both; margin: 0 0 2em 0; padding: 0; background: none; }
-#signatures table { width: 100%; margin: 1em 0 0 0; }
-#signatures thead { text-align: center; color: #555; }
-#signatures td { padding: .50em; border: 2px solid #FEFEFE; vertical-align: top; }
-#signatures td.signature-date { background: #E4F0F0; text-align: center; white-space: nowrap; }
-#signatures td.signature-nom { background: #ECF4F4; text-align: center; }
-#signatures td.signature-nom small { display: block; }
-#signatures td.signature-message { background: #F4F8F8; }
-#signatures .formulaire_recherche { margin: 1em 0; text-align: right; } /*Cf.: spip_formulaires.css*/
-#signatures .formulaire_recherche input.text { width: 10em; text-align: left; } /*Cf.: spip_formulaires.css*/
+#signatures {}
+#signatures td.signature-date small { white-space: nowrap; }
+#signatures .formulaire_recherche { margin: 1.5em auto; text-align: center; }
 
+/* Formulaire de signature */
+.formulaire_signature {}
 
 /* ------------------------------------------
 /* Sous-navigation et autres menus

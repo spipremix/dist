@@ -56,7 +56,9 @@ caption { background: #EEE; }
 th { font-weight: bold; }
 thead th { background: #DDD; }
 th,td,caption { padding: 0.75em; }
+tbody tr:nth-child(even) th,
 tbody tr:nth-child(even) td,
+tbody tr.even th,
 tbody tr.even td { background: #EEE; }
 tfoot { font-style: italic; }
 

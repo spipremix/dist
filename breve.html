@@ -29,9 +29,8 @@
         <p class="arbo"><a href="#URL_SITE_SPIP/" ><:accueil_site:></a><BOUCLE_ariane(RUBRIQUES){id_rubrique}> &gt; <a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</p>
 
         <div class="cartouche">
-            [(#LOGO_BREVE_RUBRIQUE|image_reduire{40,*})]
-            <h1 class="#EDIT{titre}">#TITRE</h1>
-            <p><small><abbr class="published" title="[(#DATE|date_iso)]">[(#DATE|nom_jour) ][(#DATE|affdate)]</abbr></small></p>
+            <h1 class="#EDIT{titre}">[(#LOGO_BREVE_RUBRIQUE|image_reduire{40,*}) ]#TITRE</h1>
+            <p class="info-publi"><abbr class="published" title="[(#DATE|date_iso)]">[(#DATE|nom_jour) ][(#DATE|affdate)]</abbr></p>
         </div>
         
         [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
@@ -42,7 +41,7 @@
         NB : pour desactiver les forums de breve, supprimez simplement les lignes ci-dessous ]
         <a href="#forum" name="forum" id="forum"></a>
         <INCLURE{fond=inclure/forum, id_breve} />
-        [<h2><:forum:form_pet_message_commentaire:></h2>
+        [<h2><:forum:form_message_commentaire:></h2>
 		(#FORMULAIRE_FORUM)]
 
 	</div><!--.content-->

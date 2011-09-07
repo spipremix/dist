@@ -49,8 +49,7 @@ body { text-align: center; background: #FFF url(img/background.jpg); }
 .nav ul li a:hover,
 .nav ul li a:active { background: #222; color: #FFF; }
 
-.formulaire_recherche { position: absolute; top: 50px; right: 50px; }
-.formulaire_recherche * { display: inline; }
+#formulaire_recherche { position: absolute; top: 50px; right: 50px; }
 
 .footer .colophon { float: left; height: 40px; width: 90%; font-size: .9em; }
 .footer .generator { float: right; }
