@@ -32,7 +32,7 @@
             <h1 class="#EDIT{titre}">[(#LOGO_RUBRIQUE|image_reduire{40,*}) ]#TITRE</h1>
         </div>
 
-        [<div class="#EDIT{texte} chapo">(#TEXTE)</div>]
+        [<div class="#EDIT{texte} texte">(#TEXTE)</div>]
 
         [(#REM) Articles de la rubrique ]
         <B_articles>
@@ -54,7 +54,7 @@
         <B_sous_rubriques>
         <div class="menu menu_rubriques">
             <h2><:sous_rubriques:></h2>
-            <ul>
+            <ul class="spip">
                 <BOUCLE_sous_rubriques(RUBRIQUES) {id_parent} {par num titre}{!par date}>
                 <li>
                     <a href="#URL_RUBRIQUE">#TITRE</a>
@@ -84,7 +84,7 @@
         <B_documents_joints>
         <div class="menu" id="documents_joints">
             <h2><:medias:titre_documents_joints:></h2>
-            <ul>
+            <ul class="spip">
                 <BOUCLE_documents_joints(DOCUMENTS) {id_rubrique} {mode=document} {par num titre, date} {doublons}>
                 <li>
 					<a href="(#URL_DOCUMENT)" type="#MIME_TYPE" class="spip_doc[ (#EXTENSION|attribut_html)]"><strong class="#EDIT{titre} titre">[(#TITRE|sinon{[(#FICHIER|basename|couper{80})]})]</strong>
