@@ -32,11 +32,15 @@
 		
 		[(#REM) Breves ]
 		<B_breves>
-		<div class="menu">
+		<div class="menu menu_breves">
 			<h2><:dernieres_breves:></h2>
 			<ul>
-				<BOUCLE_breves(BREVES) {!par date} {0,5}>
-				<li>[(#DATE|affdate_jourcourt) &ndash; ]<a href="#URL_BREVE">#TITRE</a></li>
+				<BOUCLE_breves(BREVES) {!par date} {0,3}>
+				<li>
+					[<small>(#DATE|affdate_jourcourt)</small>]
+					<h3><a href="#URL_BREVE">#TITRE</a></h3>
+					#INTRODUCTION
+				</li>
 				</BOUCLE_breves>
 			</ul>
 		</div>
@@ -44,11 +48,11 @@
 		
 		[(#REM) Liens des forums ]
 		<B_forums_liens>
-		<div class="menu">
+		<div class="menu menu_comments">
 			<h2><:derniers_commentaires:></h2>
 			<ul>
 				<BOUCLE_forums_liens(FORUMS?) {plat} {!par date} {0,5}>
-				<li>[(#DATE|affdate_jourcourt) &ndash; ]<a href="#URL_FORUM"[ title="(#TITRE|attribut_html|couper{80})"]>[(#TEXTE|couper{80})]</a></li>
+				[<li>[(#NOM)&nbsp;: ]<a href="#URL_FORUM"[ title="(#TITRE|attribut_html|couper{80})"]>(#TEXTE|couper{80})</a></li>]
 				</BOUCLE_forums_liens>
 			</ul>
 		</div>

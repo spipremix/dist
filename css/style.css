@@ -159,6 +159,10 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .menu_articles li small { font-style: italic; }
 .menu_articles li .enclosures { float: right; text-align: right; max-width: 60%; margin: 0; }
 
+.menu_breves li {}
+.menu_breves li h3 { margin: 0; }
+
+
 /* Hyperliens
 ---------------------------------------------- */
 a { color: #900; text-decoration: none; }
