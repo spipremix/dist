@@ -26,7 +26,7 @@ abbr.published { border: 0; }
 .texte {}
 .hyperlien { display: block; padding: 1.5em 50px; background: #EEE url(img/def.png) no-repeat 25px 1.9em; font-weight: bold; }
 .ps, .notes { margin-bottom: 1.5em; }
-.notes { clear: both; }
+.notes { clear: both; font-size: .9em; }
 
 /* Listes et tableaux */
 dl.spip dt { background: url(img/def.png) no-repeat 25px .5em; }
@@ -41,7 +41,7 @@ table.spip tr.odd td { background: #F5F5F5; }
 table.spip tfoot { border-top: 1px solid; }
 
 /* Citations */
-blockquote { min-height: 40px; background: url(img/quote.png) no-repeat 3px 0; }
+blockquote { min-height: 40px; background: url(img/quote.png) no-repeat; }
 pre, div.spip_code, .spip_cadre { padding: 1.5em 50px; }
 pre, code, kbd, samp, var, tt, .spip_code, .spip_cadre { font-family: 'Courier New', Courier, monospace; }
 pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #F5F5F5; }
@@ -117,6 +117,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .formulaire_forum .session_qui { display: none; }
 .formulaire_forum .saisie_texte .explication { font-size: .9em; font-style: italic; }
 
+/* Barre typo */
 .markItUp .markItUpHeader ul li { margin: 0 10px 10px 0; }
 .markItUp .markItUpHeader ul a { margin: 0; padding: 4px; border-radius: 3px; box-shadow: 0 1px 2px #CCC; }
 .markItUp .markItUpHeader ul a:focus,
@@ -155,7 +156,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .menu_articles li h3,
 .menu_articles li h2 { margin: 0; }
 .menu_articles li p { margin: 0; }
-.menu_articles li small { display: block; margin: .45em 0; font-style: italic; }
+.menu_articles li small { font-style: italic; }
 .menu_articles li .enclosures { float: right; text-align: right; max-width: 60%; margin: 0; }
 
 /* Hyperliens
