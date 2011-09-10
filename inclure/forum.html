@@ -2,21 +2,19 @@
 la premiere fois qu'un message est poste (cf. inc/invalideur). ]
 [(#PARAMETRES_FORUM|?{''})]
 
-[(#REM) Nombre total de messages ]
-<BOUCLE_decompte(FORUMS?) {id_rubrique ?}{id_article ?}{id_breve ?}{id_syndic ?} {plat} />[<h2>(#TOTAL_BOUCLE|>{0}|?{#TOTAL_BOUCLE,''})
-[(#TOTAL_BOUCLE|=={1}|?{<:message:>,<:messages_forum:>})]</h2>]<//B_decompte>
+<h2><:messages_forum:></h2>
 
 [(#REM) Messages du forum ]
-<B_forums>
-<ul class="forum">
+<B_comments>
+<ul class="comments-list">
 
-	<BOUCLE_forums(FORUMS?) {id_rubrique ?}{id_article ?}{id_breve ?}{id_syndic ?} {par date}>
-
-	<li class="forum-fil">
-
+	<BOUCLE_comments(FORUMS?) {id_rubrique ?}{id_article ?}{id_breve ?}{id_syndic ?} {par date}>
+	<li class="comment-item comment-fil[ (#COMPTEUR_BOUCLE|alterner{'odd','even'})][ (#COMPTEUR_BOUCLE|=={1}|oui)first][ (#EXPOSE)]">
 		<div class="comment hreview">
+			<a href="#comment#ID_FORUM" name="comment#ID_FORUM" id="comment#ID_FORUM"></a>
+			<a href="#forum#ID_FORUM" name="forum#ID_FORUM" id="forum#ID_FORUM"></a>
 			<p class="comment-meta">
-				<a rel="self bookmark" href="#forum#ID_FORUM" title="<:forum:forum_permalink:> #ID_FORUM" class="permalink">
+				<a rel="self bookmark" href="#forum#ID_FORUM" title="<:forum:forum_permalink:> #ID_FORUM" class="permalink"><span class="permalink">#COMPTEUR_BOUCLE.</span>
 				<strong class="#EDIT{titre} comment-titre">[ (#TITRE), ]</strong>
 				<small><abbr class="dtreviewed"[ title="(#DATE|date_iso)"]>[(#DATE|affdate_jourcourt)][, (#DATE|heures)][:(#DATE|minutes)]</abbr>[<span class="sep">, </span><:par_auteur:> <span class="#EDIT{qui}">(#NOM|couper{80})</span>]</small></a>
 			</p>
@@ -24,7 +22,6 @@ la premiere fois qu'un message est poste (cf. inc/invalideur). ]
 				[(#TEXTE|lignes_longues)]
 				[<div class="comment-notes">(#NOTES|safehtml|lignes_longues)</div>]
 				[<p class="#EDIT{hyperlien} hyperlien"><:voir_en_ligne:> : <a href="(#URL_SITE)" class="spip_out">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
-
 				<B_doc><div class="comment-doc"><BOUCLE_doc(DOCUMENTS){id_forum}>
 				[(#EXTENSION|match{'^(gif|jpg|png)$'}|?{
 					[(#MODELE{emb}|image_reduire{500,*})]
@@ -34,9 +31,8 @@ la premiere fois qu'un message est poste (cf. inc/invalideur). ]
 				</BOUCLE_doc></div></B_doc>
 			</div>
 		</div>
-
 	</li>
-	</BOUCLE_forums>
+	</BOUCLE_comments>
 
 </ul>
-</B_forums>
+</B_comments>

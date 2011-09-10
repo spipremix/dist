@@ -31,7 +31,7 @@
 		
 		[(#REM) Articles trouves ]
 		<B_articles>
-		<div class="menu">
+		<div class="menu menu_articles">
 			#ANCRE_PAGINATION
 			<h2><:articles:> (#GRAND_TOTAL)</h2>
 			<ul class="spip">
@@ -45,7 +45,7 @@
 		
 		[(#REM) Rubriques trouvees ]
 		<B_rubriques>
-		<div class="menu">
+		<div class="menu menu_rubriques">
 			#ANCRE_PAGINATION
 			<h2><:rubriques:> (#GRAND_TOTAL)</h2>
 			<ul class="spip">
@@ -59,7 +59,7 @@
 		
 		[(#REM) Mots-cles trouves ]
 		<B_mots>
-		<div class="menu">
+		<div class="menu menu_mots">
 			#ANCRE_PAGINATION
 			<h2><:mots_clefs:> (#GRAND_TOTAL)</h2>
 			<ul class="spip">
@@ -73,7 +73,7 @@
 		
 		[(#REM) Breves trouvees ]
 		<B_breves>
-		<div class="menu">
+		<div class="menu menu_breves">
 			#ANCRE_PAGINATION
 			<h2><:breves:breves:> (#GRAND_TOTAL)</h2>
 			<ul class="spip">
@@ -87,12 +87,12 @@
 		
 		[(#REM) Messages trouves ]
 		<B_messages>
-		<div class="menu">
+		<div class="menu menu_comments">
 			#ANCRE_PAGINATION
 			<h2><:messages_forum:> (#GRAND_TOTAL)</h2>
 			<ul class="spip">
 				<BOUCLE_messages(FORUMS?) {recherche} {!par points} {pagination 5}>
-				<li><a href="#URL_FORUM"[ title="(#TITRE|attribut_html|couper{80})"]>[(#TEXTE|couper{80})]</a></li>
+				[<li><a href="#URL_FORUM"[ title="(#TITRE|attribut_html|couper{80})"]>(#TEXTE|couper{80})</a></li>]
 				</BOUCLE_messages>
 			</ul>
 			[<p class="pagination">(#PAGINATION)</p>]
@@ -101,7 +101,7 @@
 		
 		[(#REM) Sites web trouves ]
 		<B_sites>
-		<div class="menu">
+		<div class="menu menu_sites">
 			#ANCRE_PAGINATION
 			<h2><:sites_web:> (#GRAND_TOTAL)</h2>
 			<ul class="spip">
