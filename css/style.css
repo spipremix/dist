@@ -100,7 +100,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 ---------------------------------------------- */
 
 /* Habillage des forums */
-.comment-fil ul { display: block; margin: 0; padding: 0; }
+.comment-fil ul {}
 .comment-meta { margin: 0; font-weight: bold; }
 .comment-meta abbr { border: 0; }
 .comment-meta a { color: #222; }
@@ -118,11 +118,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .formulaire_forum .saisie_texte .explication { font-size: .9em; font-style: italic; }
 
 /* Barre typo */
-.markItUp .markItUpHeader ul li { margin: 0 10px 10px 0; }
-.markItUp .markItUpHeader ul a { margin: 0; padding: 4px; border-radius: 3px; box-shadow: 0 1px 2px #CCC; }
-.markItUp .markItUpHeader ul a:focus,
-.markItUp .markItUpHeader ul a:active { -moz-transform: translateY(1px); outline: none !important; }
-.markItUp .markItUpHeader ul a:active { box-shadow: inset 0 1px 1px #CCC; }
+.markItUp .markItUpHeader ul li { margin: 0 10px 10px 0 !important; }
 
 /* Habillage des petitions
 ---------------------------------------------- */
