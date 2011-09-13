@@ -117,9 +117,6 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .formulaire_forum .session_qui { display: none; }
 .formulaire_forum .saisie_texte .explication { font-size: .9em; font-style: italic; }
 
-/* Barre typo */
-.markItUp .markItUpHeader ul li { margin: 0 10px 10px 0 !important; }
-
 /* Habillage des petitions
 ---------------------------------------------- */
 #signatures {}
