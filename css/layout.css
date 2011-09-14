@@ -32,7 +32,7 @@ body { text-align: center; background: #FFF url(img/background.jpg); }
 ------------------------------------------ */
 
 .header { padding-bottom: 1.5em; padding-right: 30%; border-bottom: 1px solid; }
-.header #logo { margin: 0; line-height: 1; font-weight: bold; font-weight: bold; }
+.header #logo { margin: 0; line-height: 1; font-weight: bold;  }
 .header #logo,
 .header #logo a,
 .header #logo a:hover { background: transparent; text-decoration: none; color: #222; }
