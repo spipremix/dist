@@ -9,11 +9,13 @@
 body { text-align: center; background: #FFF url(img/background.jpg); }
 .page { position: relative; width: 900px; margin: 0 auto; padding: 50px; text-align: left;  }
 
-.header { /*width: 100%;*/ }
+.header {}
+.main { margin: 1.5em 0; }
+.footer { clear: both; padding: 1.5em 0; border-top: 4px solid; }
+
 .wrapper { clear: both; float: left; width: 70%; overflow: hidden; }
 .content { min-height: 350px; }
 .aside { float: right; width: 25%; overflow: hidden; }
-.footer { clear: both; width: 100%; margin: 1.5em 0 0; padding: 1.5em 0; border-top: 4px solid; }
 
 /* Gabarit d'impression */
 @media print {
@@ -40,7 +42,7 @@ body { text-align: center; background: #FFF url(img/background.jpg); }
 
 .formulaire_menu_lang { position: absolute; right: 0; top: .9em; display: block; width: 30%; }
 
-.nav { margin-bottom: 1.5em; border: solid #222; border-width: 1px 0; }
+.nav { border: solid #222; border-width: 1px 0; }
 .nav ul {}
 .nav ul li {}
 .nav ul li a { float: left; display: block; padding: .5em 1em; border-right: 1px solid #222; text-decoration: none; }
