@@ -62,7 +62,7 @@ Cf.: http://www.alsacreations.com/astuce/lire/1177
 ------------------------------------------ */
 @media (max-width: 640px) {
 
-/* passer tous les éléments de largeur fixe en largeur automatique */
+/* passer tous les elements de largeur fixe en largeur automatique */
 body,
 .page,
 .header,
@@ -74,7 +74,7 @@ body,
 
 .page { margin: 0; padding: 1%; }
 
-/* Passer à une seule colonne (à appliquer aux éléments multi-colonnes) */
+/* Passer a une seule colonne (a appliquer aux elements multi-colonnes) */
 .content,
 .aside { clear: both; float: none !important; width: auto !important; }
 #formulaire_recherche { display: none; position: static; text-align: center; }
