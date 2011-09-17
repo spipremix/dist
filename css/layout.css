@@ -10,24 +10,12 @@ body { text-align: center; background: #FFF url(img/background.jpg); }
 .page { position: relative; width: 900px; margin: 0 auto; padding: 50px; text-align: left;  }
 
 .header {}
-.main { margin: 1.5em 0; }
+.main { padding: 1.5em 0; }
 .footer { clear: both; padding: 1.5em 0; border-top: 4px solid; }
 
 .wrapper { clear: both; float: left; width: 70%; overflow: hidden; }
 .content { min-height: 350px; }
 .aside { float: right; width: 25%; overflow: hidden; }
-
-/* Gabarit d'impression */
-@media print {
-	.nav,
-	.arbo,
-	.aside,
-	.footer { display: none; }
-	.header { margin-bottom: 1.5em; }
-	.page,
-	.wrapper,
-	.content { width: auto; }
-}
 
 
 /* Entete et barre de navigation
@@ -55,5 +43,43 @@ body { text-align: center; background: #FFF url(img/background.jpg); }
 
 .footer .colophon { float: left; height: 40px; width: 90%; font-size: .9em; }
 .footer .generator { float: right; }
+.footer .generator a { padding: 0; background: none; }
+
+/* Gabarit d'impression
+------------------------------------------ */
+@media print {
+.page,
+.wrapper,
+.content { width: auto; }
+.nav,
+.arbo,
+.aside,
+.footer { display: none; }
+}
+
+/* Affichage sur petits ecrans
+Cf.: http://www.alsacreations.com/astuce/lire/1177
+------------------------------------------ */
+@media (max-width: 640px) {
+
+/* passer tous les éléments de largeur fixe en largeur automatique */
+body,
+.page,
+.header,
+.main,
+.footer,
+.wrapper,
+.content,
+.aside { width: auto !important; margin: auto !important; padding: auto !important; }
+
+.page { margin: 0; padding: 1%; }
+
+/* Passer à une seule colonne (à appliquer aux éléments multi-colonnes) */
+.content,
+.aside { clear: both; float: none !important; width: auto !important; }
+#formulaire_recherche { display: none; position: static; text-align: center; }
+.arbo { display: none; }
+
+}
 
 /* end */
