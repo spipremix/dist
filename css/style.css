@@ -24,7 +24,7 @@ abbr.published { border: 0; }
 
 .chapo { font-weight: bold; }
 .texte {}
-.hyperlien { display: block; padding: 1.5em 50px; background: #EEE url(img/def.png) no-repeat 25px 1.9em; font-weight: bold; }
+.hyperlien { display: block; padding: 1.5em 50px; background: #EED url(img/def.png) no-repeat 25px 1.9em; font-weight: bold; }
 .ps, .notes { margin-bottom: 1.5em; }
 .notes { clear: both; font-size: .9em; }
 
@@ -37,14 +37,14 @@ table.spip thead th { background: none; border: 1px solid; border-width: 1px 0; 
 table.spip tbody tr th,
 table.spip tr td { background: none; }
 table.spip tbody tr.odd th,
-table.spip tr.odd td { background: #F5F5F5; }
+table.spip tr.odd td { background: #EED; }
 table.spip tfoot { border-top: 1px solid; }
 
 /* Citations */
 blockquote { min-height: 40px; background: url(img/quote.png) no-repeat; }
 pre, div.spip_code, .spip_cadre { padding: 1.5em 50px; }
 pre, code, kbd, samp, var, tt, .spip_code, .spip_cadre { font-family: 'Courier New', Courier, monospace; }
-pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: rgba(245,245,245,0.25); }
+pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #EED; }
 .spip_cadre { width: 100%; padding-right: 0; padding-bottom: 0; border: 0; overflow: scroll; }
 
 /* Formulaires : variantes et cas particuliers
@@ -138,7 +138,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 /* Pagination */
 .pagination a,
 .pagination .on  { padding: .2em .5em; margin: 0 1px; }
-.pagination a { background: #EEE; text-decoration: none; }
+.pagination a { background: #EED; text-decoration: none; }
 .pagination .on { font-weight: bold; background: #222; color: #fff; }
 .pagination .sep { display: none; }
 
