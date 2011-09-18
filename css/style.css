@@ -44,7 +44,7 @@ table.spip tfoot { border-top: 1px solid; }
 blockquote { min-height: 40px; background: url(img/quote.png) no-repeat; }
 pre, div.spip_code, .spip_cadre { padding: 1.5em 50px; }
 pre, code, kbd, samp, var, tt, .spip_code, .spip_cadre { font-family: 'Courier New', Courier, monospace; }
-pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #F5F5F5; }
+pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: rgba(245,245,245,0.25); }
 .spip_cadre { width: 100%; padding-right: 0; padding-bottom: 0; border: 0; overflow: scroll; }
 
 /* Formulaires : variantes et cas particuliers
