@@ -100,12 +100,12 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 /* Habillage des forums */
 .comment-fil ul {}
 .comment-meta { margin: 0; font-weight: bold; }
+.comment-meta small { font-size: 100%; }
 .comment-meta abbr { border: 0; }
 .comment-meta a { color: #222; }
 .comment-meta a:focus,
 .comment-meta a:hover,
 .comment-meta a:active { color: #fff; }
-.comment-meta .comment-titre { display: none; }
 .comment-content .hyperlien { padding: 0; background: transparent; font-weight: normal; }
 
 /* Formulaire de forum */

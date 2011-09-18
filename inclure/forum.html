@@ -13,8 +13,8 @@ la premiere fois qu'un message est poste (cf. inc/invalideur). ]
 			<a href="#comment#ID_FORUM" name="comment#ID_FORUM" id="comment#ID_FORUM"></a>
 			<a href="#forum#ID_FORUM" name="forum#ID_FORUM" id="forum#ID_FORUM"></a>
 			<p class="comment-meta">
-				<a rel="self bookmark" href="#forum#ID_FORUM" title="<:forum:forum_permalink:> #ID_FORUM" class="permalink"><span class="permalink">#COMPTEUR_BOUCLE.</span>
-				<strong class="#EDIT{titre} comment-titre">[ (#TITRE), ]</strong>
+				<a rel="self bookmark" href="#forum#ID_FORUM" title="<:forum:forum_permalink:> #ID_FORUM" class="permalink">[(#CONFIG{forums_titre}|!={non}|oui)<span class="permalink">#COMPTEUR_BOUCLE.</span>
+				<strong class="#EDIT{titre} comment-titre">[(#TITRE), ]</strong>]
 				<small><abbr class="dtreviewed"[ title="(#DATE|date_iso)"]>[(#DATE|affdate_jourcourt)][, (#DATE|heures)][:(#DATE|minutes)]</abbr>[<span class="sep">, </span><:par_auteur:> <span class="#EDIT{qui}">(#NOM|couper{80})</span>]</small></a>
 			</p>
 			<div class="#EDIT{texte} comment-content description">
