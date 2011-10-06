@@ -80,6 +80,9 @@ body,
 #formulaire_recherche { display: none; position: static; text-align: center; }
 .arbo { display: none; }
 
+
+/* header du calendrier full-calendar */
+table.fc-header td {display: block;text-align: left;}
 }
 
 /* end */
