@@ -21,12 +21,17 @@ body { text-align: center; background: #FFF url(img/background.png); }
 /* Entete et barre de navigation
 ------------------------------------------ */
 
-.header { padding-bottom: 1.5em; padding-right: 30%; border-bottom: 1px solid; }
-.header #logo { margin: 0; line-height: 1; font-weight: bold;  }
+.header { padding-bottom: 1em;  border-bottom: 1px solid; }
+.header #logo { 
+margin: 0 0 .3em 0; 
+line-height: 1.1em; 
+font-weight: bold; 
+display: block; /* pas forcément appliqué à une balise inline */ 
+}
 .header #logo,
 .header #logo a,
 .header #logo a:hover { background: transparent; text-decoration: none; color: #222; }
-.header #slogan { margin: 0; }
+.header #slogan { margin:  0;  clear: right; }
 
 .formulaire_menu_lang { position: absolute; right: 0; top: .9em; display: block; width: 30%; }
 
@@ -39,7 +44,7 @@ body { text-align: center; background: #FFF url(img/background.png); }
 .nav ul li a:hover,
 .nav ul li a:active { background: #222; color: #FFF; }
 
-#formulaire_recherche { position: absolute; top: 50px; right: 50px; }
+#formulaire_recherche { float: right; margin: 0 0 0 1em;  }
 
 .footer .colophon { float: left; height: 40px; width: 90%; font-size: .9em; }
 .footer .generator { float: right; }

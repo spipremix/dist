@@ -59,7 +59,10 @@ width: 100%; margin: 0;
 legend { display: none; }
 label { display: block; }
 .erreur_message { display: block; }
-input.text,textarea {
+input[type="search"] { /* supprimer pour que webkit ajoute le bouton effacer dans le champ */
+-webkit-appearance: textfield;
+}
+input.text, textarea {
 width: 100%;
 -ms-box-sizing: border-box;
 -webkit-box-sizing: border-box;
@@ -75,8 +78,17 @@ textarea { width: 100%; }
 .formulaire_menu_lang { margin: 0; padding: 0; background: none; }
 
 /* Formulaires de recherche (site / petitions) */
-.formulaire_recherche input.text { width: 10em; padding-left: 20px; background-image: url(img/recherche.png); background-repeat: no-repeat; background-position: left center; }
-.formulaire_recherche input.submit {}
+.formulaire_recherche label { display: block; font-size: 90%;  }
+.formulaire_recherche input.text { width: 10em; min-height: 28px; border: 0; }
+.formulaire_recherche input.submit {
+background: #EED  url(img/bouton_recherche.png) no-repeat center center;
+border: 0;
+border-left: 1px solid #d9d9b3; 
+color: #EED;
+}
+.formulaire_recherche input.submit:hover,
+.formulaire_recherche input.submit:focus { background-color: #d9d9b3; }
+#formulaire_recherche * { vertical-align: middle; }
 
 /* Choix des mots-clefs */
 ul.choix_mots { display: block; margin: 0; padding: 0; list-style: none; }
