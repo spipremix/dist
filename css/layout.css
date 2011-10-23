@@ -72,17 +72,18 @@ body,
 .content,
 .aside { width: auto !important; margin: auto !important; padding: auto !important; }
 
-.page { margin: 0; padding: 1%; }
+.page { margin: 0; padding: 5%; }
 
 /* Passer a une seule colonne (a appliquer aux elements multi-colonnes) */
 .content,
 .aside { clear: both; float: none !important; width: auto !important; }
+.nav ul li a { float: none; border: 0; }
 #formulaire_recherche { display: none; position: static; text-align: center; }
 .arbo { display: none; }
 
-
 /* header du calendrier full-calendar */
-table.fc-header td {display: block;text-align: left;}
+table.fc-header td { display: block; text-align: left; }
+
 }
 
 /* end */
