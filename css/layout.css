@@ -77,7 +77,6 @@ body,
 /* Passer a une seule colonne (a appliquer aux elements multi-colonnes) */
 .content,
 .aside { clear: both; float: none !important; width: auto !important; }
-.nav { background: #EEE; }
 .nav ul li a { float: none; border: 0; }
 #formulaire_recherche { display: none; position: static; text-align: center; }
 .arbo { display: none; }
