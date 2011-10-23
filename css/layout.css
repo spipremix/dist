@@ -6,12 +6,12 @@
 
 -------------------------------------------------------------- */
 
-body { text-align: center; background: #FFF url(img/background.png); }
+body { text-align: center; background: #FFF url(img/background.png); border-top: 5px solid; }
 .page { position: relative; width: 900px; margin: 0 auto; padding: 50px; text-align: left;  }
 
 .header {}
 .main { padding: 1.5em 0; }
-.footer { clear: both; padding: 1.5em 0; border-top: 4px solid; }
+.footer { clear: both; padding: 1.5em 0; border-top: 2px solid; }
 
 .wrapper { clear: both; float: left; width: 70%; overflow: hidden; }
 .content { min-height: 350px; }
