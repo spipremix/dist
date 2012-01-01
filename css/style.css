@@ -18,6 +18,10 @@
 .surtitre{}
 .soustitre {}
 abbr.published { border: 0; }
+@media print {
+	abbr[title].published:after { content: ""; }
+	abbr[title].dtreviewed:after { content: ""; }
+}
 .info-publi { margin: 1.5em 0 0; font-size: .9em; font-style: italic; }
 .traductions { font-size: .9em; }
 .traductions a[hreflang]:after { content: ''; }
