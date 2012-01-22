@@ -119,6 +119,8 @@ Cf.: http://www.alsacreations.com/astuce/lire/1177
 
 	/* fixer une largeur maximale  de 100 % aux elements potentiellement problematiques */
 	img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video { max-width: 100% !important; }
+	/* conserver le ratio des images, necessaire car attribut height existant */
+	img { height: auto; }
 	
 	/* gestion des mots longs */
 	textarea, table, td, th, code, pre, samp { word-wrap: break-word; /* cesure forcee */ }
