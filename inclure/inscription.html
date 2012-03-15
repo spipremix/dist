@@ -1,0 +1,14 @@
+[(#REM) On récupère le statut par défaut de l'inscription, selon la configuration de SPIP ]
+#SET{mode,#VAL|tester_config}
+
+[(#REM) On n'affiche le bloc d'inscription et l'explication que si
+	soit le visiteur est anonyme
+	soit le visiteur a un compte plus petit que celui proposé par l'inscription
+]
+[(#SESSION{statut}|et{#SESSION{statut}|<={#GET{mode}}}|non)
+<div class="inscription">
+	<h2><:pass_vousinscrire:></h2>
+	[<p class="explication">(#GET{mode}|=={1comite}|?{<:pass_espace_prive_bla:>,<:pass_forum_bla:>})</p>]
+	#FORMULAIRE_INSCRIPTION
+</div>
+]
