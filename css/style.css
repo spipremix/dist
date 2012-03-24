@@ -114,6 +114,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 ---------------------------------------------- */
 
 /* Habillage des forums */
+.comments-items .comments-items {margin-left: 25px;padding-left: 20px;border-left:5px solid #ddd;}
 .comment-fil ul {}
 .comment-meta { margin: 0; font-weight: bold; }
 .comment-meta small { font-size: 100%; }
