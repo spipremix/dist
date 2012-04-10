@@ -1,6 +1,6 @@
 /* --------------------------------------------------------------
 
-   clear.css.html
+   clear.css
    Classes pour faciliter la composition
    Cf.: http://www.spip-contrib.net/3820
 
@@ -53,6 +53,6 @@ hr.clear { visibility: hidden; }
 /* debug */
 .todo { opacity: 0.5; }
 .todo:hover { opacity: 1; }
-.blink { text-decoration: blink; } 
+.blink { text-decoration: blink; }
 
 /* end */
