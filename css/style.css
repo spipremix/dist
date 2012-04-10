@@ -1,7 +1,6 @@
 /* --------------------------------------------------------------
 
-   style.css
-   Habillage distroy - romy.tetue.net - 2011
+   Theme pour la dist de SPIP 3
 
 -------------------------------------------------------------- */
 
@@ -43,13 +42,6 @@ table.spip tr td { background: none; }
 table.spip tbody tr.odd th,
 table.spip tr.odd td { background: #EED; }
 table.spip tfoot { border-top: 1px solid; }
-
-/* Citations */
-blockquote { min-height: 40px; background: url(img/quote.png) no-repeat; }
-pre, div.spip_code, .spip_cadre { padding: 1.5em 50px; }
-pre, code, kbd, samp, var, tt, .spip_code, .spip_cadre { font-family: 'Courier New', Courier, monospace; }
-pre, code, samp, var, tt, .spip_code, .spip_cadre { background-color: #EED; }
-.spip_cadre { width: 100%; padding-right: 0; padding-bottom: 0; border: 0; overflow: scroll; }
 
 /* Formulaires : variantes et cas particuliers
 ----------------------------------------------- */

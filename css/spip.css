@@ -1,8 +1,6 @@
 /* --------------------------------------------------------------
 
-   spip.css.html
    Styles associes au code genere par SPIP
-   Cf.: http://www.spip-contrib.net/3821
 
 -------------------------------------------------------------- */
 
@@ -20,18 +18,18 @@ dl.spip dt { clear: both; }
 dl.spip dd {}
 
 /* Tableaux SPIP */
-table.spip { margin-bottom: 1.5em; width: 100%; }
+table.spip { width: 100%; }
 table.spip caption {}
 table.spip tr.row_first th {}
 table.spip tr.odd td {}
 table.spip tr.even td {}
 
 /* Citations, code et poesie */
-blockquote.spip {}
-.spip_poesie {}
+blockquote.spip { min-height: 40px; background: url(img/quote.png) no-repeat; }
+.spip_poesie { border-left: 1px solid; }
 .spip_poesie div { margin-left: 50px; text-indent: -50px; }
 .spip_code,
-.spip_cadre { font-family: 'andale mono','lucida console',monospace; font-size: 1em; }
+.spip_cadre { font-family: 'Courier New', Courier, monospace; font-size: 1em; }
 
 /* Enluminures typo V3 / Cf.: http://www.spip-contrib.net/3118 */
 sc, .sc { font-variant: small-caps; }
@@ -59,7 +57,7 @@ sc, .sc { font-variant: small-caps; }
 /* Formulaires */
 .formulaire_spip {}
 .formulaire_spip li { clear: both; margin-bottom: 0.75em; }
-.formulaire_spip .boutons { clear: both; margin: 0; padding: 0; }
+.formulaire_spip .boutons { clear: both; margin: 0; padding: 0; text-align: right; }
 .formulaire_spip .boutons input,
 .formulaire_spip .boutons button {}
 @media print {
