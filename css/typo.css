@@ -1,69 +1,9 @@
 /* --------------------------------------------------------------
 
-  Base CSS
-
--------------------------------------------------------------- */
-
-/* 1 *
-   
-   Reset
-   http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
--------------------------------------------------------------- */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* Bicubic resizing for non-native sized IMG:
-   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
-.ie7 img { -ms-interpolation-mode: bicubic; }
-
-
-/* 2 *
-   
+   typo.css
    Base typographique
+   Cf.: http://www.spip-contrib.net/3820
+
 -------------------------------------------------------------- */
 
 html { font-size: 100.01%; } /* pour IE < 6 */
@@ -195,112 +135,16 @@ a[hreflang]:after { content: "\0000a0(" attr(hreflang) ")"; }
   body { -webkit-text-size-adjust: 70%; }
 }
 
+/*
 
-/* 3 *
-   
-   Base pour formulaires
--------------------------------------------------------------- */
+    ATTENTION
+    L'usage de proprietes -webkit-* sans leurs contreparties
+    (-o-*, -moz-*, etc.) est fortement deconseille !
+    cf. http://www.webstandards.org/2012/02/09/call-for-action-on-vendor-prefixes/
 
-input,textarea,select,button { font-family: inherit; font-size: 100%; font-weight: inherit; line-height: inherit; }
+    Prenez le temps de corriger s'il vous plait : les proprietes CSS prefixees ne sont en theorie
+    destinees qu'a des fins de test.
 
-legend { font-weight: bold; }
-
-/* Hand cursor on clickable input elements */
-input[type="submit"],input.submit,
-input[type="button"],input.button,
-input[type="image"],input.image,
-button { cursor: pointer; }
-
-textarea { overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
-
-.ie fieldset { padding-top: 0; }
-.ie6 legend,
-.ie7 legend { margin-left: -7px; } /* Preciser la couleur des legend et du fond pour IE/Win */
-.ie button,
-.ie input.submit,
-.ie input.button { position: relative; }
-
-button { width: auto; overflow: visible; } /* Make buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
-
-/* Success, info, notice and error/alert boxes (from BluePrint) */
-
-.reponse,
-.error,
-.alert, 
-.notice,
-.success, 
-.info     { padding: .8em; margin-bottom: 1.5em; border: 2px solid #ddd; }
-
-.error,
-.alert      { background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; }
-.notice     { background: #fff6bf; color: #514721; border-color: #ffd324; }
-.success    { background: #e6efc2; color: #264409; border-color: #c6d880; }
-.info     { background: #d5edf8; color: #205791; border-color: #92cae4; }
-
-.error a,
-.alert a      { color: #8a1f11; }
-.notice a   { color: #514721; }
-.success a    { color: #264409; }
-.info a     { color: #205791; }
-
-/* Print */
-@media print {
-  form { display: none; }
-}
-
-
-/* 4 *
-   
-   Classes pour faciliter la composition
--------------------------------------------------------------- */
-
-/* Blocs */
-.bloc { display: block; margin-bottom: 1.5em; }
-.box { display: block; margin-bottom: 1.5em; padding: 1.5em; background: #EEE; }
-
-/* Listes, tableaux et mosaiques */
-.first { margin-left: 0; padding-left: 0; }
-.last { margin-right: 0; padding-right: 0; }
-.top { margin-top: 0; padding-top: 0; }
-.bottom { margin-bottom: 0; padding-bottom: 0; }
-.odd {}
-.even {}
-.sep {}
-
-/* Alignements */
-.left { float: left !important; }
-.right { float: right !important; }
-.center { text-align: center; margin-right: auto; margin-left: auto; }
-
-/* Espaceur de blocs */
-.clear { clear: both; }
-br.clear { clear: both; margin: 0; padding: 0; border: 0; height: 0; line-height: 1px; font-size: 1px; }
-hr.clear { visibility: hidden; }
-
-/* clearfix : http://www.positioniseverything.net/easyclearing.html */
-.clearfix:after {
-    content: "\0020";
-    display: block; 
-    height: 0; 
-    clear: both; 
-    visibility: hidden;
-    overflow: hidden;
-}
-.clearfix { display: inline-table; }
-
-/* Hides from IE-mac \*/
-.clearfix { height: 1%; }
-.clearfix { display: block; }
-/* End hide from IE-mac */
-
-/* Non visible a l'ecran */
-.offscreen { position: absolute; left: -999em; height: 1%; }
-.hidden { visibility: hidden; }
-.none { display: none; }
-
-/* debug */
-.todo { opacity: 0.5; }
-.todo:hover { opacity: 1; }
-.blink { text-decoration: blink; }
+*/
 
 /* end */
