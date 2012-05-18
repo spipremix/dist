@@ -21,8 +21,8 @@ body { text-align: center; background: #FFF url(img/background.png); border-top:
 /* Entete et barre de navigation
 ------------------------------------------ */
 
-.header { padding-bottom: 1em;  border-bottom: 1px solid; }
-.header #logo { display: block; margin: 0; line-height: 1; font-weight: bold; }
+.header { padding-bottom: 1.5em; padding-right: 30%; border-bottom: 1px solid; }
+.header #logo { display: block; margin: 0; line-height: 1; font-weight: bold;  }
 .header #logo,
 .header #logo a,
 .header #logo a:hover { background: transparent; text-decoration: none; color: #222; }
@@ -39,7 +39,7 @@ body { text-align: center; background: #FFF url(img/background.png); border-top:
 .nav ul li a:hover,
 .nav ul li a:active { background: #222; color: #FFF; }
 
-#formulaire_recherche { float: right; margin: 0 0 0 1em;  }
+#formulaire_recherche { position: absolute; top: 50px; right: 50px; border: 0; }
 
 .footer .colophon { float: left; height: 40px; width: 70%; margin: 0; }
 .footer .generator { float: right; }
