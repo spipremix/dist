@@ -14,6 +14,9 @@
 	<langue code="it" url="http://trad.spip.net/tradlang_module/paquet-dist?lang_cible=it">
 		<traducteur nom="phante" lien="http://trad.spip.net/auteur/phante" />
 	</langue>
+	<langue code="lb" url="http://trad.spip.net/tradlang_module/paquet-dist?lang_cible=lb">
+		<traducteur nom="jwander" lien="http://trad.spip.net/auteur/jwander" />
+	</langue>
 	<langue code="pt_br" url="http://trad.spip.net/tradlang_module/paquet-dist?lang_cible=pt_br">
 		<traducteur nom="Ricardo Porto" lien="http://trad.spip.net/auteur/ricardo-porto" />
 	</langue>
