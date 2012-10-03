@@ -30,14 +30,14 @@ body { text-align: center; background: #FFF url(img/background.png); border-top:
 
 .formulaire_menu_lang { position: absolute; right: 0; top: .9em; display: block; width: 30%; }
 
-.nav { border: solid #222; border-width: 1px 0; }
-.nav ul {}
-.nav ul li {}
-.nav ul li a { float: left; display: block; padding: .5em 1em; border-right: 1px solid #222; text-decoration: none; }
-.nav ul li.on a { background: #EED; color: #222; font-weight: normal; }
-.nav ul li a:focus,
-.nav ul li a:hover,
-.nav ul li a:active { background: #222; color: #FFF; }
+.navbar { border: solid #222; border-width: 1px 0; }
+.nav {}
+.nav li {}
+.nav li a { float: left; display: block; padding: .5em 1em; border-right: 1px solid #222; text-decoration: none; }
+.nav li.on a { background: #EED; color: #222; font-weight: normal; }
+.nav li a:focus,
+.nav li a:hover,
+.nav li a:active { background: #222; color: #FFF; }
 
 #formulaire_recherche { position: absolute; top: 50px; right: 50px; border: 0; }
 
