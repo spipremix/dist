@@ -1,11 +1,9 @@
 <B_nav>
-<div class="navbar clearfix[ (#TOTAL_BOUCLE|=={1}|oui)none]" id="nav">
-    <div class="navbar-inner">
-        <ul class="nav">
-            <BOUCLE_nav(RUBRIQUES) {racine} {par num titre, titre}>
-            <li[ class="(#EXPOSE{on active})"]><a href="#URL_RUBRIQUE">#TITRE</a></li>
-            </BOUCLE_nav>
-        </ul>
-    </div>
+<div class="nav clearfix[ (#TOTAL_BOUCLE|=={1}|oui)none]" id="nav">
+	<ul>
+		<BOUCLE_nav(RUBRIQUES) {racine} {par num titre, titre}>
+		<li[ class="(#EXPOSE)"]><a href="#URL_RUBRIQUE">#TITRE</a></li>
+		</BOUCLE_nav>
+	</ul>
 </div>
 </B_nav>
