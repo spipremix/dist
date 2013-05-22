@@ -10,9 +10,26 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion du formulaire pour écrire à un auteur
+ *
+ * @package SPIP\Dist\Formulaires
+**/
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
+/**
+ * Chargement du formulaire pour écrire à un auteur
+ *
+ * L'adresse courriel de l'émetteur est pré-remplie avec l'adresse
+ * de l'auteur connecté.
+ * 
+ * @param int $id_auteur   Identifiant de l'auteur, si connu
+ * @param int $id_article  Identifiant de l'article, si connu
+ * @param string $mail     Courriel(s) du ou des auteurs
+ * @return array
+ *     Environnement du formulaire
+**/
 function formulaires_ecrire_auteur_charger_dist($id_auteur, $id_article, $mail){
 	include_spip('inc/texte');
 	$puce = definir_puce();
@@ -31,6 +48,20 @@ function formulaires_ecrire_auteur_charger_dist($id_auteur, $id_article, $mail){
 	return $valeurs;
 }
 
+/**
+ * Vérifications du formulaire pour écrire à un auteur
+ *
+ * L'email doit être valide, le message et le texte complété.
+ *
+ * Retourne une (fausse) erreur tant que la prévisualisation du message
+ * envoyé n'est pas validée.
+ * 
+ * @param int $id_auteur   Identifiant de l'auteur, si connu
+ * @param int $id_article  Identifiant de l'article, si connu
+ * @param string $mail     Courriel(s) du ou des auteurs
+ * @return array
+ *     Erreurs du formulaire
+**/
 function formulaires_ecrire_auteur_verifier_dist($id_auteur, $id_article, $mail){
 	$erreurs = array();
 	include_spip('inc/filtres');
@@ -59,6 +90,19 @@ function formulaires_ecrire_auteur_verifier_dist($id_auteur, $id_article, $mail)
 	return $erreurs;
 }
 
+/**
+ * Traitements du formulaire pour écrire à un auteur
+ *
+ * Envoie le courriel aux auteurs destinataires.
+ *
+ * @use inc_envoyer_mail_dist()
+ * 
+ * @param int $id_auteur   Identifiant de l'auteur, si connu
+ * @param int $id_article  Identifiant de l'article, si connu
+ * @param string $mail     Courriel(s) du ou des auteurs
+ * @return array
+ *     Retours des traitements
+**/
 function formulaires_ecrire_auteur_traiter_dist($id_auteur, $id_article, $mail){
 	
 	$adres = _request('email_message_auteur');

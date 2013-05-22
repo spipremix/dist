@@ -10,8 +10,31 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion du formulaire d'inscription d'un nouvel auteur
+ *
+ * @package SPIP\Dist\Formulaires
+**/
+
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
+/**
+ * Chargement du formulaire d'inscription d'un auteur
+ *
+ * Le formulaire s'affiche uniquement si
+ * - les inscriptions sont autorisées dans la configuration du site,
+ * - si on n'est pas déjà connecté, avec un statut au moins équivalent
+ *   à celui attribué par cette inscription
+ * 
+ * @use tester_config()
+ * 
+ * @param string $mode
+ *     Statut d'inscription (6forum, 1comite, ...)
+ * @param int $id
+ *     Identifiant éventuel de rubrique
+ * @return array
+ *     Environnement du formulaire
+**/
 function formulaires_inscription_charger_dist($mode='', $id=0) {
 	global $visiteur_session;
 	
@@ -32,7 +55,22 @@ function formulaires_inscription_charger_dist($mode='', $id=0) {
 	return $valeurs;
 }
 
-// Si inscriptions pas autorisees, retourner une chaine d'avertissement
+
+/**
+ * Vérifications du formulaire d'inscription d'un auteur
+ *
+ * Si inscriptions pas autorisées, retourner une chaîne d'avertissement
+ * 
+ * @use tester_config()
+ * @use test_inscription_dist()
+ * 
+ * @param string $mode
+ *     Statut d'inscription (6forum, 1comite, ...)
+ * @param int $id
+ *     Identifiant éventuel de rubrique
+ * @return array
+ *     Erreurs du formulaire
+**/
 function formulaires_inscription_verifier_dist($mode='', $id=0) {
 	
 	include_spip('inc/filtres');
@@ -80,6 +118,21 @@ function formulaires_inscription_verifier_dist($mode='', $id=0) {
 	return $erreurs;
 }
 
+/**
+ * Traitements du formulaire d'inscription d'un auteur
+ *
+ * Inscrit et notifie d'un courriel la personne qui s'inscrit
+ * 
+ * @use tester_config()
+ * @use action_inscrire_auteur_dist()
+ * 
+ * @param string $mode
+ *     Statut d'inscription (6forum, 1comite, ...)
+ * @param int $id
+ *     Identifiant éventuel de rubrique
+ * @return array
+ *     Retours du traitement
+**/
 function formulaires_inscription_traiter_dist($mode='', $id=0) {
 	
 	include_spip('inc/filtres');
