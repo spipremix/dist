@@ -10,10 +10,32 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
+/**
+ * Gestion du formulaire de recréation de mot de passe
+ *
+ * @package SPIP\Dist\Formulaires
+**/
+
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 include_spip('base/abstract_sql');
 
+/**
+ * Retrouve un auteur soit par son identifiant, soit par un jeton attribué
+ * par le formulaire d'oubli de mot de passe
+ *
+ * L'auteur doit en plus : ne pas être à la poubelle et avoir un mot de passe.
+ *
+ * @use auteur_verifier_jeton()
+ * 
+ * @param int|null $id_auteur
+ *     Identifiant de l'auteur, si connu
+ * @param string|null $jeton
+ *     Jeton d'oubli de mot de passe permettant de retrouver l'auteur, si connu
+ * @return array|bool
+ *     - array : Description de l'auteur dans spip_auteurs,
+ *     - false si auteur non retrouvé ou non valide.
+**/
 function retrouve_auteur($id_auteur,$jeton=''){
 	if ($id_auteur=intval($id_auteur)) {
 		return sql_fetsel('*','spip_auteurs',array('id_auteur='.intval($id_auteur),"statut<>'5poubelle'","pass<>''"));
@@ -29,15 +51,22 @@ function retrouve_auteur($id_auteur,$jeton=''){
 	return false;
 }
 
-// chargement des valeurs par defaut des champs du formulaire
 /**
- * Chargement de l'auteur qui peut changer son mot de passe.
- * Soit un cookie d'oubli fourni par #FORMULAIRE_OUBLI est passe dans l'url par &p=
- * Soit un id_auteur est passe en parametre #FORMULAIRE_MOT_DE_PASSE{#ID_AUTEUR}
- * Dans les deux cas on verifie que l'auteur est autorise
+ * Chargement du formulaire de recréation de mot de passe d'un auteur.
+ * 
+ * Soit un cookie d'oubli fourni par `#FORMULAIRE_OUBLI` est passé dans l'URL par `&p=`,
+ * soit un id_auteur est passé en paramètre `#FORMULAIRE_MOT_DE_PASSE{#ID_AUTEUR}`.
+ * 
+ * Dans les deux cas on verifie que l'auteur est autorisé
  *
- * @param int $id_auteur
+ * @use retrouve_auteur()
+ * 
+ * @param int|null $id_auteur
+ *     Identifiant de l'auteur, si connu
+ * @param string|null $jeton
+ *     Jeton d'oubli de mot de passe permettant de retrouver l'auteur, si connu
  * @return array
+ *     Environnement par défaut du formulaire
  */
 function formulaires_mot_de_passe_charger_dist($id_auteur=null, $jeton=null){
 
@@ -60,11 +89,17 @@ function formulaires_mot_de_passe_charger_dist($id_auteur=null, $jeton=null){
 }
 
 /**
- * Verification de la saisie du mot de passe.
- * On verifie qu'un mot de passe est saisi, et que sa longuer est suffisante
- * Ce serait le lieu pour verifier sa qualite (caracteres speciaux ...)
+ * Vérification de la saisie du nouveau mot de passe.
+ * 
+ * On vérifie qu'un mot de passe est saisi, et que sa longuer est suffisante
+ * Ce serait le lieu pour vérifier sa qualité (caractères spéciaux ...)
  *
- * @param int $id_auteur
+ * @param int|null $id_auteur
+ *     Identifiant de l'auteur, si connu
+ * @param string|null $jeton
+ *     Jeton d'oubli de mot de passe permettant de retrouver l'auteur, si connu
+ * @return array
+ *     Erreurs du formulaire
  */
 function formulaires_mot_de_passe_verifier_dist($id_auteur=null, $jeton=null){
 	$erreurs = array();
@@ -90,9 +125,18 @@ function formulaires_mot_de_passe_verifier_dist($id_auteur=null, $jeton=null){
 
 /**
  * Modification du mot de passe d'un auteur.
- * Utilise le cookie d'oubli fourni en url ou l'argument du formulaire pour identifier l'auteur
+ * 
+ * Utilise le cookie d'oubli fourni en URL ou l'argument du formulaire pour identifier l'auteur
  *
- * @param int $id_auteur
+ * @use retrouve_auteur()
+ * @use auteur_effacer_jeton()
+ * 
+ * @param int|null $id_auteur
+ *     Identifiant de l'auteur, si connu
+ * @param string|null $jeton
+ *     Jeton d'oubli de mot de passe permettant de retrouver l'auteur, si connu
+ * @return array
+ *     Retours du traitement
  */
 function formulaires_mot_de_passe_traiter_dist($id_auteur=null, $jeton=null){
 	$message = '';
