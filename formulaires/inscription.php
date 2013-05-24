@@ -26,8 +26,6 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  * - si on n'est pas déjà connecté, avec un statut au moins équivalent
  *   à celui attribué par cette inscription
  * 
- * @use tester_config()
- * 
  * @param string $mode
  *     Statut d'inscription (6forum, 1comite, ...)
  * @param int $id
@@ -59,7 +57,6 @@ function formulaires_inscription_charger_dist($mode='', $id=0) {
  *
  * Si inscriptions pas autorisées, retourner une chaîne d'avertissement
  * 
- * @use tester_config()
  * @use test_inscription_dist()
  * 
  * @param string $mode
@@ -121,7 +118,6 @@ function formulaires_inscription_verifier_dist($mode='', $id=0) {
  *
  * Inscrit et notifie d'un courriel la personne qui s'inscrit
  * 
- * @use tester_config()
  * @use action_inscrire_auteur_dist()
  * 
  * @param string $mode
