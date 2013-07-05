@@ -25,7 +25,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  *     Environnement du formulaire
 **/
 function formulaires_oubli_charger_dist(){
-	$valeurs = array('oubli'=>'');
+	$valeurs = array('oubli'=>'','nobot'=>'');
 	return $valeurs;
 }
 
@@ -136,6 +136,9 @@ function formulaires_oubli_verifier_dist(){
 		elseif ($r[1]['statut'] == '5poubelle' OR $r[1]['pass'] == '')
 			$erreurs['oubli'] =  _T('pass_erreur_acces_refuse');
 	}
+
+	if (_request('nobot'))
+		$erreurs['message_erreur'] = _T('pass_rien_a_faire_ici');
 
 	return $erreurs;
 }
