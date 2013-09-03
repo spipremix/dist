@@ -57,7 +57,7 @@ function formulaires_inscription_charger_dist($mode='', $id=0) {
  *
  * Si inscriptions pas autorisées, retourner une chaîne d'avertissement
  * 
- * @use test_inscription_dist()
+ * @uses test_inscription_dist()
  * 
  * @param string $mode
  *     Statut d'inscription (6forum, 1comite, ...)
@@ -118,7 +118,7 @@ function formulaires_inscription_verifier_dist($mode='', $id=0) {
  *
  * Inscrit et notifie d'un courriel la personne qui s'inscrit
  * 
- * @use action_inscrire_auteur_dist()
+ * @uses action_inscrire_auteur_dist()
  * 
  * @param string $mode
  *     Statut d'inscription (6forum, 1comite, ...)

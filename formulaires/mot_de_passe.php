@@ -26,7 +26,7 @@ include_spip('base/abstract_sql');
  *
  * L'auteur doit en plus : ne pas être à la poubelle et avoir un mot de passe.
  *
- * @use auteur_verifier_jeton()
+ * @uses auteur_verifier_jeton()
  * 
  * @param int|null $id_auteur
  *     Identifiant de l'auteur, si connu
@@ -59,7 +59,7 @@ function retrouve_auteur($id_auteur,$jeton=''){
  * 
  * Dans les deux cas on verifie que l'auteur est autorisé
  *
- * @use retrouve_auteur()
+ * @uses retrouve_auteur()
  * 
  * @param int|null $id_auteur
  *     Identifiant de l'auteur, si connu
@@ -132,8 +132,8 @@ function formulaires_mot_de_passe_verifier_dist($id_auteur=null, $jeton=null){
  * 
  * Utilise le cookie d'oubli fourni en URL ou l'argument du formulaire pour identifier l'auteur
  *
- * @use retrouve_auteur()
- * @use auteur_effacer_jeton()
+ * @uses retrouve_auteur()
+ * @uses auteur_effacer_jeton()
  * 
  * @param int|null $id_auteur
  *     Identifiant de l'auteur, si connu

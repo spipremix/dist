@@ -99,7 +99,7 @@ function formulaires_ecrire_auteur_verifier_dist($id_auteur, $id_article, $mail)
  *
  * Envoie le courriel aux auteurs destinataires.
  *
- * @use inc_envoyer_mail_dist()
+ * @uses inc_envoyer_mail_dist()
  * 
  * @param int $id_auteur   Identifiant de l'auteur, si connu
  * @param int $id_article  Identifiant de l'article, si connu
