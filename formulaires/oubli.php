@@ -34,9 +34,9 @@ function formulaires_oubli_charger_dist(){
  *
  * Le contenu du mail est déterminé par le modèle `mail_oubli`.
  * 
- * @use formulaires_oubli_mail()
- * @use auteur_attribuer_jeton()
- * @use notifications_envoyer_mails()
+ * @uses formulaires_oubli_mail()
+ * @uses auteur_attribuer_jeton()
+ * @uses notifications_envoyer_mails()
  *
  * @param string $email
  *     Email de l'auteur souhaitant réinitialiser son mot de passe
@@ -72,7 +72,7 @@ function message_oubli($email, $param)
  *
  * Génère et envoie l'email pour réinitialiser son mot de passe.
  * 
- * @use message_oubli()
+ * @uses message_oubli()
  * 
  * @return array
  *     Retours des traitements
@@ -115,7 +115,7 @@ function test_oubli_dist($email)
  * Un auteur à la poubelle ou qui n'a pas de mot de passe n'a pas
  * l'autorisation de générer un nouveau mot de passe.
  *
- * @use formulaires_oubli_mail()
+ * @uses formulaires_oubli_mail()
  * 
  * @return array
  *     Tableau des erreurs
@@ -147,7 +147,7 @@ function formulaires_oubli_verifier_dist(){
  * Teste la validité de l'adresse email fournie lors d'un oubli de mot de passe,
  * en vérifiant sa conformité et en retrouvant l'auteur concerné.
  *
- * @use test_oubli_dist()
+ * @uses test_oubli_dist()
  * 
  * @param string $email
  *     Adresse email
