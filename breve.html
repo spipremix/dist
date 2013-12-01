@@ -33,7 +33,7 @@
 				<p class="info-publi"><abbr class="published" title="[(#DATE|date_iso)]">[(#DATE|nom_jour) ][(#DATE|affdate)]</abbr></p>
 			</div>
 			
-			[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+			[<div class="#EDIT{texte} texte surlignable">(#TEXTE|image_reduire{500,*})</div>]
 			[<hr /><p class="#EDIT{hyperlien} hyperlien"><:voir_en_ligne:> : <a href="(#URL_SITE)">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
 			[<div class="notes"><hr />(#NOTES)</div>]
 			
