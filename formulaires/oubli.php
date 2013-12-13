@@ -103,7 +103,7 @@ function test_oubli_dist($email)
 {
 	include_spip('inc/filtres'); # pour email_valide()
 	if (!email_valide($email) )
-		return _T('pass_erreur_non_valide', array('email_oubli' => htmlspecialchars($email)));
+		return _T('pass_erreur_non_valide', array('email_oubli' => spip_htmlspecialchars($email)));
 	return array('mail' => $email);
 }
 
@@ -131,7 +131,7 @@ function formulaires_oubli_verifier_dist(){
 		$erreurs['oubli'] = $r;
 	else {
 		if (!$r[1])
-			$erreurs['oubli'] = _T('pass_erreur_non_enregistre', array('email_oubli' => htmlspecialchars($email)));
+			$erreurs['oubli'] = _T('pass_erreur_non_enregistre', array('email_oubli' => spip_htmlspecialchars($email)));
 
 		elseif ($r[1]['statut'] == '5poubelle' OR $r[1]['pass'] == '')
 			$erreurs['oubli'] =  _T('pass_erreur_acces_refuse');
