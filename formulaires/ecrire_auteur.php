@@ -120,13 +120,11 @@ function formulaires_ecrire_auteur_traiter_dist($id_auteur, $id_article, $mail){
 	$texte .= "\n\n-- "._T('envoi_via_le_site')." ".supprimer_tags(extraire_multi($GLOBALS['meta']['nom_site']))." (".$GLOBALS['meta']['adresse_site']."/) --\n";
 	$envoyer_mail = charger_fonction('envoyer_mail','inc');
 
-	if ($envoyer_mail($mail, $sujet, $texte, $adres,
+	if (!$envoyer_mail($mail, $sujet, $texte, $adres,
 	"X-Originating-IP: ".$GLOBALS['ip']))
-		$message = _T('form_prop_message_envoye');
+		return array('message_ok' => _T('form_prop_message_envoye'));
 	else
-		$message = _T('pass_erreur_probleme_technique');
-
-	return array('message_ok'=>$message);
+		return array('message_erreur' => _T('pass_erreur_probleme_technique'));
 }
 
 ?>
