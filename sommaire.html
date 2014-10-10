@@ -15,8 +15,10 @@
 <body class="pas_surlignable page_sommaire">
 <div class="page">
 
-	<INCLURE{fond=inclure/header}{home=oui} />
-	<INCLURE{fond=inclure/nav,env} />
+	<INCLURE{fond=inclure/header,home=oui} />
+  <div class="nav clearfix" id="nav">
+       <INCLURE{fond=inclure/nav,env} />
+  </div>
 	
 	<div class="main">
 		<div class="wrapper hfeed">
