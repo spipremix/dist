@@ -1,6 +1,8 @@
 [(#REM)
 	Head standard de toutes les pages ;
 	les elements specifiques (title, description) figurent dans chaque squelette
+
+  
 ]
 <meta http-equiv="Content-Type" content="text/html; charset=#CHARSET" />
 
@@ -47,3 +49,6 @@
 [(#REM) Favicon ]
 [<link rel="icon" type="image/x-icon" href="(#CHEMIN{favicon.ico})" />
 [<link rel="shortcut icon" type="image/x-icon" href="(#CHEMIN{favicon.ico})" />]]
+
+[(#REM) meta robots ]
+[<meta name="robots" content="(#ENV{robots})" />]
