@@ -9,6 +9,8 @@ ul, ol {list-style:none;margin-left:0; }
 blockquote {   border:none; padding-left:3em;  }
 blockquote:before { content:"";  /* à terme supprimer l'image quote.png et reintegrer le bon sur blocquote.spip_poesie */ }
 
+h1,.h1 {line-height:1.2;}
+
 /* compatibilite ancienne dist */
 .on {font-weight:bold;}
 
@@ -66,7 +68,7 @@ sc, .sc { font-variant: small-caps; }
 .texteencadre-spip { display: block; margin: 1.5em 50px; padding: 1.5em; background: #EEE; }
 
 /* Logos, documents et images */
-.spip_logos { float: left; margin: 0 10px 10px 0; padding: 0; border: none; }
+.spip_logos { float:right; margin: 0 0 10px 10px; padding:0; border: none; }
 
 .spip_documents { margin-bottom: 1.5em; padding: 0; background: none; }
 .spip_documents,

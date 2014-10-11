@@ -11,9 +11,12 @@
 
 body {font-family: Arial, Georgia,sans-serif; color:#222222;background:#ffffff;}
 
+
+/* fil d'ariane */
 .arbo { clear: both; font-size: .9em; color: #DDC; }
 .arbo * { font-weight: normal; }
-.arbo a:visited {color:#189B14;} 
+.arbo a:visited {color:#189B14;}
+.arbo a:hover {color:#fff;}  
 
 .cartouche { margin-bottom: 1.5em; }
 .cartouche h1 { margin-bottom: 0; }
@@ -155,7 +158,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .menu_breves li h3 { margin: 0; }
 
 .aside h2 {border-bottom:3px solid #999;padding-bottom:.1em;}
-
+.aside li {margin:1em 0;}
 
 /* Hyperliens
 ---------------------------------------------- */
