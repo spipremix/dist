@@ -29,7 +29,7 @@
 			<p class="arbo"><a href="#URL_SITE_SPIP/"><:accueil_site:></a><BOUCLE_ariane(HIERARCHIE){id_rubrique}> &gt; <a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</p><!--.arbo-->
 	
 			<div class="cartouche">
-				<h1 class="#EDIT{titre} surlignable">[(#LOGO_RUBRIQUE|image_reduire{40,*}) ]#TITRE</h1>
+				<h1 class="#EDIT{titre} surlignable">[(#LOGO_RUBRIQUE|image_reduire{220,*}) ]#TITRE</h1>
 			</div>
 	
 			[<div class="#EDIT{texte} texte surlignable">(#TEXTE|image_reduire{500,*})</div>]
@@ -41,7 +41,7 @@
 				<ul>
 					<BOUCLE_articles(ARTICLES) {id_rubrique} {!par date} {pagination}>
 					<li>
-						<strong><a href="#URL_ARTICLE">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{40,*}) ]#TITRE</a></strong>
+						<strong><a href="#URL_ARTICLE">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{220,*}) ]#TITRE</a></strong>
 						<br /><small>[(#DATE|affdate_jourcourt)][, <:par_auteur:> (#LESAUTEURS|supprimer_tags)]</small>
 					</li>
 					</BOUCLE_articles>
