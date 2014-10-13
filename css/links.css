@@ -45,13 +45,16 @@ a[hreflang]:after {
   content: "\0000a0[" attr(hreflang) "]";
 }
 /* External Links */
+a.spip_out:after,
 a.external:after {
   content: "\0000a0\279A";
 }
+a[hreflang].spip_out:after,
 a[hreflang].external:after {
   content: "\0000a0[" attr(hreflang) "]\0000a0\279A";
 }
 /* mailto / tel */
+a.spip_mail:after,
 a.mailto:after {
   content: "\0000a0\2709";
 }
