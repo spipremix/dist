@@ -48,12 +48,13 @@ table.spip tbody tr th,
 table.spip tr td { background: none; }
 table.spip tbody tr.odd th,
 table.spip tr.odd td { background: #EED; }
+table.spip tr:hover td {background: #AAD;}
 table.spip tfoot { border-top: 1px solid; }
 
 /* Formulaires : variantes et cas particuliers
 ----------------------------------------------- */
 .formulaire_spip { margin-bottom: 1.5em; }
-.aside .formulaire_spip { padding-top: 1.3em; background:#f6f6f6;padding:1em; }
+.aside .formulaire_spip { padding-top: 1.3em; background:#EED;padding:1em; }
 fieldset {
 width: 100%; margin: 0;
 -ms-box-sizing: border-box;
@@ -153,7 +154,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .menu_articles li h3,
 .menu_articles li h2 { margin: 0 0 0.2em 0; }
 .menu_articles li p { margin: 0; }
-.menu_articles li small { background:#eee; padding:.25em .5em;  }
+.menu_articles li small { background:#EED; padding:.25em .5em;  }
 .menu_articles li .enclosures { float: right; text-align: right; max-width: 60%; margin: 0; }
 .menu_articles li div {margin-top:0.2em;margin-bottom:0.5em;}
 .menu_articles a {text-decoration:none;}
