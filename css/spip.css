@@ -49,12 +49,19 @@ blockquote.spip { min-height: 40px; background: url(img/quote.png) no-repeat; }
    font-family: 'Courier New', Courier, monospace; 
    font-size: 1em;  
    margin:0 .2em;
+}
 
+.spip_code {   
    border: 1px solid #dfdfcd;
    background-color: rgba(227,227,211,0.5);
    color: #3b3b25;
-   text-shadow: 0 1px 0 #fdfdfc;
+   text-shadow: 0 1px 0 #fdfdfc;   
+}
 
+.spip_cadre { 
+   background:#333;
+   color:#fff;
+   border-radius:0.5em;
 }
 
 textarea.spip_code, 
