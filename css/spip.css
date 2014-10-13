@@ -8,6 +8,8 @@
 ul, ol {list-style:none;margin-left:0; }
 blockquote {   border:none; padding-left:3em;  }
 blockquote:before { content:"";  /* à terme supprimer l'image quote.png et reintegrer le bon sur blocquote.spip_poesie */ }
+s,  strike,del, .del { opacity:1;}
+a:link {transition:0;}
 
 h1,.h1 {line-height:1.2;}
 
@@ -90,6 +92,8 @@ sc, .sc { font-variant: small-caps; }
 .formulaire_spip .boutons { clear: both; margin: 0; padding: 0; text-align: right; }
 .formulaire_spip .boutons input,
 .formulaire_spip .boutons button {}
+.formulaire_spip input.text, 
+.formulaire_spip textarea {padding:.2em;}
 @media print {
 	.formulaire_spip { display: none; }
 }
