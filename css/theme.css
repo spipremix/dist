@@ -9,9 +9,9 @@
 /* Habillage des elements du contenu
 /* ------------------------------------------ */
 
-body {font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Luxi Sans', Arial, sans-serif; color:#222222;background:#ffffff;}
+body {font-family: "Luxi sans", "Lucida Grande", Lucida, "Lucida Sans Unicode", sans-serif;; color:#222222;background:#ffffff;}
 
-
+    
 /* fil d'ariane */
 .arbo { clear: both; font-size: .9em; color: #ACACAC; }
 .arbo * { font-weight: normal; }
@@ -79,8 +79,8 @@ textarea { width: 100%; }
 .formulaire_menu_lang { margin: 0; padding: 0; background: none; }
 
 /* Formulaires de recherche (site / petitions) */
-.formulaire_recherche input.text { width: 10em; padding-left: 20px; background-image: url(img/recherche.png); background-repeat: no-repeat; background-position: left center; }
-.formulaire_recherche input.submit {}
+.formulaire_recherche input.text { width: 10em; padding-left: 20px;border:solid 1px #aaa; background:#fff url(img/recherche.png) no-repeat left center; }
+.formulaire_recherche input.submit {padding:0.1em;}
 
 /* Choix des mots-clefs */
 ul.choix_mots { display: block; margin: 0; padding: 0; list-style: none; }
