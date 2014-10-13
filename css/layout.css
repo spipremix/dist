@@ -22,10 +22,10 @@ body { text-align: center; }
 ------------------------------------------ */
 
 .header { padding-bottom: 1.5em;  }
-.header #logo { display: block; margin: 0; line-height: 1; font-weight: bold;  }
-.header #logo,
-.header #logo a,
-.header #logo a:hover { background: transparent; text-decoration: none; color: #222; }
+.header .spip_logo_site { display: block; margin: 0; line-height: 1; font-weight: bold;  }
+.header .spip_logo_site,
+.header .spip_logo_site a,
+.header .spip_logo_site a:hover { background: transparent; text-decoration: none; color: #222; }
 .header #slogan { margin: 0; }
 
 .formulaire_menu_lang { position: absolute; right: 0; top: .9em; display: block; width: 30%; }
