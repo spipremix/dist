@@ -9,7 +9,7 @@ ul, ol {list-style:none;margin-left:0; }
 blockquote {   border:none; padding-left:3em;  }
 blockquote:before { content:"";  /* à terme supprimer l'image quote.png et reintegrer le bon sur blocquote.spip_poesie */ }
 s,  strike,del, .del { opacity:1;}
-a:link {transition:0;}
+a:link {transition:none;}
 
 h1,.h1 {line-height:1.2;}
 
@@ -55,7 +55,7 @@ blockquote.spip { min-height: 40px; background: url(img/quote.png) no-repeat; }
    border: 1px solid #dfdfcd;
    background-color: rgba(227,227,211,0.5);
    color: #3b3b25;
-   text-shadow: 0 1px 0 #fdfdfc;   
+   text-shadow: 0 1px 0 #fdfdfc;      
 }
 
 .spip_cadre { 
@@ -66,8 +66,8 @@ blockquote.spip { min-height: 40px; background: url(img/quote.png) no-repeat; }
 
 textarea.spip_code, 
 textarea.spip_cadre {
-        padding: 1em;
-        width:98%;
+   padding: 1em; 
+   width:98%;
 }
 
 /* Enluminures typo V3 / Cf.: http://www.spip-contrib.net/3118 */
