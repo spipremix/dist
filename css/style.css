@@ -1,6 +1,6 @@
 /* --------------------------------------------------------------
 
-   Theme pour la dist de SPIP 3
+   Theme pour la dist de SPIP 3.1
 
 -------------------------------------------------------------- */
 
@@ -9,13 +9,13 @@
 /* Habillage des elements du contenu
 /* ------------------------------------------ */
 
-body {font-family: Arial, Georgia,sans-serif; color:#222222;background:#ffffff;}
+body {font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif; color:#222222;background:#ffffff;}
 
 
 /* fil d'ariane */
 .arbo { clear: both; font-size: .9em; color: #DDC; }
 .arbo * { font-weight: normal; }
-.arbo a:visited {color:#189B14;}
+.arbo a:visited {color:#0F6FFF;}
 .arbo a:hover {color:#fff;}  
 
 .cartouche { margin-bottom: 1.5em; }
@@ -162,10 +162,10 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 
 /* Hyperliens
 ---------------------------------------------- */
-a { color: #189B14; text-decoration: none; }
+a { color: #0F6FFF; text-decoration: none; }
 a:focus,
 a:hover,
-a:active { background-color: #189B14; color: #FFF; text-decoration: none; }
+a:active { background-color: #0F6FFF; color: #FFF; text-decoration: none; }
 
 /* ------------------------------------------
 /* Autres medias

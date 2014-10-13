@@ -33,7 +33,7 @@ body { text-align: center; }
 .nav { }
 .nav ul {}
 .nav ul li {display:inline;}
-.nav ul li a {  display: inline-block; padding:0.25em 0.5em; margin:0 0.25em 0.5em 0;text-decoration: none; background:#189B14;color:#fff;border-radius:0.25em;}
+.nav ul li a {  display: inline-block; padding:0.25em 0.5em; margin:0 0.25em 0.5em 0;text-decoration: none; background:#0F6FFF;color:#fff;border-radius:0.25em;}
 .nav ul li.on a { background: #EED; color: #222; font-weight: normal; }
 .nav ul li a:focus,
 .nav ul li a:hover,
