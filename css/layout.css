@@ -38,7 +38,7 @@ body { text-align: center; }
 .nav ul li.on a { background:#0F6FFF;color:#fff;  font-weight: normal; }
 .nav ul li a:focus,
 .nav ul li a:hover,
-.nav ul li a:active { background: #222; color: #FFF; }
+.nav ul li a:active { background: #222; color:#fff; }
 
 
 

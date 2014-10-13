@@ -114,6 +114,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .comment-content .hyperlien { padding: 0; background: transparent; font-weight: normal; }
 
 /* Formulaire de forum */
+.forum-titre  {margin-top:2em;padding:1em 0;border-top:10px solid #EED;}
 .formulaire_forum {}
 .formulaire_forum legend { display: none; }
 .formulaire_forum .saisie_titre input.text { width: 100% }
@@ -154,7 +155,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .menu_articles li h3,
 .menu_articles li h2 { margin: 0 0 0.2em 0; }
 .menu_articles li p { margin: 0; }
-.menu_articles li small { background:#EED; padding:.25em .5em;  }
+.menu_articles li small {  }
 .menu_articles li .enclosures { float: right; text-align: right; max-width: 60%; margin: 0; }
 .menu_articles li div {margin-top:0.2em;margin-bottom:0.5em;}
 .menu_articles a {text-decoration:none;}
@@ -164,7 +165,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .menu_breves li {}
 .menu_breves li h3 { margin: 0; }
 
-.aside h2 {border-bottom:3px solid #999;padding-bottom:.1em;}
+.aside h2 {border-bottom:3px solid #EED;padding-bottom:.1em;}
 .aside li {margin:1em 0;}
 .aside a {text-decoration:none;}
 
