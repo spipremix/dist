@@ -13,11 +13,11 @@ body {font-family: "Luxi sans", "Lucida Grande", Lucida, "Lucida Sans Unicode", 
 
     
 /* fil d'ariane */
-.arbo { clear: both; font-size: .9em; color: #767676; }
+.arbo { clear: both; font-size: .9em; color: #666; }
 .arbo * { font-weight: normal; }
 .arbo a,
-.arbo a:visited { color: #767676; }
-.arbo a:hover { background: #767676; color: white; }  
+.arbo a:visited { color: #666; }
+.arbo a:hover { background: #666; color: white; }  
 
 .cartouche { margin-bottom: 1.5em; }
 .cartouche h1 { margin-bottom: 0; }
