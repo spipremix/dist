@@ -90,6 +90,7 @@ sc, .sc { font-variant: small-caps; }
 .spip_documents_right { float: right; margin-left: 1.5em; }
 .spip_doc_titre {}
 .spip_doc_descriptif { clear: both; }
+.spip_doc_credits { font-size:x-small; clear: both; }
 
 /* Modeles par defaut */
 .spip_modele { float: right; display: block; width: 25%; margin: 0 0 1.5em 1.5em; padding: 1.5em; background-color: #EEE; }
