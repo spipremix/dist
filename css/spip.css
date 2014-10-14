@@ -55,6 +55,12 @@ sc, .sc { font-variant: small-caps; }
 .spip_doc_titre {}
 .spip_doc_descriptif { clear: both; }
 
+@media (max-width: 640px) {
+  /* fixer une largeur maximale  de 100 % aux elements potentiellement problematiques */
+	.spip_documents,.spip_doc_titre,.spip_doc_descriptif { max-width: 100% !important; }
+}
+
+
 /* Modeles par defaut */
 .spip_modele { float: right; display: block; width: 25%; margin: 0 0 1.5em 1.5em; padding: 1.5em; background-color: #EEE; }
 
