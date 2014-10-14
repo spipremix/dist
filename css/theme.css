@@ -79,7 +79,7 @@ textarea { width: 100%; }
 .formulaire_menu_lang { margin: 0; padding: 0; background: none; }
 
 /* Formulaires de recherche (site / petitions) */
-.formulaire_recherche input.text { width: 10em; padding-left: 20px;border:solid 1px #aaa; background:#fff url(img/recherche.png) no-repeat left center; }
+.formulaire_recherche input.text { width: 9em; padding-left: 20px;border:solid 1px #aaa; background:#fff url(img/recherche.png) no-repeat left center; }
 .formulaire_recherche input.submit {padding:0.1em;}
 
 /* Choix des mots-clefs */

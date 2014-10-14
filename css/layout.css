@@ -13,9 +13,11 @@ body { text-align: center; }
 .main { padding: 1.5em 0; }
 .footer { clear: both; padding: 1em 0 0; margin:1em 0 0 0; border-top:1px solid #999; }
 
+/* largeur calculee du wrapper: 960*70%  = 672px */
 .wrapper { clear: both; float: left; width: 70%; overflow: hidden; }
 .content { min-height: 350px; }
-.aside { float: right; width: 25%; overflow: hidden; }
+/* largeur calculee du aside: 672px / 3 = 224px = 23.333 %*/
+.aside { float: right; width: 23.333%; overflow: hidden; }    
 
 
 /* Entete et barre de navigation
