@@ -13,10 +13,11 @@ body {font-family: "Luxi sans", "Lucida Grande", Lucida, "Lucida Sans Unicode", 
 
     
 /* fil d'ariane */
-.arbo { clear: both; font-size: .9em; color: #ACACAC; }
+.arbo { clear: both; font-size: .9em; color: #767676; }
 .arbo * { font-weight: normal; }
-.arbo a:visited {/*color:#b46025;*/}
-.arbo a:hover {}  
+.arbo a,
+.arbo a:visited { color: #767676; }
+.arbo a:hover { background: #767676; color: white; }  
 
 .cartouche { margin-bottom: 1.5em; }
 .cartouche h1 { margin-bottom: 0; }
@@ -182,11 +183,11 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 
 /* Hyperliens
 ---------------------------------------------- */
-a, a:visited { color: #b46025;  }
+a, a:visited { color: #c85000;  }
 
 a:focus,
 a:hover,
-a:active { background-color:#b46025; color:#fff;}
+a:active { background-color:#c85000; color:#fff;}
 
 /* ------------------------------------------
 /* Autres medias
