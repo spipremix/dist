@@ -64,16 +64,15 @@ Cf.: http://www.alsacreations.com/astuce/lire/1177
 @media (max-width: 640px) {
 
     /* passer tous les elements de largeur fixe en largeur automatique */
-    body,
-    .page,
+    body,    
     .header,
     .main,
     .footer,
     .wrapper,
     .content,
-    .aside { width: auto !important; margin: auto !important; }
+    .aside { width: 100% !important; margin: auto !important; }
 
-    .page { margin: 0; padding: 5%; }
+    .page  { width: auto !important; margin: 0; padding: 5%; }
 
     /* Passer a une seule colonne (a appliquer aux elements multi-colonnes) */
     .content,
