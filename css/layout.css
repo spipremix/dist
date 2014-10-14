@@ -6,8 +6,8 @@
 
 -------------------------------------------------------------- */
 
-body { text-align: center; padding: 1em; }
-.page { position: relative; max-width: 960px; margin:2em auto; text-align: left;  }
+body { text-align: center; }
+.page { position: relative; width: 960px; margin:2em auto; text-align: left;  }
 
 .header {}
 .main { padding: 1.5em 0; }
@@ -60,6 +60,11 @@ body { text-align: center; padding: 1em; }
     .footer { display: none; }
 }
 
+/* Contenu principal adaptatif */
+@media (min-width: 640px) {
+    body { padding: 0 1em; }
+    .page { width: auto; max-width: 960px; }
+}
 /* Affichage sur petits ecrans
 Cf.: http://www.alsacreations.com/astuce/lire/1177
 ------------------------------------------ */
@@ -74,6 +79,7 @@ Cf.: http://www.alsacreations.com/astuce/lire/1177
     .content,
     .aside { width: 100% !important; margin: auto !important; }
 
+    body { padding: 0 0.5em; }
     .page  { width: auto !important; margin: 0; }
 
     /* Passer a une seule colonne (a appliquer aux elements multi-colonnes) */
