@@ -6,8 +6,8 @@
 
 -------------------------------------------------------------- */
 
-body { text-align: center; }
-.page { position: relative; width: 960px; margin:2em auto; text-align: left;  }
+body { text-align: center; padding: 1em; }
+.page { position: relative; max-width: 960px; margin:2em auto; text-align: left;  }
 
 .header {}
 .main { padding: 1.5em 0; }
@@ -74,7 +74,7 @@ Cf.: http://www.alsacreations.com/astuce/lire/1177
     .content,
     .aside { width: 100% !important; margin: auto !important; }
 
-    .page  { width: auto !important; margin: 0; padding: 5%; }
+    .page  { width: auto !important; margin: 0; }
 
     /* Passer a une seule colonne (a appliquer aux elements multi-colonnes) */
     .content,
