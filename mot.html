@@ -29,7 +29,7 @@
 			<p class="arbo"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <:mots_clefs:><BOUCLE_ariane(GROUPES_MOTS){id_groupe}> &gt; [(#TITRE|couper{80})]</BOUCLE_ariane>[ &gt; <strong class="on">(#TITRE|couper{80})</strong>]</p>
 	
 			<div class="cartouche">
-				[(#LOGO_MOT|image_reduire{240,240})]
+				[(#LOGO_MOT|image_reduire{224,*})]
 				<h1 class="#EDIT{titre}">#TITRE</h1>
 			</div>
 	
@@ -43,7 +43,7 @@
 				<ul>
 					<BOUCLE_articles(ARTICLES) {id_mot} {!par popularite} {pagination 10}>
 					<li>
-						<strong><a href="#URL_ARTICLE">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{240,120}) ]#TITRE</a></strong>
+						<strong><a href="#URL_ARTICLE">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{224,*}) ]#TITRE</a></strong>
 						<br /><small>[(#DATE|affdate_jourcourt)][, <:par_auteur:> (#LESAUTEURS|supprimer_tags)]</small>
 					</li>
 					</BOUCLE_articles>
