@@ -64,15 +64,14 @@ Cf.: http://www.alsacreations.com/astuce/lire/1177
 
 /* passer tous les elements de largeur fixe en largeur automatique */
 body,
-.page,
 .header,
 .main,
 .footer,
 .wrapper,
 .content,
-.aside { width: auto !important; margin: auto !important; }
+.aside { width: 100% !important; margin: auto !important; }
 
-.page { margin: 0; padding: 5%; }
+.page { margin: 0; padding: 5%; width: auto !important;}
 
 /* Passer a une seule colonne (a appliquer aux elements multi-colonnes) */
 .content,
