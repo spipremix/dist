@@ -80,7 +80,7 @@ sc, .sc { font-variant: small-caps; }
 /* Logos, documents et images */
 .spip_logos { float:right; margin: 0 0 10px 10px; padding:0; border: none; }
 
-.spip_documents { margin-bottom: 1.5em; padding: 0; background: none; }
+.spip_documents { margin-bottom: 1.5em; padding: 0; background: none; max-width: 100%;}
 .spip_documents,
 .spip_documents_center,
 .spip_doc_titre,
