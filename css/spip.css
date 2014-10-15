@@ -11,7 +11,8 @@ blockquote:before { content:"";  /* à terme supprimer l'image quote.png et rein
 s,  strike,del, .del { opacity:1;}
 a:link {transition:none !important;}
 
-h1,.h1 {line-height:1.2;}
+h1,.h1,
+h2,.h2 { line-height: 1.2;}
 
 /* compatibilite ancienne dist */
 .on {font-weight:bold;}
