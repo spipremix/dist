@@ -106,6 +106,8 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .documents_portfolio a:hover {color:#999;opacity:0.8;}
 .documents_portfolio img {margin:0;}
 
+.documents_joints .descriptif p {margin:0;}
+
 /* Habillage des forums
 ---------------------------------------------- */
 
