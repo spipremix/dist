@@ -154,10 +154,10 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 
 /* Pagination */
 .pagination a,
-.pagination .on  { padding:.5em; margin: 0 0.5em; border-radius:.25em; }
+.pagination .on  { padding:.5em; margin: 0em; border-radius:.25em; }
 .pagination a { background: #EED; text-decoration: none; }
 .pagination .on { font-weight: bold; background: #222; color: #fff; }
-.pagination .sep { display: none; }
+.pagination .sep { visibility: hidden; }
 .menu_articles .pagination strong {font-size:1em;}
 
 /* Listes d'articles et extraits introductifs */
