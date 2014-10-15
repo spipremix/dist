@@ -6,3 +6,28 @@
 /* Add your styles here
 [fr] Ajoutez vos styles ici */
 
+
+/* TONTON THEME */
+
+/* layout */
+body {background:#ddd;}
+.page {background:#fff;padding:2em 1em;border-radius:0.4em;
+        box-shadow: 4px 5px 15px #888888;
+}
+
+/* form */
+#content .formulaire_spip input.text, 
+#content .formulaire_spip textarea {border:2px solid #999;background:#f4f4f4;border-radius:0.4em;}
+
+
+/* lines  */
+.footer {border-top:8px solid #ddd;}
+.nav {}
+.nav ul {padding:1em 0 0 0;margin:0;
+         border-top:8px solid #ddd;
+}
+.arbo {border-left: 20px solid #ddd;padding-left:1em;}
+
+/* nav */
+.nav ul li a  {background:transparent;}
+.nav ul li {border-left:2px solid #ddd;}
