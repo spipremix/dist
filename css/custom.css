@@ -22,12 +22,12 @@ body {background:#ddd;}
 
 /* lines  */
 .footer {border-top:8px solid #ddd;}
-.nav {}
 .nav ul {padding:1em 0 0 0;margin:0;
          border-top:8px solid #ddd;
 }
 .arbo {border-left: 20px solid #ddd;padding-left:1em;}
 
 /* nav */
+.nav li {border-right:2px solid #ddd;}
 .nav ul li a  {background:transparent;}
-.nav ul li {border-left:2px solid #ddd;}
+.nav li.last {border-right:none;}
