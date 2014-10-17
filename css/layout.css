@@ -7,7 +7,7 @@
 -------------------------------------------------------------- */
 
 body { text-align: center; }
-.page { position: relative; max-width: 960px; margin:2em auto; text-align: left;  }
+.page { position: relative; width: 960px; max-width:100%; margin:2em auto; text-align: left;  }
 
 .header {}
 .main { padding: 1.5em 0; }
