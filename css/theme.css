@@ -55,24 +55,23 @@ table.spip tfoot { border-top: 1px solid; }
 /* Formulaires : variantes et cas particuliers
 ----------------------------------------------- */
 .formulaire_spip { margin-bottom: 1.5em; }
-.aside .formulaire_spip { padding-top: 1.3em; background:#EED;padding:1em; }
+.aside .formulaire_spip { padding-top: 1.3em; background:#EED;padding:1em;border-radius:0.4em; }
 fieldset {
-width: 100%; margin: 0;
--ms-box-sizing: border-box;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box; }
+  width: 100%; margin: 0;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
 legend { display: none; }
 label { display: block; }
 .formulaire_recherche label { display: block; }
 .erreur_message { display: block; }
 input.text,textarea {
-width: 100%;
--ms-box-sizing: border-box;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-/* background-color: #EED; */
-/* border: 1px solid #888; */
+  width: 100%;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .content input.text { width: 50%; }
 textarea { width: 100%; }
