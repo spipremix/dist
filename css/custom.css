@@ -63,7 +63,7 @@ body {background:#ddd;}
    .nav ul {padding:0 !important; border-bottom:6px solid #ddd;}
    .nav li {border:none;}
    .nav li a {display:block;margin:0.2em 0;
-              background:#EED !important;
+              background:#EED;
    }
 
 }
