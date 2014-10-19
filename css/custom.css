@@ -9,7 +9,8 @@
 
 /* TONTON THEME */
 
-/* layout */
+/* Elements principaux
+------------------------------------------ */
 body {background:#ddd;}
 .page {background:#fff;padding:2em 1em;border-radius:0.4em;
         box-shadow: 4px 5px 15px #888888;
@@ -24,20 +25,46 @@ body {background:#ddd;}
 		box-shadow: none;
 	}
 }
-
-/* form */
-#content .formulaire_spip input.text, 
-#content .formulaire_spip textarea {border:2px solid #999;background:#f4f4f4;border-radius:0.4em;}
-
-
-/* lines  */
 .footer {border-top:6px solid #ddd;}
-.nav ul {padding:1em 0 0 0;margin:0;
-         border-top:6px solid #ddd;
-}
+
 .arbo {border-left: 20px solid #ddd;padding-left:1em;}
 
-/* nav */
+/* Formulaires
+------------------------------------------ */
+#content .formulaire_spip input.text, 
+#content .formulaire_spip textarea {border:2px solid #999;background:#f4f4f4;}
+#content .formulaire_spip input.text:focus, 
+#content .formulaire_spip textarea:focus {border-color:lightblue;}
+
+/* Navigation
+------------------------------------------ */
+.nav ul {padding:1em 0 0 0;margin:0;    border-top:6px solid #ddd;}
 .nav li {border-right:2px solid #ddd;}
-.nav ul li a  {background:transparent;}
 .nav li.last {border-right:none;}
+.nav li a  {background:transparent;}
+
+
+
+/* ------------------------------------------
+/* Responsive
+/* ------------------------------------------ */
+
+/* largeur maximum 767px */
+@media (max-width: 767px) { }
+
+ 
+/* largeur maximum 640px */
+@media (max-width: 640px) {
+  body {font-size:.95em;}
+	h1,.h1,
+	h2,.h2 { line-height:1;}
+
+
+   .nav ul {padding:0 !important; border-bottom:6px solid #ddd;}
+   .nav li {border:none;}
+   .nav li a {display:block;margin:0.2em 0;
+              background:#EED !important;
+   }
+
+}
+
