@@ -61,7 +61,7 @@ blockquote.spip { min-height: 40px; background: url(img/quote.png) no-repeat; }
    background:#333;
    color:#fff;
    border-radius:0.5em;
-   border-color:#333;
+   border:0;
 }
 
 textarea.spip_code, 
