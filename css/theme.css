@@ -10,7 +10,8 @@
 /* ------------------------------------------ */
 
 body {font-family: "Luxi sans", "Lucida Grande", Lucida, "Lucida Sans Unicode", sans-serif;; color:#222222;background:#ffffff;}
-
+h1,.h1,
+h2,.h2 { line-height: 1.2;}
     
 /* fil d'ariane */
 .arbo { clear: both; font-size: .9em; color: #666; }
@@ -43,6 +44,7 @@ abbr.published { border: 0; }
 dl.spip dt { background: url(img/def.png) no-repeat 25px .5em; }
 dl.spip dd {}
 
+table.spip {margin:1em 0;}
 table.spip caption {  background: none; border-bottom: 1px solid; text-align: left; font-weight: bold; }
 table.spip thead th { background: none; border: 1px solid; border-width: 1px 0; }
 table.spip tbody tr th,
@@ -55,7 +57,7 @@ table.spip tfoot { border-top: 1px solid; }
 /* Formulaires : variantes et cas particuliers
 ----------------------------------------------- */
 .formulaire_spip { margin-bottom: 1.5em; }
-.aside .formulaire_spip { padding-top: 1.3em; background:#EED;padding:1em;border-radius:0.4em; }
+
 fieldset {
   width: 100%; margin: 0;
   -ms-box-sizing: border-box;
@@ -211,5 +213,25 @@ a:active { background-color:#c85000; color:#fff;}
 	a.spip_mail:after { display: inline; content: " [" attr(href) "]"; }
 
 }
+
+
+/* ------------------------------------------
+/* Responsive
+/* ------------------------------------------ */
+
+/* largeur maximum 767px */
+@media (max-width: 767px) { }
+
+ 
+/* largeur maximum 640px */
+@media (max-width: 640px) {
+  body {font-size:.95em;}
+	h1,.h1,
+	h2,.h2 { line-height:1;}
+
+}
+
+
+
 
 /* end */
