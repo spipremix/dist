@@ -339,24 +339,24 @@ table {
 .table {
   width: 100%;
 }
-.table caption,
-.table th,
-.table td {
+.table caption, table.spip caption,
+.table th, table.spip th,
+.table td, table.spip td  {
   padding: 0.375em;
 }
-.table caption {
+.table caption, table.spip caption {
   font-weight: bold;
   text-align: left;
   border-bottom: 2px solid;
 }
-.table th {
+.table th, table.spip th {
   font-weight: bold;
 }
-.table th,
-.table td {
+.table th, table.spip th,
+.table td, table.spip td {
   border-bottom: 1px solid;
 }
-.table thead th {
+.table thead th, table.spip thead th {
   vertical-align: bottom;
 }
 .table tbody tr:hover td {
