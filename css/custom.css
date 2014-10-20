@@ -55,16 +55,9 @@ body {background:#ddd;}
  
 /* largeur maximum 640px */
 @media (max-width: 640px) {
-  body {font-size:.95em;}
-	h1,.h1,
-	h2,.h2 { line-height:1;}
-
-
-   .nav ul {padding:0 !important; border-bottom:6px solid #ddd;}
+   .header {padding-bottom:0.25em;}
+   .nav ul {padding:0; border:none;}
    .nav li {border:none;}
-   .nav li a {display:block;margin:0.2em 0;
-              background:#EED;
-   }
-
+   .nav li a {display:block;margin:0.2em 0; background:#EED; }
 }
 

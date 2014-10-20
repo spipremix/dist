@@ -226,12 +226,8 @@ a:active { background-color:#c85000; color:#fff;}
 /* largeur maximum 640px */
 @media (max-width: 640px) {
   body {font-size:.95em;}
-	h1,.h1,
-	h2,.h2 { line-height:1;}
-
+  h1,.h1,
+  h2,.h2 { line-height:1;}
 }
-
-
-
 
 /* end */
