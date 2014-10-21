@@ -15,6 +15,9 @@ a:link {transition:none !important;}
 /* compatibilite ancienne dist */
 .on {font-weight:bold;}
 
+/* Lignes SPIP */
+hr.spip {clear:both;}
+
 /* Listes SPIP */
 ul.spip,
 ol.spip { margin-left: 50px; }
