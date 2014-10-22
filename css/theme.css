@@ -13,7 +13,7 @@
 
 /* Elements principaux
 ------------------------------------------ */
-body {font-family: "Luxi sans", "Lucida Grande", Lucida, "Lucida Sans Unicode", sans-serif;; color:#222;background:#ddd;}
+body {font-family: "Luxi sans", "Lucida Grande", Lucida, "Lucida Sans Unicode", sans-serif; color:#222;background:#ddd;}
 .page {background:#fff;padding:2em 1em;border-radius:0.4em; box-shadow: 4px 5px 15px #888;}
 .footer {border-top:6px solid #ddd;}
 
@@ -50,7 +50,7 @@ abbr.published { border: 0; }
 	abbr[title].dtreviewed:after { content: ""; }
 }
 .info-publi { margin: 1.5em 0 0; font-size: .9em; font-style: italic; }
-html[dir="rtl"] .info-publi { font-style: normal}
+html[dir="rtl"] .info-publi { font-style: normal; }
 .traductions { font-size: .9em; }
 .traductions a[hreflang]:after { content: ''; }
 
@@ -155,7 +155,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .formulaire_forum .saisie_titre input.text { width: 100% }
 .formulaire_forum .session_qui { display: none; }
 .formulaire_forum .saisie_texte .explication { font-size: .9em; font-style: italic; }
-html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: normal}
+html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: normal; }
 /* Habillage des petitions
 ---------------------------------------------- */
 
