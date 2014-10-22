@@ -31,7 +31,7 @@ a:active { background-color:#c85000; color:#fff;}
 /* ------------------------------------------
 /* Habillage des elements du contenu
 /* ------------------------------------------ */
-    
+
 /* fil d'ariane */
 .arbo { clear: both; font-size: .9em; color: #666; border-left: 18px solid #ddd; padding-left:1em; }
 .arbo * { font-weight: normal; }
@@ -50,6 +50,7 @@ abbr.published { border: 0; }
 	abbr[title].dtreviewed:after { content: ""; }
 }
 .info-publi { margin: 1.5em 0 0; font-size: .9em; font-style: italic; }
+html[dir="rtl"] .info-publi { font-style: normal}
 .traductions { font-size: .9em; }
 .traductions a[hreflang]:after { content: ''; }
 
@@ -154,7 +155,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .formulaire_forum .saisie_titre input.text { width: 100% }
 .formulaire_forum .session_qui { display: none; }
 .formulaire_forum .saisie_texte .explication { font-size: .9em; font-style: italic; }
-
+html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: normal}
 /* Habillage des petitions
 ---------------------------------------------- */
 
