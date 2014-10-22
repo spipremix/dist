@@ -40,7 +40,7 @@
 				#ANCRE_PAGINATION
 				<ul>
 					<BOUCLE_articles(ARTICLES) {id_rubrique} {!par date} {pagination}>
-					<li dir="#LANG_DIR" style="text-align: #LANG_LEFT;">
+					<li dir="#LANG_DIR" class="text-#LANG_LEFT">
 						<strong><a href="#URL_ARTICLE">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{224,*}) ]#TITRE</a></strong>
 						<br /><small>[(#DATE|affdate_jourcourt)][, <:par_auteur:> (#LESAUTEURS|supprimer_tags)]</small>
 					</li>
