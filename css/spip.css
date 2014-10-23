@@ -82,7 +82,7 @@ sc, .sc { font-variant: small-caps; }
 .texteencadre-spip { display: block; margin: 1.5em 50px; padding: 1.5em; background: #EEE; }
 
 /* Logos, documents et images */
-.spip_logos { float:right; margin: 0 0 10px 10px; padding:0; border: none; }
+.spip_logo { float:right; margin: 0 0 10px 10px; padding:0; border: none; }
 
 .spip_documents { margin-bottom: 1.5em; padding: 0; background: none; max-width: 100%;}
 .spip_documents,

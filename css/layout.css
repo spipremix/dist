@@ -32,7 +32,7 @@ body { text-align: center; background:#ddd;}
 .header .spip_logo_site a:hover { background: transparent; text-decoration:none; color:#222; }
 .header .spip_logo_site a:hover  {color:#c85000;}
 .header .spip_logo_site a:hover img {opacity:0.7;}
-.header .spip_logos {margin-bottom:0;}
+.header .spip_logo {margin-bottom:0;}
 .header #slogan { margin: 0; }
 
 .formulaire_menu_lang { position: absolute; right: 0; top: .9em; display: block; width: 30%; }
