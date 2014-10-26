@@ -14,7 +14,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 function formulaires_inscription_charger_dist($mode='', $id=0) {
 	global $visiteur_session;
-	
+
 	// fournir le mode de la config ou tester si l'argument du formulaire est un mode accepte par celle-ci
 	// pas de formulaire si le mode est interdit
 	include_spip('inc/autoriser');
@@ -33,6 +33,7 @@ function formulaires_inscription_charger_dist($mode='', $id=0) {
 // Si inscriptions pas autorisees, retourner une chaine d'avertissement
 function formulaires_inscription_verifier_dist($mode='', $id=0) {
 	
+	set_request("_upgrade_auteur"); // securite
 	include_spip('inc/filtres');
 	$erreurs = array();
 
@@ -68,9 +69,15 @@ function formulaires_inscription_verifier_dist($mode='', $id=0) {
 				if (($row['statut'] == '5poubelle') AND !$declaration['pass'])
 					// irrecuperable
 					$erreurs['message_erreur'] = _T('form_forum_access_refuse');	
-				else if (($row['statut'] != 'nouveau') AND !$declaration['pass'])
-					// deja inscrit
-					$erreurs['message_erreur'] = _T('form_forum_email_deja_enregistre');
+				else if (($row['statut'] != 'nouveau') AND !$declaration['pass']){
+					if (intval($row['statut'])>intval($mode)){
+						set_request("_upgrade_auteur",$row['id_auteur']);
+					}
+					else {
+						// deja inscrit
+						$erreurs['message_erreur'] = _T('form_forum_email_deja_enregistre');
+					}
+				}
 				spip_log($row['id_auteur'] . " veut se resinscrire");
 			}
 		}
@@ -85,6 +92,16 @@ function formulaires_inscription_traiter_dist($mode='', $id=0) {
 	if (!autoriser('inscrireauteur', $mode, $id))
 		$desc = "rien a faire ici";
 	else {
+		if ($id_auteur = _request('_upgrade_auteur')){
+			include_spip("action/editer_auteur");
+			autoriser_exception("modifier","auteur",$id_auteur);
+			autoriser_exception("instituer","auteur",$id_auteur);
+			auteur_modifier($id_auteur,array('statut' => $mode));
+			autoriser_exception("modifier","auteur",$id_auteur,false);
+			autoriser_exception("instituer","auteur",$id_auteur,false);
+			return array('message_ok' => _T('form_forum_email_deja_enregistre'), 'id_auteur' => $id_auteur);
+		}
+
 		$nom = _request('nom_inscription');
 		$mail_complet = _request('mail_inscription');
 
