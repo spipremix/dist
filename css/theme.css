@@ -82,7 +82,7 @@ fieldset {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-legend { display: none; }
+
 label { display: block; }
 .formulaire_recherche label { display: block; }
 .erreur_message { display: block; }
@@ -169,7 +169,6 @@ html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: norma
 .menu ul { margin-bottom: 1.5em; }
 .menu ul li {}
 .menu ul li ul { margin-left: 1.5em; list-style: circle; }
-.menu a:link {  transition: .4s;} 
 
 
 /* Pagination */
