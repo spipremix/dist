@@ -91,6 +91,7 @@ a:active img {
   a:after {
     content: '';
   }
+	a.spip_url:after,
   a[rel="external"]:after,
   a.external:after {
     content: " (" attr(href) ")";
