@@ -6,13 +6,13 @@
 
 -------------------------------------------------------------- */
 
-/* neutraliser conflit spip / tinytypo */
+/* Neutraliser conflit spip / tinytypo */
 ul, ol {list-style:none;margin-left:0; }
 blockquote {   border:none; padding-left:3em;  }
 blockquote:before { content:"";  /* à terme supprimer l'image quote.png et reintegrer le bon sur blocquote.spip_poesie */ }
 s, strike,del, .del { opacity:1;}
 
-/* compatibilite ancienne dist */
+/* Compatibilite ancienne dist */
 .on {font-weight:bold;}
 
 /* Listes SPIP */
