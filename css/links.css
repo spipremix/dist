@@ -5,7 +5,7 @@
    (c) 2010-2014 Tiny Typo v1.3 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
-/* Hyperlinks
+/* Hyperliens
 [fr] Signalétique des hyperliens : http://letrainde13h37.fr/43/signaletique-hyperliens/ */
 a {
   background: transparent;
@@ -41,7 +41,7 @@ a small {
 a[hreflang]:after {
   content: "\0000a0[" attr(hreflang) "]";
 }
-/* External Links */
+/* Liens externes */
 a.spip_out:after,
 a.external:after {
   content: "\0000a0\279A";
@@ -71,7 +71,7 @@ a.audio:after {
 a[hreflang].audio:after {
   content: "\0000a0[" attr(hreflang) "]\0000a0\266B";
 }
-/* Linked images */
+/* Liens images */
 a img {
   border: 0;
 }
@@ -101,7 +101,7 @@ a:active img {
   a[href^="#"]:after {
     content: '';
   }
-  /* Don't show links for images, or javascript/internal links */
+  /* Ne pas montrer les liens sur images ou javascript / liens internes */
 }
 
 /* fin */

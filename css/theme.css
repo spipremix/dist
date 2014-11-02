@@ -6,7 +6,6 @@
 
 -------------------------------------------------------------- */
 
-
 /* ------------------------------------------
 /* Habillage des balises HTML
 /* ------------------------------------------ */
@@ -149,9 +148,9 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .formulaire_forum .session_qui { display: none; }
 .formulaire_forum .saisie_texte .explication { font-size: .9em; font-style: italic; }
 html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: normal; }
+
 /* Habillage des petitions
 ---------------------------------------------- */
-
 #signatures td.signature-date small { white-space: nowrap; }
 #signatures .formulaire_recherche { margin: 1.5em auto; text-align: center; }
 
@@ -163,14 +162,12 @@ html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: norma
 /* ------------------------------------------ */
 
 /* Habillage general des menus de nav */
-
 .menu { clear: both; margin-bottom: 1.5em; text-align: left; }
 .menu p {}
 .menu ul { margin-bottom: 1.5em; }
 .menu ul li {}
 .menu ul li ul { margin-left: 1.5em; list-style: circle; }
-
-
+ 
 /* Pagination */
 .pagination a,
 .pagination .on  { padding:.5em; margin: 0em; border-radius:.25em; }

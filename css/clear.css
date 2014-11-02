@@ -5,7 +5,7 @@
   (c) 2010-2014 Tiny Typo v1.3 - MIT License - tinytypo.tetue.net
   
  ----------------------------------------------------- */
-/* Box model
+/* Modele de boite
 [fr] http://blog.goetter.fr/post/27612618411/box-sizing-et-pourquoi-pas
 [en] http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 *,
@@ -15,7 +15,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* Blocks */
+/* Blocs */
 .block {
   display: block;
   margin-bottom: 1.5em;
@@ -26,7 +26,7 @@
 .inline-block {
   display: inline-block;
 }
-/* Positioning */
+/* Positionnement */
 .left {
   float: left;
 }
@@ -37,7 +37,7 @@
   margin-right: auto;
   margin-left: auto;
 }
-/* Blocks spacer
+/* Espace de blocs
 [fr] Espaceur de blocs : http://romy.tetue.net/657 */
 .clear {
   clear: both;

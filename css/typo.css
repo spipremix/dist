@@ -513,7 +513,7 @@ fieldset {
 /* Typographie pour petites ecrans
 [fr] http://www.alsacreations.com/astuce/lire/1177 */
 @media (max-width: 640px) {
-  /* fixer une largeur maximale  de 100 % aux elements potentiellement problematiques */
+  /* Fixer une largeur maximale  de 100 % aux elements potentiellement problematiques */
   img,
   table,
   td,
@@ -528,7 +528,7 @@ fieldset {
   video {
     max-width: 100% !important;
   }
-  /* gestion des mots longs */
+  /* Gestion des mots longs */
   textarea,
   table,
   td,
@@ -543,10 +543,10 @@ fieldset {
   code,
   samp {
     white-space: pre-line;
-    /* passage a la ligne specifique pour les elements a chasse fixe */
+    /* Passage a la ligne specifique pour les elements a chasse fixe */
   }
 }
-/* orientation iOS5 font-size fix */
+/* Orientation iOS5 font-size fix */
 @media (orientation: landscape) and (max-device-width: 640px) {
   html,
   body {
