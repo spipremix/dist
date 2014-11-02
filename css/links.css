@@ -11,9 +11,6 @@ a {
   background: transparent;
   color: inherit;
 }
-a:link {
-  /* transition: .5s; */    
-} 
 a:visited {
   color: inherit;     
 }  
