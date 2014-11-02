@@ -201,7 +201,7 @@ sub,
 .quiet {
   color: #555555;
 }
-/* Alignment */
+/* Alignement */
 .text-left {
   text-align: left;
 }
@@ -330,7 +330,7 @@ dd {
   display: block;
   margin-right: 0;
 }
-/* Tables */
+/* Tableaux */
 table {
   max-width: 100%;
   border-collapse: collapse;
@@ -389,7 +389,7 @@ table {
     white-space: nowrap;
   }
 }
-/* Quotes, code and poetry */
+/* Quotes, code et poetry */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -496,7 +496,7 @@ var {
     width: 75%;
   }
 }
-/* Paragraphs */
+/* Paragraphes */
 p,
 .p,
 ul,
@@ -510,7 +510,7 @@ pre,
 fieldset {
   margin-bottom: 1.5em;
 }
-/* Typography for small screens
+/* Typographie pour petites ecrans
 [fr] http://www.alsacreations.com/astuce/lire/1177 */
 @media (max-width: 640px) {
   /* fixer une largeur maximale  de 100 % aux elements potentiellement problematiques */
@@ -553,7 +553,7 @@ fieldset {
     -webkit-text-size-adjust: 100%;
   }
 }
-/* Print styles from HTML5 Boilerplate
+/* Style pour l'impression (HTML5 Boilerplate)
 Inlined to avoid required HTTP connection: h5bp.com/r */
 @media print {
   pre,
@@ -581,3 +581,5 @@ Inlined to avoid required HTTP connection: h5bp.com/r */
     page-break-after: avoid;
   }
 }
+
+/* fin */

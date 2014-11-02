@@ -19,12 +19,9 @@ body { text-align: center; background:#ddd;}
 .content { min-height: 350px; }
 /* largeur calculee du aside: 672px / 3 = 224px = 23.333 %*/
 .aside { float: right; width: 23.333%; overflow: hidden; }    
-
-
-
+  
 /* Entete et barre de navigation
 ------------------------------------------ */
-
 .header { padding-bottom: 1.5em;  }
 .header .spip_logo_site { display: block; margin: 0; line-height: 1; font-weight: bold;  }
 .header .spip_logo_site,
@@ -71,7 +68,6 @@ Cf.: http://www.alsacreations.com/astuce/lire/1177
 	body {   	width: 100%;		padding: 0 20px;	}
 	.page {  	width: 100%;  	max-width: none; 	}
 }
-
  
 /* largeur maximum 640px */
 @media (max-width: 640px) {
@@ -93,4 +89,4 @@ Cf.: http://www.alsacreations.com/astuce/lire/1177
 
 }
 
-/* end */
+/* fin */
