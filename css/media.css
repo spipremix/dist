@@ -6,9 +6,7 @@
 
 ----------------------------------------------------- */
 /* Rendre les images responsive par defaut */
-img,
-object,
-embed {
+img {
   max-width: 100%;
   height: auto;
 }
