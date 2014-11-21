@@ -29,7 +29,7 @@
 <BOUCLE_r(RUBRIQUES){!par date}{0,1000}>
 <url>
     [<loc>(#URL_RUBRIQUE|url_absolue)</loc>]
-    <BOUCLE_r_trad(RUBRIQUES){tout}{traduction}>
+    <BOUCLE_r_trad(RUBRIQUES){traduction}>
         <xhtml:link rel="alternate" hreflang="[(#LANG)]" href="[(#URL_RUBRIQUE|url_absolue)]" />    
     </BOUCLE_r_trad>
 </url>
@@ -40,7 +40,7 @@
 <BOUCLE_a(ARTICLES){!par date_modif}{!par date}{0,2000}>
 <url>
     [<loc>(#URL_ARTICLE|url_absolue)</loc>]
-    <BOUCLE_a_trad(ARTICLES){tout}{traduction}>
+    <BOUCLE_a_trad(ARTICLES){traduction}>
         <xhtml:link rel="alternate" hreflang="[(#LANG)]" href="[(#URL_ARTICLE|url_absolue)]" />    
     </BOUCLE_a_trad>
     [(#DATE_MODIF**|>{#GET{recent}}
