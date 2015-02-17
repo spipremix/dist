@@ -99,7 +99,7 @@ function formulaires_mot_de_passe_verifier_dist($id_auteur=null, $jeton=null){
  * @param int $id_auteur
  */
 function formulaires_mot_de_passe_traiter_dist($id_auteur=null, $jeton=null){
-	$message = '';
+	$res = array('message_ok'=>'');
 
 	// compatibilite anciens appels du formulaire
 	if (is_null($jeton)) $jeton = _request('p');
@@ -110,13 +110,16 @@ function formulaires_mot_de_passe_traiter_dist($id_auteur=null, $jeton=null){
 	 && ($oubli = _request('oubli'))) {
 		include_spip('action/editer_auteur');
 		include_spip('action/inscrire_auteur');
-		auteurs_set($id_auteur, array('pass'=>$oubli));
-		auteur_effacer_jeton($id_auteur);
-
-		$login = $row['login'];
-		$message = "<b>" . _T('pass_nouveau_enregistre') . "</b>".
-		"<br />" . _T('pass_rappel_login', array('login' => $login));
+		if ($err = auteur_modifier($id_auteur, array('pass'=>$oubli))){
+			$res = array('message_erreur'=>$err);
+		}
+		else {
+			auteur_effacer_jeton($id_auteur);
+			$login = $row['login'];
+			$res['message_ok'] = "<b>" . _T('pass_nouveau_enregistre') . "</b>".
+			"<br />" . _T('pass_rappel_login', array('login' => $login));
+		}
 	}
-	return array('message_ok'=>$message);
+	return $res;
 }
 ?>
