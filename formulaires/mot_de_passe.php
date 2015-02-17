@@ -144,6 +144,7 @@ function formulaires_mot_de_passe_verifier_dist($id_auteur=null, $jeton=null){
  */
 function formulaires_mot_de_passe_traiter_dist($id_auteur=null, $jeton=null){
 	$res = array('message_ok'=>'');
+	refuser_traiter_formulaire_ajax(); // puisqu'on va loger l'auteur a la volee (c'est bonus)
 
 	// compatibilite anciens appels du formulaire
 	if (is_null($jeton)) $jeton = _request('p');
@@ -162,6 +163,10 @@ function formulaires_mot_de_passe_traiter_dist($id_auteur=null, $jeton=null){
 			$login = $row['login'];
 			$res['message_ok'] = "<b>" . _T('pass_nouveau_enregistre') . "</b>".
 			"<br />" . _T('pass_rappel_login', array('login' => $login));
+
+			include_spip('inc/auth');
+			$row = sql_fetsel("*","spip_auteurs","id_auteur=".intval($id_auteur));
+			auth_loger($row);
 		}
 	}
 	return $res;
