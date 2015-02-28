@@ -8,8 +8,8 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// D
-	'dist_description' => 'Juec d’esquelètrou distribuit embé SPIP 3.',
-	'dist_slogan' => 'Esquelètrou predefinit de SPIP 3'
+	'dist_description' => 'Juec d’esquèletrou distribuit embé SPIP 3.',
+	'dist_slogan' => 'Esquèletrou predefinit de SPIP 3'
 );
 
 ?>
