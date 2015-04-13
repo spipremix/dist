@@ -57,14 +57,17 @@ function formulaires_ecrire_auteur_verifier_dist($id_auteur, $id_article, $mail)
 
 	if (_request('nobot'))
 		$erreurs['message_erreur'] = _T('pass_rien_a_faire_ici');
-		
-	if (!_request('confirmer') AND !count($erreurs))
+
+	if (!_request('confirmer') AND !count($erreurs)) {
 		$erreurs['previsu']=' ';
+		$erreurs['message_erreur'] = '';
+	}
+
 	return $erreurs;
 }
 
 function formulaires_ecrire_auteur_traiter_dist($id_auteur, $id_article, $mail){
-	
+
 	$adres = _request('email_message_auteur');
 	$sujet = _request('sujet_message_auteur');
 
@@ -77,12 +80,13 @@ function formulaires_ecrire_auteur_traiter_dist($id_auteur, $id_article, $mail){
 	$envoyer_mail = charger_fonction('envoyer_mail','inc');
 
 	if ($envoyer_mail($mail, $sujet, $texte, $adres,
-	"X-Originating-IP: ".$GLOBALS['ip']))
+	"X-Originating-IP: ".$GLOBALS['ip'])) {
 		$message = _T('form_prop_message_envoye');
-	else
+		return array('message_ok' => $message);
+	} else {
 		$message = _T('pass_erreur_probleme_technique');
-
-	return array('message_ok'=>$message);
+		return array('message_erreur' => $message);
+	}
 }
 
 ?>
