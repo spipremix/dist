@@ -42,9 +42,10 @@
 				<h2><:articles:></h2>
 				<ul>
 					<BOUCLE_articles(ARTICLES) {id_mot} {!par popularite} {pagination 10}>
-					<li>
+					<li dir="#LANG_DIR" class="hentry clearfix text-#LANG_LEFT">
 						<strong><a href="#URL_ARTICLE">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{150,*}) ]#TITRE</a></strong>
 						<br /><small>[(#DATE|affdate_jourcourt)][, <:par_auteur:> (#LESAUTEURS|supprimer_tags)]</small>
+            [<div class="#EDIT{intro} introduction entry-content">(#INTRODUCTION)</div>]
 					</li>
 					</BOUCLE_articles>
 				</ul>
