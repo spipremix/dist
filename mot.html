@@ -43,7 +43,7 @@
 				<ul>
 					<BOUCLE_articles(ARTICLES) {id_mot} {!par popularite} {pagination 10}>
 					<li>
-						<strong><a href="#URL_ARTICLE">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{224,*}) ]#TITRE</a></strong>
+						<strong><a href="#URL_ARTICLE">[(#LOGO_ARTICLE_RUBRIQUE|image_reduire{150,*}) ]#TITRE</a></strong>
 						<br /><small>[(#DATE|affdate_jourcourt)][, <:par_auteur:> (#LESAUTEURS|supprimer_tags)]</small>
 					</li>
 					</BOUCLE_articles>
