@@ -226,7 +226,9 @@ html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: norma
 /* ------------------------------------------ */
 
 /* largeur maximum 767px */
-@media (max-width: 767px) { }
+@media (max-width: 767px) { 
+  .pagination {line-height:3;}
+}
 
  
 /* largeur maximum 640px */
