@@ -110,7 +110,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .formulaire_spip .bugajaxie { display: none; } /*IE/Win*/
 
 /* Formulaire de login dans une page */
-.formulaire_login ul li { clear: left; }
+.formulaire_login .editer-groupe .editer { clear: left; }
 .formulaire_login .editer_password .details { display: block; }
 .formulaire_login #spip_logo_auteur { float: right; }
 

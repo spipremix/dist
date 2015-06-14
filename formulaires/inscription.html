@@ -8,7 +8,7 @@
 		#INCLURE{fond=formulaires/inc-inscription-explication,env}
 		<legend><:form_forum_identifiants:></legend>
 		<p class='explication'><:form_forum_indiquer_nom_email:></p>
-		<ul>
+		<ul class="editer-groupe">
 			<li class='editer saisie_nom_inscription obligatoire[ (#ENV*{erreurs}|table_valeur{nom_inscription}|oui)erreur]'>
 				<label for="nom_inscription"><:entree_nom_pseudo:> <em class="obligatoire"><:info_obligatoire_02:></em></label>
 				[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{nom_inscription})</span>]

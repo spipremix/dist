@@ -20,7 +20,7 @@
 	[(#REM) Sinon, formulaire normal ]
 	<fieldset>
 		<legend><:envoyer_message:></legend>
-		<ul>
+		<ul class="editer-groupe">
 			<li class='editer saisie_email_message_auteur obligatoire[ (#ENV*{erreurs}|table_valeur{email_message_auteur}|oui)erreur]'>
 				<label for="email_message_auteur#ENV{id}"><:entree_adresse_email:> <:info_obligatoire_02:></label>
 				[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{email_message_auteur})</span>]
