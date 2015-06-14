@@ -7,7 +7,7 @@
 	#ACTION_FORMULAIRE{#ENV{action}}
 	<fieldset>
 		<legend><:pass_nouveau_pass:></legend>
-		<ul>
+		<ul class="editer-groupe">
 			<li class="editer saisie_oubli obligatoire[ (#ENV*{erreurs}|table_valeur{oubli}|oui)erreur]">
 				<label for="oubli"><:pass_choix_pass:></label>
 				[<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{oubli})</span>]

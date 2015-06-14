@@ -8,7 +8,7 @@
 	<fieldset>
 		<legend><:pass_nouveau_pass:></legend>
 		<p><:pass_procedure_changer:></p>
-		<ul>
+		<ul class="editer-groupe">
 			<li class="editer saisie_oubli obligatoire[ (#ENV*{erreurs}|table_valeur{oubli}|oui)erreur]">
 				<label for="oubli"><:entree_adresse_email:></label>
 				[<span class='erreur_message'>(#ENV**{erreurs}|table_valeur{oubli})</span>]
