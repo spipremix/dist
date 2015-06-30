@@ -44,6 +44,11 @@ sc, .sc { font-variant: small-caps; }
 /* Logos, documents et images */
 .spip_logos { float: left; margin: 0 10px 10px 0; padding: 0; border: none; }
 
+.spip_logo { margin: 0 0 10px 10px; padding:0; border: none; }
+.spip_logo_center { clear: both; display: block; margin:0 auto 1.5em auto;}
+.spip_logo_left { margin-right: 1.5em; margin-bottom:1.5em; }
+.spip_logo_right { margin-left: 1.5em; margin-bottom:1.5em; }
+
 .spip_documents { margin-bottom: 1.5em; padding: 0; background: none; }
 .spip_documents,
 .spip_documents_center,
