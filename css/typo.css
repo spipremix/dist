@@ -143,6 +143,7 @@ big,
 abbr[title],
 acronym[title] {
   border-bottom: .1em dotted;
+  text-decoration: none;
   cursor: help;
 }
 @media print {
