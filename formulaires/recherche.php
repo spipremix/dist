@@ -29,20 +29,18 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  * @param string $class Une class différenciant le formulaire
  * @return array
  */
-function formulaires_recherche_charger_dist($lien = '', $class=''){
+function formulaires_recherche_charger_dist($lien = '', $class = '') {
 	if ($GLOBALS['spip_lang'] != $GLOBALS['meta']['langue_site'])
 		$lang = $GLOBALS['spip_lang'];
 	else
-		$lang='';
+		$lang = '';
 
-	return 
+	return
 		array(
 			'action' => ($lien ? $lien : generer_url_public('recherche')), # action specifique, ne passe pas par Verifier, ni Traiter
 			'recherche' => _request('recherche'),
 			'lang' => $lang,
 			'class' => $class,
-			'_id_champ' => $class ? substr(md5($action.$class),0,4) : 'recherche'
+			'_id_champ' => $class ? substr(md5($action.$class), 0, 4) : 'recherche'
 		);
 }
-
-?>

@@ -33,7 +33,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  * @return array
  *     Environnement du formulaire
 **/
-function formulaires_inscription_charger_dist($mode='', $id=0) {
+function formulaires_inscription_charger_dist($mode = '', $id = 0) {
 	global $visiteur_session;
 	
 	// fournir le mode de la config ou tester si l'argument du formulaire est un mode accepte par celle-ci
@@ -46,7 +46,7 @@ function formulaires_inscription_charger_dist($mode='', $id=0) {
 	if(isset($visiteur_session['statut']) && ($visiteur_session['statut'] <= $mode))
 		return false;
 	
-	$valeurs = array('nom_inscription'=>'','mail_inscription'=>'', 'id'=>$id, '_mode'=>$mode);
+	$valeurs = array('nom_inscription' => '','mail_inscription' => '', 'id' => $id, '_mode' => $mode);
 	
 	return $valeurs;
 }
@@ -66,14 +66,14 @@ function formulaires_inscription_charger_dist($mode='', $id=0) {
  * @return array
  *     Erreurs du formulaire
 **/
-function formulaires_inscription_verifier_dist($mode='', $id=0) {
+function formulaires_inscription_verifier_dist($mode = '', $id = 0) {
 	
 	include_spip('inc/filtres');
 	$erreurs = array();
 
 	include_spip('inc/autoriser');
 	if (!autoriser('inscrireauteur', $mode, $id)
-	  OR (strlen(_request('nobot'))>0))
+	  or (strlen(_request('nobot')) > 0))
 		$erreurs['message_erreur'] = _T('pass_rien_a_faire_ici');
 
 	if (!$nom = _request('nom_inscription'))
@@ -89,7 +89,7 @@ function formulaires_inscription_verifier_dist($mode='', $id=0) {
 		include_spip('action/inscrire_auteur');
 		if (function_exists('test_inscription'))
 			$f = 'test_inscription';
-		else 
+		else
 			$f = 'test_inscription_dist';
 		$declaration = $f($mode, $mail, $nom, $id);
 		if (is_string($declaration)) {
@@ -100,10 +100,10 @@ function formulaires_inscription_verifier_dist($mode='', $id=0) {
 			include_spip('base/abstract_sql');
 			
 			if ($row = sql_fetsel("statut, id_auteur, login, email", "spip_auteurs", "email=" . sql_quote($declaration['email']))){
-				if (($row['statut'] == '5poubelle') AND !$declaration['pass'])
+				if (($row['statut'] == '5poubelle') and !$declaration['pass'])
 					// irrecuperable
-					$erreurs['message_erreur'] = _T('form_forum_access_refuse');	
-				else if (($row['statut'] != 'nouveau') AND !$declaration['pass'])
+					$erreurs['message_erreur'] = _T('form_forum_access_refuse');
+				elseif (($row['statut'] != 'nouveau') and !$declaration['pass'])
 					// deja inscrit
 					$erreurs['message_erreur'] = _T('form_forum_email_deja_enregistre');
 				spip_log($row['id_auteur'] . " veut se resinscrire");
@@ -127,7 +127,7 @@ function formulaires_inscription_verifier_dist($mode='', $id=0) {
  * @return array
  *     Retours du traitement
 **/
-function formulaires_inscription_traiter_dist($mode='', $id=0) {
+function formulaires_inscription_traiter_dist($mode = '', $id = 0) {
 	
 	include_spip('inc/filtres');
 	include_spip('inc/autoriser');
@@ -137,18 +137,15 @@ function formulaires_inscription_traiter_dist($mode='', $id=0) {
 		$nom = _request('nom_inscription');
 		$mail_complet = _request('mail_inscription');
 
-		$inscrire_auteur = charger_fonction('inscrire_auteur','action');
-		$desc = $inscrire_auteur($mode, $mail_complet, $nom, array('id'=>$id));
+		$inscrire_auteur = charger_fonction('inscrire_auteur', 'action');
+		$desc = $inscrire_auteur($mode, $mail_complet, $nom, array('id' => $id));
 	}
 
 	// erreur ?
 	if (is_string($desc)){
-		return array('message_erreur'=> $desc);
+		return array('message_erreur' => $desc);
 	}
 	// OK
 	else
 		return array('message_ok' => _T('form_forum_identifiant_mail'), 'id_auteur' => $desc['id_auteur']);
 }
-
-
-?>
