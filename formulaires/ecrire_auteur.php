@@ -63,7 +63,7 @@ function formulaires_ecrire_auteur_verifier_dist($id_auteur, $id_article, $mail)
 		$erreurs['message_erreur'] = _T('pass_rien_a_faire_ici');
 	}
 
-	if (!_request('confirmer') AND !count($erreurs)) {
+	if (!_request('confirmer') and !count($erreurs)) {
 		$erreurs['previsu'] = ' ';
 		$erreurs['message_erreur'] = '';
 	}
@@ -95,5 +95,3 @@ function formulaires_ecrire_auteur_traiter_dist($id_auteur, $id_article, $mail) 
 		return array('message_erreur' => $message);
 	}
 }
-
-?>

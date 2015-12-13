@@ -43,7 +43,7 @@ function formulaires_inscription_verifier_dist($mode = '', $id = 0) {
 
 	include_spip('inc/autoriser');
 	if (!autoriser('inscrireauteur', $mode, $id)
-		OR (strlen(_request('nobot')) > 0)
+		or (strlen(_request('nobot')) > 0)
 	) {
 		$erreurs['message_erreur'] = _T('pass_rien_a_faire_ici');
 	}
@@ -77,11 +77,11 @@ function formulaires_inscription_verifier_dist($mode = '', $id = 0) {
 			if ($row = sql_fetsel("statut, id_auteur, login, email", "spip_auteurs",
 				"email=" . sql_quote($declaration['email']))
 			) {
-				if (($row['statut'] == '5poubelle') AND !$declaration['pass']) // irrecuperable
+				if (($row['statut'] == '5poubelle') and !$declaration['pass']) // irrecuperable
 				{
 					$erreurs['message_erreur'] = _T('form_forum_access_refuse');
 				} else {
-					if (($row['statut'] != 'nouveau') AND !$declaration['pass']) {
+					if (($row['statut'] != 'nouveau') and !$declaration['pass']) {
 						if (intval($row['statut']) > intval($mode)) {
 							set_request("_upgrade_auteur", $row['id_auteur']);
 						} else {
@@ -131,6 +131,3 @@ function formulaires_inscription_traiter_dist($mode = '', $id = 0) {
 		return array('message_ok' => _T('form_forum_identifiant_mail'), 'id_auteur' => $desc['id_auteur']);
 	}
 }
-
-
-?>

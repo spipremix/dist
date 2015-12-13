@@ -22,8 +22,8 @@ function retrouve_auteur($id_auteur, $jeton = '') {
 	} elseif ($jeton) {
 		include_spip('action/inscrire_auteur');
 		if ($auteur = auteur_verifier_jeton($jeton)
-			AND $auteur['statut'] <> '5poubelle'
-			AND $auteur['pass'] <> ''
+			and $auteur['statut'] <> '5poubelle'
+			and $auteur['pass'] <> ''
 		) {
 			return $auteur;
 		}
@@ -140,5 +140,3 @@ function formulaires_mot_de_passe_traiter_dist($id_auteur = null, $jeton = null)
 
 	return $res;
 }
-
-?>
