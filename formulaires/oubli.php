@@ -24,7 +24,7 @@ function formulaires_oubli_charger_dist() {
 // http://code.spip.net/@message_oubli
 function message_oubli($email, $param) {
 	$r = formulaires_oubli_mail($email);
-	if (is_array($r) AND $r[1]) {
+	if (is_array($r) and $r[1]) {
 		include_spip('inc/texte'); # pour corriger_typo
 
 		include_spip('action/inscrire_auteur');
@@ -77,7 +77,7 @@ function formulaires_oubli_verifier_dist() {
 	} else {
 		if (!$r[1]) {
 			$erreurs['oubli'] = _T('pass_erreur_non_enregistre', array('email_oubli' => spip_htmlspecialchars($email)));
-		} elseif ($r[1]['statut'] == '5poubelle' OR $r[1]['pass'] == '') {
+		} elseif ($r[1]['statut'] == '5poubelle' or $r[1]['pass'] == '') {
 			$erreurs['oubli'] = _T('pass_erreur_acces_refuse');
 		}
 	}
@@ -108,5 +108,3 @@ function formulaires_oubli_mail($email) {
 		);
 	}
 }
-
-?>

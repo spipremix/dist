@@ -40,5 +40,3 @@ function formulaires_recherche_charger_dist($lien = '', $class = '') {
 			'_id_champ' => $class ? substr(md5($action . $class), 0, 4) : 'recherche'
 		);
 }
-
-?>
