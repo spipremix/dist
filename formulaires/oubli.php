@@ -24,8 +24,8 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  * @return array
  *     Environnement du formulaire
 **/
-function formulaires_oubli_charger_dist(){
-	$valeurs = array('oubli'=>'','nobot'=>'');
+function formulaires_oubli_charger_dist() {
+	$valeurs = array('oubli' => '','nobot' => '');
 	return $valeurs;
 }
 
@@ -48,7 +48,7 @@ function formulaires_oubli_charger_dist(){
 function message_oubli($email, $param)
 {
 	$r = formulaires_oubli_mail($email);
-	if (is_array($r) AND $r[1]) {
+	if (is_array($r) and $r[1]) {
 		include_spip('inc/texte'); # pour corriger_typo
 
 		include_spip('action/inscrire_auteur');
@@ -57,7 +57,7 @@ function message_oubli($email, $param)
 		$msg = recuperer_fond(
 			"modeles/mail_oubli",
 			array(
-				'url_reset'=>generer_url_public('spip_pass',"$param=$cookie", true, false)
+				'url_reset' => generer_url_public('spip_pass', "$param=$cookie", true, false)
 			)
 		);
 		include_spip("inc/notifications");
@@ -77,10 +77,10 @@ function message_oubli($email, $param)
  * @return array
  *     Retours des traitements
 **/
-function formulaires_oubli_traiter_dist(){
+function formulaires_oubli_traiter_dist() {
 
-	$message = message_oubli(_request('oubli'),'p');
-	return array('message_ok'=>$message);
+	$message = message_oubli(_request('oubli'), 'p');
+	return array('message_ok' => $message);
 }
 
 
@@ -102,7 +102,7 @@ function formulaires_oubli_traiter_dist(){
 function test_oubli_dist($email)
 {
 	include_spip('inc/filtres'); # pour email_valide()
-	if (!email_valide($email) )
+	if (!email_valide($email))
 		return _T('pass_erreur_non_valide', array('email_oubli' => spip_htmlspecialchars($email)));
 	return array('mail' => $email);
 }
@@ -120,7 +120,7 @@ function test_oubli_dist($email)
  * @return array
  *     Tableau des erreurs
 **/
-function formulaires_oubli_verifier_dist(){
+function formulaires_oubli_verifier_dist() {
 	$erreurs = array();
 
 	$email = strval(_request('oubli'));
@@ -133,7 +133,7 @@ function formulaires_oubli_verifier_dist(){
 		if (!$r[1])
 			$erreurs['oubli'] = _T('pass_erreur_non_enregistre', array('email_oubli' => spip_htmlspecialchars($email)));
 
-		elseif ($r[1]['statut'] == '5poubelle' OR $r[1]['pass'] == '')
+		elseif ($r[1]['statut'] == '5poubelle' or $r[1]['pass'] == '')
 			$erreurs['oubli'] =  _T('pass_erreur_acces_refuse');
 	}
 
@@ -172,4 +172,3 @@ function formulaires_oubli_mail($email)
 		return array($declaration, sql_fetsel("id_auteur,statut,pass", "spip_auteurs", "email =" . sql_quote($declaration['mail'])));
 	}
 }
-?>

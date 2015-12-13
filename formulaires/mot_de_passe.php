@@ -36,15 +36,15 @@ include_spip('base/abstract_sql');
  *     - array : Description de l'auteur dans spip_auteurs,
  *     - false si auteur non retrouvé ou non valide.
 **/
-function retrouve_auteur($id_auteur,$jeton=''){
-	if ($id_auteur=intval($id_auteur)) {
-		return sql_fetsel('*','spip_auteurs',array('id_auteur='.intval($id_auteur),"statut<>'5poubelle'","pass<>''"));
+function retrouve_auteur($id_auteur, $jeton = '') {
+	if ($id_auteur = intval($id_auteur)) {
+		return sql_fetsel('*', 'spip_auteurs', array('id_auteur='.intval($id_auteur), "statut<>'5poubelle'", "pass<>''"));
 	}
 	elseif ($jeton) {
 		include_spip('action/inscrire_auteur');
 		if ($auteur = auteur_verifier_jeton($jeton)
-		  AND $auteur['statut']<>'5poubelle'
-		  AND $auteur['pass']<>''){
+		  and $auteur['statut'] <> '5poubelle'
+		  and $auteur['pass'] <> ''){
 			return $auteur;
 		}
 	}
@@ -68,12 +68,12 @@ function retrouve_auteur($id_auteur,$jeton=''){
  * @return array
  *     Environnement par défaut du formulaire
  */
-function formulaires_mot_de_passe_charger_dist($id_auteur=null, $jeton=null){
+function formulaires_mot_de_passe_charger_dist($id_auteur = null, $jeton = null) {
 
 	$valeurs = array();
 	// compatibilite anciens appels du formulaire
 	if (is_null($jeton)) $jeton = _request('p');
-	$auteur = retrouve_auteur($id_auteur,$jeton);
+	$auteur = retrouve_auteur($id_auteur, $jeton);
 
 	if ($auteur){
 		$valeurs['id_auteur'] = $id_auteur; // a toutes fins utiles pour le formulaire
@@ -84,8 +84,8 @@ function formulaires_mot_de_passe_charger_dist($id_auteur=null, $jeton=null){
 		$valeurs['_hidden'] = _T('pass_erreur_code_inconnu');
 		$valeurs['editable'] =  false; // pas de saisie
 	}
-	$valeurs['oubli']='';
-	$valeurs['nobot']='';
+	$valeurs['oubli'] = '';
+	$valeurs['nobot'] = '';
 	return $valeurs;
 }
 
@@ -102,17 +102,17 @@ function formulaires_mot_de_passe_charger_dist($id_auteur=null, $jeton=null){
  * @return array
  *     Erreurs du formulaire
  */
-function formulaires_mot_de_passe_verifier_dist($id_auteur=null, $jeton=null){
+function formulaires_mot_de_passe_verifier_dist($id_auteur = null, $jeton = null) {
 	$erreurs = array();
 	if (!_request('oubli'))
 		$erreurs['oubli'] = _T('info_obligatoire');
-	else if (strlen($p=_request('oubli')) < _PASS_LONGUEUR_MINI)
-		$erreurs['oubli'] = _T('info_passe_trop_court_car_pluriel',array('nb'=>_PASS_LONGUEUR_MINI));
+	elseif (strlen($p = _request('oubli')) < _PASS_LONGUEUR_MINI)
+		$erreurs['oubli'] = _T('info_passe_trop_court_car_pluriel', array('nb' => _PASS_LONGUEUR_MINI));
 	else {
 		if (!is_null($c = _request('oubli_confirm'))){
 			if (!$c)
 				$erreurs['oubli_confirm'] = _T('info_obligatoire');
-			elseif ($c!==$p)
+			elseif ($c !== $p)
 				$erreurs['oubli'] = _T('info_passes_identiques');
 		}
 	}
@@ -142,21 +142,21 @@ function formulaires_mot_de_passe_verifier_dist($id_auteur=null, $jeton=null){
  * @return array
  *     Retours du traitement
  */
-function formulaires_mot_de_passe_traiter_dist($id_auteur=null, $jeton=null){
-	$res = array('message_ok'=>'');
+function formulaires_mot_de_passe_traiter_dist($id_auteur = null, $jeton = null) {
+	$res = array('message_ok' => '');
 	refuser_traiter_formulaire_ajax(); // puisqu'on va loger l'auteur a la volee (c'est bonus)
 
 	// compatibilite anciens appels du formulaire
 	if (is_null($jeton)) $jeton = _request('p');
-	$row = retrouve_auteur($id_auteur,$jeton);
+	$row = retrouve_auteur($id_auteur, $jeton);
 
 	if ($row
 	 && ($id_auteur = $row['id_auteur'])
 	 && ($oubli = _request('oubli'))) {
 		include_spip('action/editer_auteur');
 		include_spip('action/inscrire_auteur');
-		if ($err = auteur_modifier($id_auteur, array('pass'=>$oubli))){
-			$res = array('message_erreur'=>$err);
+		if ($err = auteur_modifier($id_auteur, array('pass' => $oubli))){
+			$res = array('message_erreur' => $err);
 		}
 		else {
 			auteur_effacer_jeton($id_auteur);
@@ -165,10 +165,9 @@ function formulaires_mot_de_passe_traiter_dist($id_auteur=null, $jeton=null){
 			"<br />" . _T('pass_rappel_login', array('login' => $login));
 
 			include_spip('inc/auth');
-			$row = sql_fetsel("*","spip_auteurs","id_auteur=".intval($id_auteur));
+			$row = sql_fetsel("*", "spip_auteurs", "id_auteur=".intval($id_auteur));
 			auth_loger($row);
 		}
 	}
 	return $res;
 }
-?>
