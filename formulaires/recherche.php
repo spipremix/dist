@@ -10,37 +10,33 @@
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-/**
- * Gestion du formulaire de recherche pour l'espace public
- *
- * @package SPIP\Dist\Formulaires
-**/
-
-if (!defined('_ECRIRE_INC_VERSION')) return;
+if (!defined('_ECRIRE_INC_VERSION')) {
+	return;
+}
 
 /**
- * Chargement des valeurs par défaut des champs du `#FORMULAIRE_RECHERCHE`
- * 
- * On peut lui passer l'URL de destination en premier argument.
- * On peut passer une deuxième chaine qui va différencier le formulaire
- * pour pouvoir en utiliser plusieurs sur une même page.
+ * chargement des valeurs par defaut des champs du #FORMULAIRE_RECHERCHE
+ * on peut lui passer l'url de destination en premier argument
+ * on peut passer une deuxième chaine qui va différencier le formulaire pour pouvoir en utiliser plusieurs sur une même page
  *
- * @param string $lien  URL où amène le formulaire validé
+ * @param string $lien URL où amène le formulaire validé
  * @param string $class Une class différenciant le formulaire
  * @return array
  */
 function formulaires_recherche_charger_dist($lien = '', $class = '') {
-	if ($GLOBALS['spip_lang'] != $GLOBALS['meta']['langue_site'])
+	if ($GLOBALS['spip_lang'] != $GLOBALS['meta']['langue_site']) {
 		$lang = $GLOBALS['spip_lang'];
-	else
+	} else {
 		$lang = '';
+	}
 
+	$action = ($lien ? $lien : generer_url_public('recherche')); # action specifique, ne passe pas par Verifier, ni Traiter
 	return
 		array(
-			'action' => ($lien ? $lien : generer_url_public('recherche')), # action specifique, ne passe pas par Verifier, ni Traiter
+			'action' => $action,
 			'recherche' => _request('recherche'),
 			'lang' => $lang,
 			'class' => $class,
-			'_id_champ' => $class ? substr(md5($action.$class), 0, 4) : 'recherche'
+			'_id_champ' => $class ? substr(md5($action . $class), 0, 4) : 'recherche'
 		);
 }
