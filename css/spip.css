@@ -70,12 +70,6 @@ textarea.spip_cadre {
    width:98%;
 }
 
-/* Enluminures typo V3 / Cf.: http://contrib.spip.net/3118 */
-sc, .sc { font-variant: small-caps; }
-.caractencadre-spip { background-color: #FFFFCC; color: purple; }
-.caractencadre2-spip { background-color: #FFFFCC; color: orange; }
-.texteencadre-spip { display: block; margin: 1.5em 50px; padding: 1.5em; background: #EEE; }
-
 /* Logos, documents et images */
 .spip_logo { float:right; margin: 0 0 10px 10px; padding:0; border: none; }
 
