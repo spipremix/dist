@@ -10,8 +10,8 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// D
-	'dist_description' => 'Skeletpack verdeeld met SPIP 3.',
-	'dist_slogan' => 'Standaard skelet van SPIP 3'
+	'dist_description' => 'Pakket skeletten verdeeld met SPIP 3.',
+	'dist_slogan' => 'Standaard skeletten van SPIP 3'
 );
 
 ?>
