@@ -14,7 +14,7 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
-function formulaires_inscription_charger_dist($mode = '', $id = 0) {
+function formulaires_inscription_charger_dist($mode = '', $id = 0, $retour='') {
 	global $visiteur_session;
 
 	// fournir le mode de la config ou tester si l'argument du formulaire est un mode accepte par celle-ci
@@ -35,7 +35,7 @@ function formulaires_inscription_charger_dist($mode = '', $id = 0) {
 }
 
 // Si inscriptions pas autorisees, retourner une chaine d'avertissement
-function formulaires_inscription_verifier_dist($mode = '', $id = 0) {
+function formulaires_inscription_verifier_dist($mode = '', $id = 0, $retour='') {
 
 	set_request("_upgrade_auteur"); // securite
 	include_spip('inc/filtres');
@@ -98,7 +98,7 @@ function formulaires_inscription_verifier_dist($mode = '', $id = 0) {
 	return $erreurs;
 }
 
-function formulaires_inscription_traiter_dist($mode = '', $id = 0) {
+function formulaires_inscription_traiter_dist($mode = '', $id = 0, $retour='') {
 
 	include_spip('inc/filtres');
 	include_spip('inc/autoriser');
@@ -120,7 +120,7 @@ function formulaires_inscription_traiter_dist($mode = '', $id = 0) {
 		$mail_complet = _request('mail_inscription');
 
 		$inscrire_auteur = charger_fonction('inscrire_auteur', 'action');
-		$desc = $inscrire_auteur($mode, $mail_complet, $nom, array('id' => $id));
+		$desc = $inscrire_auteur($mode, $mail_complet, $nom, array('id'=>$id, 'redirect'=> $retour));
 	}
 
 	// erreur ?
