@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'dist_slogan' => 'Esquèletrou predefinit de SPIP 3'
 );
 
-?>

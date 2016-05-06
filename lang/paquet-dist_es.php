@@ -14,4 +14,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'dist_slogan' => 'Juego de esqueletos por defecto en SPIP 3'
 );
 
-?>
