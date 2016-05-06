@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'dist_description' => 'Conjunto de gabaritos distribuído com o SPIP 3.',
 	'dist_slogan' => 'Gabaritos padrão do SPIP 3'
 );
-

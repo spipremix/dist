@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'dist_description' => 'مجموعه‌ي اسكلت‌هاي پيش‌گزيده‌ي اسپيپ 3',
 	'dist_slogan' => 'اسكلت‌هاي پش‌گزيده‌ي اسپيپ 3'
 );
-

@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'dist_description' => 'Sada šablón distribuovaná so SPIPom 3.',
 	'dist_slogan' => 'Predvolené šablóny SPIPu 3'
 );
-

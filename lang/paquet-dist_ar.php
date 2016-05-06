@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'dist_description' => 'مجموعة صفحات نموذجية موزعة مع SPIP ٣.',
 	'dist_slogan' => 'صفحات SPIP ٣ النموذجية الافتراضية'
 );
-

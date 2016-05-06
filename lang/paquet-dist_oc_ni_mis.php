@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'dist_description' => 'Juec d’esquèletrou distribuit embé SPIP 3.',
 	'dist_slogan' => 'Esquèletrou predefinit de SPIP 3'
 );
-

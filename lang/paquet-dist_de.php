@@ -13,4 +13,3 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'dist_description' => 'Mit SPIP 3 ausgelieferte  Skelette.',
 	'dist_slogan' => 'SPIP 3 Standardskelette'
 );
-
