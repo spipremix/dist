@@ -14,8 +14,7 @@
 
 	(On pose un cache a zero pour echapper au test _IS_BOT)
 
-]#CACHE{0}
-#HTTP_HEADER{Content-Type: text/xml; charset=utf-8}
+]#HTTP_HEADER{Content-Type: text/xml; charset=utf-8}
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
@@ -29,9 +28,6 @@
 <BOUCLE_r(RUBRIQUES){!par date}{0,1000}>
 <url>
 	[<loc>(#URL_RUBRIQUE|url_absolue)</loc>]
-	<BOUCLE_r_trad(RUBRIQUES){traduction}>
-		<xhtml:link rel="alternate" hreflang="[(#LANG)]" href="[(#URL_RUBRIQUE|url_absolue)]" />
-	</BOUCLE_r_trad>
 </url>
 </BOUCLE_r>
 
