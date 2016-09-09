@@ -30,10 +30,12 @@ function message_oubli($email, $param) {
 		include_spip('action/inscrire_auteur');
 		$cookie = auteur_attribuer_jeton($r[1]['id_auteur']);
 
+		// l'url_reset doit etre une URL de confiance, on force donc un url_absolue sur adresse_site
+		include_spip('inc/filtres');
 		$msg = recuperer_fond(
 			"modeles/mail_oubli",
 			array(
-				'url_reset' => generer_url_public('spip_pass', "$param=$cookie", true, false)
+				'url_reset' => url_absolue(generer_url_public('spip_pass', "$param=$cookie"),$GLOBALS['meta']['adresse_site'])
 			)
 		);
 		include_spip("inc/notifications");
