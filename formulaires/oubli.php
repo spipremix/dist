@@ -35,7 +35,7 @@ function message_oubli($email, $param) {
 		$msg = recuperer_fond(
 			"modeles/mail_oubli",
 			array(
-				'url_reset' => url_absolue(generer_url_public('spip_pass', "$param=$cookie"),$GLOBALS['meta']['adresse_site'])
+				'url_reset' => url_absolue(generer_url_public('spip_pass', "$param=$cookie"), $GLOBALS['meta']['adresse_site'] . '/')
 			)
 		);
 		include_spip("inc/notifications");
