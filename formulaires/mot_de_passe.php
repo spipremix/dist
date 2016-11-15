@@ -18,7 +18,11 @@ include_spip('base/abstract_sql');
 
 function retrouve_auteur($id_auteur, $jeton = '') {
 	if ($id_auteur = intval($id_auteur)) {
-		return sql_fetsel('*', 'spip_auteurs', array('id_auteur=' . intval($id_auteur), "statut<>'5poubelle'", "pass<>''"));
+		return sql_fetsel(
+			'*',
+			'spip_auteurs',
+			array('id_auteur=' . intval($id_auteur), "statut<>'5poubelle'", "pass<>''")
+		);
 	} elseif ($jeton) {
 		include_spip('action/inscrire_auteur');
 		if ($auteur = auteur_verifier_jeton($jeton)
@@ -129,11 +133,11 @@ function formulaires_mot_de_passe_traiter_dist($id_auteur = null, $jeton = null)
 		} else {
 			auteur_effacer_jeton($id_auteur);
 			$login = $row['login'];
-			$res['message_ok'] = "<b>" . _T('pass_nouveau_enregistre') . "</b>" .
-				"<br />" . _T('pass_rappel_login', array('login' => $login));
+			$res['message_ok'] = '<b>' . _T('pass_nouveau_enregistre') . '</b>' .
+				'<br />' . _T('pass_rappel_login', array('login' => $login));
 
 			include_spip('inc/auth');
-			$row = sql_fetsel("*", "spip_auteurs", "id_auteur=" . intval($id_auteur));
+			$row = sql_fetsel('*', 'spip_auteurs', 'id_auteur=' . intval($id_auteur));
 			auth_loger($row);
 		}
 	}

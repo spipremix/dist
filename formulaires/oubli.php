@@ -33,12 +33,15 @@ function message_oubli($email, $param) {
 		// l'url_reset doit etre une URL de confiance, on force donc un url_absolue sur adresse_site
 		include_spip('inc/filtres');
 		$msg = recuperer_fond(
-			"modeles/mail_oubli",
+			'modeles/mail_oubli',
 			array(
-				'url_reset' => url_absolue(generer_url_public('spip_pass', "$param=$cookie"), $GLOBALS['meta']['adresse_site'] . '/')
+				'url_reset' => url_absolue(
+					generer_url_public('spip_pass', "$param=$cookie"),
+					$GLOBALS['meta']['adresse_site'] . '/'
+				)
 			)
 		);
-		include_spip("inc/notifications");
+		include_spip('inc/notifications');
 		notifications_envoyer_mails($email, $msg);
 
 		return _T('pass_recevoir_mail');
@@ -106,7 +109,7 @@ function formulaires_oubli_mail($email) {
 
 		return array(
 			$declaration,
-			sql_fetsel("id_auteur,statut,pass", "spip_auteurs", "email =" . sql_quote($declaration['mail']))
+			sql_fetsel('id_auteur,statut,pass', 'spip_auteurs', 'email =' . sql_quote($declaration['mail']))
 		);
 	}
 }
