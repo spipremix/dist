@@ -126,6 +126,9 @@ fieldset.previsu legend { color: #F57900; }
 
 .erreur_message { color: red; }
 
+div.erreur input[type="text"], div.erreur input.text,
+div.erreur input[type="password"], div.erreur input.password,
+div.erreur textarea,
 li.erreur input[type="text"], li.erreur input.text,
 li.erreur input[type="password"], li.erreur input.password,
 li.erreur textarea { background-color: #fbe3e4; border-color: #fbc2c4; }
