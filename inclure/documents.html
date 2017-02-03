@@ -23,7 +23,7 @@
 </B_documents_portfolio>
 
 [(#REM)
-Afficher en grand le document demande dans l'URL
+	Afficher en grand le document demande dans l'URL
 ]
 <BOUCLE_afficher_document(DOCUMENTS) {id_document}{objet?}{id_objet?} {mode=document}{extension IN png,jpg,gif}>
 [(#MODELE{emb,lien=#URL_DOCUMENT}|image_reduire{672,*})]
@@ -31,17 +31,17 @@ Afficher en grand le document demande dans l'URL
 
 
 [(#REM)
-Si un seul document est joint a l'article, et si le texte est vide,
-on incruste automatiquement ce document
+	Si un seul document est joint a l'article, et si le texte est vide,
+	on incruste automatiquement ce document
 ]
 <BOUCLE_documents_decompte(DOCUMENTS spip_documents_liens articles) {objet?}{id_objet?} {mode=document}{texte=''}{extension !IN gif,jpg,png} {vu=non}>
 [(#TOTAL_BOUCLE|=={1}
-|?{[(#INCLURE{fond=modeles/emb, id_document}
-|trim)]})]</BOUCLE_documents_decompte>
+	|?{[(#INCLURE{fond=modeles/emb, id_document}
+	|trim)]})]</BOUCLE_documents_decompte>
 
 
 [(#REM)
-Sinon, liste des autres documents joints
+	Sinon, liste des autres documents joints
 ]
 <B_documents_joints>
 	<div class="menu documents_joints" id="documents_joints">
