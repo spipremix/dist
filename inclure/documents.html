@@ -1,4 +1,4 @@
-[(#REM) Historiquement on pouvait arriver avec id_article ou id_rubrique. On les réaffecte sur objet, id_objet. ]
+[(#REM) On peut arriver avec id_article ou id_rubrique. On les réaffecte sur objet, id_objet. ]
 [(#ENV{id_article}|oui)[(#VAL{article}|setenv{objet})][(#ENV{id_article}|setenv{id_objet})]]
 [(#ENV{id_rubrique}|oui)[(#VAL{rubrique}|setenv{objet})][(#ENV{id_rubrique}|setenv{id_objet})]]
 
