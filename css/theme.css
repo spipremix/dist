@@ -146,8 +146,9 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .formulaire_forum legend { display: none; }
 .formulaire_forum .saisie_titre input.text { width: 100% }
 .formulaire_forum .session_qui { display: none; }
-.formulaire_forum .saisie_texte .explication { font-size: .9em; font-style: italic; }
+.formulaire_forum .saisie_texte .explication { font-size: .9em; font-style: italic; margin: 0.5em 0; }
 html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: normal; }
+.formulaire_forum .boutons { margin-top: 1em; }
 
 /* Habillage des petitions
 ---------------------------------------------- */
