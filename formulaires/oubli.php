@@ -21,7 +21,7 @@ function formulaires_oubli_charger_dist() {
 	return $valeurs;
 }
 
-// http://code.spip.net/@message_oubli
+// https://code.spip.net/@message_oubli
 function message_oubli($email, $param) {
 	$r = formulaires_oubli_mail($email);
 	if (is_array($r) and $r[1]) {
@@ -60,7 +60,7 @@ function formulaires_oubli_traiter_dist() {
 
 
 // fonction qu'on peut redefinir pour filtrer les adresses mail
-// http://code.spip.net/@test_oubli
+// https://code.spip.net/@test_oubli
 function test_oubli_dist($email) {
 	include_spip('inc/filtres'); # pour email_valide()
 	if (!email_valide($email)) {
