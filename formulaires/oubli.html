@@ -4,7 +4,7 @@
 [(#ENV*{editable}|?{' '})
 <form id="oubli_form" action="[(#ENV{action})]" method="post">
 	[(#REM) activer le traitement auto et dispatch sur charger/verifier/traiter]
-	#ACTION_FORMULAIRE{#ENV{action}}
+	#ACTION_FORMULAIRE
 	<fieldset>
 		<legend><:pass_nouveau_pass:></legend>
 		<p><:pass_procedure_changer:></p>

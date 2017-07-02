@@ -4,7 +4,7 @@
 [(#ENV{editable})
 <form method="post" action="#ENV{action}#formulaire_ecrire_auteur#ENV{id}">
 	[(#REM) declarer les hidden qui declencheront le service du formulaire parametre : url d'action ]
-	#ACTION_FORMULAIRE{#ENV{action}}
+	#ACTION_FORMULAIRE
 	[(#REM) Previsualisation... ]
 	[(#ENV*{erreurs}|table_valeur{previsu}|oui)
 	<fieldset class="previsu">
