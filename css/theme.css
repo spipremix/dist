@@ -19,11 +19,11 @@ h2,.h2 { line-height: 1.2;}
 
 /* Hyperliens
 ---------------------------------------------- */
-a, a:visited { color: #c85000;  } 
+a, a:visited { color: #E8246F;  } 
  
 a:focus, 
 a:hover, 
-a:active { background-color:#c85000; color:#fff;}
+a:active { background-color:#E8246F; color:#fff;}
 
 /* ------------------------------------------
 /* Habillage des elements du contenu
