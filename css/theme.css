@@ -100,8 +100,9 @@ textarea { width: 100%; }
 .formulaire_menu_lang { margin: 0; padding: 0; background: none; }
 
 /* Formulaires de recherche (site / petitions) */
-.formulaire_recherche input.text { width: 9em; padding-left: 20px;border:solid 1px #aaa; background:#fff url(img/recherche.png) no-repeat left center; }
-.formulaire_recherche input.submit {padding:0.1em;}
+.formulaire_recherche input.text { width: 100%; padding-left: 20px;border:1px solid #aaa; background: #F7F7F7 url(img/recherche.png) no-repeat left center; }
+.formulaire_recherche input.text:focus { background-color: #FFF; }
+.formulaire_recherche input.submit { float: right; margin:1px 0 2em; padding: 0; font-size: 90%; }
 
 /* Choix des mots-clefs */
 ul.choix_mots { display: block; margin: 0; padding: 0; list-style: none; }
@@ -119,6 +120,8 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .formulaire_ecrire_auteur {}
 .formulaire_ecrire_auteur .saisie_sujet_message_auteur input.text { width: 100%; }
 
+/* formulaire spip en general */
+.formulaire_spip label { cursor: pointer; }
 
 /* Habillage des portfolios
 ---------------------------------------------- */
@@ -131,7 +134,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 
 /* Habillage des forums
 ---------------------------------------------- */
-.comments  {margin-top:2em;padding:1em 0;border-top:10px solid #EED;}
+.comments  {margin-top:2em;padding:1em 0;border-top:1px solid #aaa;}
 .comments  ul {list-style:none;}
 .comment-item {margin:0.5em 0 0 0;padding:0.5em 0 0 0;border-top:1px solid #EED;}
 .comments-items .comments-items {margin-left: 25px;padding-left: 20px;border-left:5px solid #ddd;}
@@ -142,7 +145,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .comment-content .hyperlien { padding: 0; background: transparent; font-weight: normal; }
 
 /* Formulaire de forum */
-.forum-titre  {margin-top:2em;padding:1em 0;border-top:10px solid #EED;}
+.forum-titre  {margin-top:2em;padding:1em 0;border-top:solid 1px #aaa;}
 .formulaire_forum {}
 .formulaire_forum legend { display: none; }
 .formulaire_forum .saisie_titre input.text { width: 100% }
@@ -195,7 +198,7 @@ html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: norma
 .menu_breves li {}
 .menu_breves li h3 { margin: 0; }
 
-.aside h2 {border-bottom:3px solid #EED;padding-bottom:.1em;}
+.aside h2 {border-bottom:1px solid #aaa;padding-bottom:.1em;}
 .aside li {margin:1em 0;}
 .aside a {text-decoration:none;}
 
