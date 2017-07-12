@@ -27,7 +27,7 @@ body { text-align: center; background:#ddd;}
 .header .spip_logo_site,
 .header .spip_logo_site a,
 .header .spip_logo_site a:hover { background: transparent; text-decoration:none; color:#222; }
-.header .spip_logo_site a:hover  {color:#E8246F;}
+.header .spip_logo_site a:hover  {color:#db1762;}
 .header .spip_logo_site a:hover img {opacity:0.7;}
 .header .spip_logo {margin-bottom:0;}
 .header #slogan { margin: 0; }
@@ -36,11 +36,11 @@ body { text-align: center; background:#ddd;}
 
 .nav {}
 .nav li {display:inline;}
-.nav li a {  display: inline-block; padding: 0.25em 0.5em; margin: 0 0.25em 0.5em 0;border-radius: 0.25em;text-decoration: none;  background: #F5F5F5; color: #A60040; }
-.nav li.on a { background:#E8246F;color:#fff;  font-weight: normal; }
+.nav li a { display: inline-block; padding: 0.25em 0.5em; margin: 0 0.25em 0.5em 0;border-radius: 0.25em;  text-decoration: none;  background: #f0f0f0; color: #db1762; }
+.nav li.on a { background:#c41558; color:#fff; font-weight: normal; }
 .nav li a:focus,
 .nav li a:hover,
-.nav li a:active { background: #A60040; color:#fff; }
+.nav li a:active { background: #c41558; color:#fff; }
  
 
 .footer .colophon { float: left; height: 40px; width: 70%; margin: 0; }

@@ -19,11 +19,11 @@ h2,.h2 { line-height: 1.2;}
 
 /* Hyperliens
 ---------------------------------------------- */
-a, a:visited { color: #E8246F;  } 
+a, a:visited { color: #db1762;  }
  
 a:focus, 
 a:hover, 
-a:active { background-color:#E8246F; color:#fff;}
+a:active { background-color:#db1762; color:#fff; text-decoration:none; }
 
 /* ------------------------------------------
 /* Habillage des elements du contenu
@@ -34,7 +34,8 @@ a:active { background-color:#E8246F; color:#fff;}
 .arbo * { font-weight: normal; }
 .arbo a,
 .arbo a:visited { color: #666; }
-.arbo a:hover { background: #666; color: white; }  
+.arbo a:hover,
+.arbo a:focus { background: #666; color: white; text-decoration:none; }
 
 .cartouche { margin-bottom: 1.5em; }
 .cartouche h1 { margin-bottom: 0; }
@@ -172,8 +173,11 @@ html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: norma
 /* Pagination */
 .pagination a,
 .pagination .on  { padding:.5em; margin: 0em; border-radius:.25em; }
-.pagination a { background: #EED; text-decoration: none; }
-.pagination .on { font-weight: bold; background: #222; color: #fff; }
+.pagination a { background: #f0f0f0; text-decoration: none; }
+.pagination .on,
+.pagination a:hover,
+.pagination a:focus,
+.pagination a:active { font-weight: bold; background: #c41558; color: #fff; }
 .pagination .sep { visibility: hidden; }
 .menu_articles .pagination strong {font-size:1em;}
 
