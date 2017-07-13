@@ -54,7 +54,7 @@ html[dir="rtl"] .info-publi { font-style: normal; }
 
 .chapo { font-weight: bold; }
 .texte {}
-.hyperlien { display: block; padding: 1.5em 50px; background: #EED url(img/def.png) no-repeat 25px 1.9em; font-weight: bold; }
+.hyperlien { display: block; padding: 1.5em 50px; background: #EEE url(img/def.png) no-repeat 25px 1.9em; font-weight: bold; }
 .ps, .notes { margin-bottom: 1.5em; }
 .notes { clear: both; font-size: .9em; }
 
@@ -68,7 +68,7 @@ table.spip thead th { background: none; border: 1px solid; border-width: 1px 0; 
 table.spip tbody tr th,
 table.spip tr td { background: none; }
 table.spip tbody tr.odd th,
-table.spip tr.odd td { background: #EED; }
+table.spip tr.odd td { background: #EEE; }
 table.spip tr:hover td {background: #AAD;}
 table.spip tfoot { border-top: 1px solid; }
 
@@ -141,7 +141,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 /* Habillage des portfolios
 ---------------------------------------------- */
 .documents_portfolio li {display:inline;margin:0;padding:0;}
-.documents_portfolio a {display:inline-block;padding:10px;margin:5px;border:1px solid #ccc !important;color:#EED;background:#fff;box-shadow: 5px 7px 5px 2px rgba(85,85,85,0.3);}
+.documents_portfolio a {display:inline-block;padding:10px;margin:5px;border:1px solid #ccc !important;color:#EEE;background:#fff;box-shadow: 5px 7px 5px 2px rgba(85,85,85,0.3);}
 .documents_portfolio a:hover {color:#999;opacity:0.8;}
 .documents_portfolio img {margin:0;}
 
@@ -149,9 +149,9 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 
 /* Habillage des forums
 ---------------------------------------------- */
-.comments  {margin-top:2em;padding:1em 0;border-top:10px solid #EED;}
+.comments  {margin-top:2em;padding:1em 0;border-top:10px solid #EEE;}
 .comments  ul {list-style:none;}
-.comment-item {margin:0.5em 0 0 0;padding:0.5em 0 0 0;border-top:1px solid #EED;}
+.comment-item {margin:0.5em 0 0 0;padding:0.5em 0 0 0;border-top:1px solid #EEE;}
 .comments-items .comments-items {margin-left: 25px;padding-left: 20px;border-left:5px solid #ddd;}
 .comment-meta { margin: 0; font-weight: bold; }
 .comment-meta small { font-size: 100%; }
@@ -160,7 +160,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 .comment-content .hyperlien { padding: 0; background: transparent; font-weight: normal; }
 
 /* Formulaire de forum */
-.forum-titre  {margin-top:2em;padding:1em 0;border-top:10px solid #EED;}
+.forum-titre  {margin-top:2em;padding:1em 0;border-top:10px solid #EEE;}
 .formulaire_forum {}
 .formulaire_forum legend { display: none; }
 .formulaire_forum .saisie_titre input.text { width: 100% }
@@ -213,7 +213,7 @@ html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: norma
 .menu_breves li {}
 .menu_breves li h3 { margin: 0; }
 
-.aside h2 {border-bottom:3px solid #EED;padding-bottom:.1em;}
+.aside h2 {border-bottom:3px solid #EEE;padding-bottom:.1em;}
 .aside li {margin:1em 0;}
 .aside a {text-decoration:none;}
 
