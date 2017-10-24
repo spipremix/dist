@@ -101,7 +101,7 @@ textarea { width: 100%; }
 
 /* Formulaires de recherche (site / petitions) */
 .formulaire_recherche input.text { 
-	width: 83%;
+	width: auto;
 	height: 32px;
 	padding-left: 20px;
 	vertical-align: middle;
@@ -111,12 +111,10 @@ textarea { width: 100%; }
 	border-radius: 0.25em 0 0 0.25em;
 }
 .formulaire_recherche input.submit { 
-	width: 17%;
-	padding:0; 
+	width: auto;
 	height: 32px;
 	vertical-align: middle;
 	border:solid 1px #aaa;
-	background:#ddd;
 	border-left: none;
 	-webkit-border-radius: 0 0.25em 0.25em 0;
 	border-radius: 0 0.25em 0.25em 0;
