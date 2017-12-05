@@ -12,6 +12,10 @@
 	Mais si date_modif est recente (1 jour) on l'indique, pour que ce
 	soit reindexe en priorite
 
+	un critère annee permet de lister les articles d'une année pour contourner la limite de 2000 items  du sitemap general
+	sitemap.xml?annee=1981
+
+
 	(On pose un cache a zero pour echapper au test _IS_BOT)
 
 ]#HTTP_HEADER{Content-Type: text/xml; charset=utf-8}
@@ -24,16 +28,16 @@
 	<changefreq>hourly</changefreq>
 </url>
 
-[(#REM) Rubriques ]
-<BOUCLE_r(RUBRIQUES){!par date}{0,1000}>
+[(#REM) Rubriques]
+<BOUCLE_r(RUBRIQUES){!par date}{0,1000}{si #ENV{annee}|non}>
 <url>
 	[<loc>(#URL_RUBRIQUE|url_absolue)</loc>]
 </url>
 </BOUCLE_r>
 
-[(#REM) Articles ]
+[(#REM) Articles]
 [(#SET{recent,[(#VAL{Y-m-d H:i:s}|date{#VAL{"-1 day"}|strtotime})]})]
-<BOUCLE_a(ARTICLES){!par date_modif}{!par date}{0,2000}>
+<BOUCLE_a(ARTICLES){annee?}{!par date_modif}{!par date}{0,2000}>
 <url>
 	[<loc>(#URL_ARTICLE|url_absolue)</loc>]
 	<BOUCLE_a_trad(ARTICLES){traduction}>
@@ -44,12 +48,12 @@
 </url>
 </BOUCLE_a>
 
-[(#REM) Breves ]
-<BOUCLE_b(BREVES){!par date}{0,1000}>[
+[(#REM) Breves]
+<BOUCLE_b(BREVES){annee?}{!par date}{0,1000}>[
 <url><loc>(#URL_BREVE|url_absolue)</loc></url>]</BOUCLE_b>
 
-[(#REM) Extensions de sitemap par des plugins ]
-<BOUCLE_objets(DATA){source table,#REM|lister_tables_objets_sql}>
+[(#REM) Extensions de sitemap par des plugins]
+<BOUCLE_objets(DATA){source table,#REM|lister_tables_objets_sql}{si #ENV{annee}|non}>
 	#SET{fond,#VAL{sitemap-}|concat{#VALEUR{table_objet}}}
 	[(#GET{fond}|trouver_fond|oui)#INCLURE*{fond=#GET{fond}}]
 </BOUCLE_objets>
