@@ -10,7 +10,7 @@
 	<script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
 	<title>[(#TITRE|couper{80}|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
 	[<meta name="description" content="(#INTRODUCTION{150}|attribut_html)" />]
-	[<link rel="canonical" href="(#URL_BREVE|url_absolue)" />]
+	[<link rel="canonical" href="(#URL_BREVE|url_absolue{#URL_SITE_SPIP})" />]
 	<INCLURE{fond=inclure/head} />
 	[(#REM) Lien vers le flux RSS des breves ]
 	<link rel="alternate" type="application/rss+xml" title="<:dernieres_breves:>" href="#URL_PAGE{backend-breves}" />
