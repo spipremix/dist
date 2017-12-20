@@ -1,8 +1,8 @@
 /* --------------------------------------------------------------
 
    theme.css
-   Theme par defaut de SPIP 3.1 
-   2014 - theme neodist - collectif SPIP
+   Theme par defaut de SPIP 3.3
+   2017 - theme neodist - collectif SPIP
 
 -------------------------------------------------------------- */
 
@@ -162,6 +162,7 @@ ul.choix_mots li label { display: inline; font-weight: normal; }
 /* Formulaire de forum */
 .forum-titre  {margin-top:2em;padding:1em 0;border-top:10px solid #EEE;}
 .formulaire_forum {}
+.formulaire_forum form+form{margin-top:1em;}
 .formulaire_forum legend { display: none; }
 .formulaire_forum .saisie_titre input.text { width: 100% }
 .formulaire_forum .session_qui { display: none; }
