@@ -29,7 +29,9 @@ h3.legend { font-size: 140%; line-height: 135%; font-weight: bold; padding-botto
 .saisie_mot input,
 .saisie_mot label { display: inline-block; }
 .saisie_input label, .choix label { cursor: pointer; }
-.explication { font-size: 80%; font-style: italic; margin: 0; }
+.explication { font-style: italic; }
+.explication p { margin: 0; }
+p.explication { font-size: 90%; margin-bottom: 0.5em; }
 .choix label { font-size: 100%; font-weight: normal; padding: 0; }
 .choix.choix_alternatif:after { content: ''; clear: both; display: block; }
 .choix.choix_alternatif label { float: left; width: 20%; text-align: right; }
