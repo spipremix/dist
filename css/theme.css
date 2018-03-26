@@ -93,8 +93,6 @@ input.text,textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.content input.text { width: 50%; }
-textarea { width: 100%; }
 
 /* Selection des langues */
 .formulaire_menu_lang { margin: 0; padding: 0; background: none; }
