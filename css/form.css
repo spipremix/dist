@@ -10,6 +10,37 @@ input,textarea,select,button { font-family: inherit; font-size: 100%; font-weigh
 
 legend { font-weight: bold; }
 
+fieldset { margin: 3em 0 0; padding:1em 0; }
+fieldset fieldset { margin-left: 1em; }
+label { padding: 4px 0; font-size: 120%; font-weight: 700; }
+/* formulaires issus de saisies */
+h3.legend { font-size: 140%; line-height: 135%; font-weight: bold; padding-bottom: 0.2em; border-bottom: 1px solid #CCCCCC;}
+.editer,
+.choix { clear: both; padding: 0.3em 0; }
+.editer { margin:0.7em 0; }
+.saisie_radio input, 
+.saisie_radio label,
+.saisie_checkbox input,
+.saisie_checkbox label,
+.saisie_case input,
+.saisie_case label,
+.saisie_oui_non input,
+.saisie_oui_non label,
+.saisie_mot input,
+.saisie_mot label { display: inline-block; }
+.saisie_input label, .choix label { cursor: pointer; }
+.explication { font-size: 80%; font-style: italic; margin: 0; }
+.choix label { font-size: 100%; font-weight: normal; padding: 0; }
+.choix.choix_alternatif:after { content: ''; clear: both; display: block; }
+.choix.choix_alternatif label { float: left; width: 20%; text-align: right; }
+.choix.choix_alternatif input { float: right; width: 78%; }
+.browser .frame { display: inline-block; vertical-align: top; width: 32%; min-width: 170px; border: solid 1px #aaa; background-color: #F7F7F7; padding:0.2em; margin-bottom:1em; }
+ul.item_picked { margin:0; }
+ul.item_picked li { display: inline-block; padding:0 0.2em; background-color:#F7F7F7; border: solid 1px #aaa; margin-right:0.2em; margin-bottom:0.2em; }
+ul.item_picked li span.sep { display: none; }
+.picker_bouton { text-align: right; }
+
+
 /* Curseur main sur les elements input cliquables */
 input[type="submit"],input.submit,
 input[type="button"],input.button,
