@@ -125,7 +125,7 @@ textarea.spip_cadre {
 .formulaire_spip input.text,
 .formulaire_spip textarea {padding:.2em;border:solid 1px #aaa;}
 @media print {
-	.formulaire_spip { display: none; }
+	.forum-titre, .formulaire_forum { display: none; }
 }
 
 /* Barre typo */

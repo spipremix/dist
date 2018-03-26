@@ -233,8 +233,7 @@ html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: norma
 	.spip-admin,
 	.spip-admin-float,
 	.spip-previsu { display: none; }
-	.repondre,
-	.formulaire_spip { display: none; }
+	.repondre { display: none; }
 
 	/* Souligner et expliciter les liens */
 	a { color: #600; text-decoration: underline !important; }
