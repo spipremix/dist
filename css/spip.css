@@ -117,11 +117,38 @@ textarea.spip_cadre {
 .spip_modele { float: right; display: block; width: 25%; margin: 0 0 1.5em 1.5em; padding: 1.5em; background-color: #EEE; }
 
 /* Formulaires */
-.formulaire_spip {}
-.formulaire_spip li { clear: both; margin-bottom: 0.75em; }
+.formulaire_spip fieldset { margin: 3em 0 0; padding:1em 0; }
+.formulaire_spip fieldset fieldset { margin-left: 1em; }
+.formulaire_spip label { padding: 4px 0; font-size: 120%; font-weight: 700; }
+.formulaire_spip  h3.legend { font-size: 140%; line-height: 135%; font-weight: bold; padding-bottom: 0.2em; border-bottom: 1px solid #CCCCCC;}
+.formulaire_spip .editer,
+.formulaire_spip .choix { clear: both; padding: 0.3em 0; }
+.formulaire_spip .editer { margin:0.7em 0; }
+.formulaire_spip .saisie_radio input, 
+.formulaire_spip .saisie_radio label,
+.formulaire_spip .saisie_checkbox input,
+.formulaire_spip .saisie_checkbox label,
+.formulaire_spip .saisie_case input,
+.formulaire_spip .saisie_case label,
+.formulaire_spip .saisie_oui_non input,
+.formulaire_spip .saisie_oui_non label,
+.formulaire_spip .saisie_mot input,
+.formulaire_spip .saisie_mot label { display: inline-block; }
+.formulaire_spip .saisie_input label, .choix label { cursor: pointer; }
+.formulaire_spip .explication { font-style: italic; }
+.formulaire_spip .explication p { margin: 0; }
+.formulaire_spip p.explication { font-size: 90%; margin-bottom: 0.5em; }
+.formulaire_spip .choix label { font-size: 100%; font-weight: normal; padding: 0; }
+.formulaire_spip .choix.choix_alternatif:after { content: ''; clear: both; display: block; }
+.formulaire_spip .choix.choix_alternatif label { float: left; width: 20%; text-align: right; }
+.formulaire_spip .choix.choix_alternatif input { float: right; width: 78%; }
+.formulaire_spip .browser .frame { display: inline-block; vertical-align: top; width: 32%; min-width: 170px; border: solid 1px #aaa; background-color: #F7F7F7; padding:0.2em; margin-bottom:1em; }
+.formulaire_spip ul.item_picked { margin:0; }
+.formulaire_spip ul.item_picked li { display: inline-block; padding:0 0.2em; background-color:#F7F7F7; border: solid 1px #aaa; margin-right:0.2em; margin-bottom:0.2em; }
+.formulaire_spip ul.item_picked li span.sep { display: none; }
+.formulaire_spip .picker_bouton { text-align: right; }
 .formulaire_spip .boutons { clear: both; margin: 0; padding: 0; text-align: right; }
-.formulaire_spip .boutons input,
-.formulaire_spip .boutons button {}
+
 @media print {
 	.forum-titre, .formulaire_forum { display: none; }
 }
