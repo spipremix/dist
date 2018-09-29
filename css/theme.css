@@ -102,7 +102,8 @@ table.spip tfoot { border-top: 1px solid; }
 	-webkit-border-radius: 0.25em 0 0 0.25em;
 	border-radius: 0.25em 0 0 0.25em;
 }
-.formulaire_recherche input.submit { 
+.formulaire_recherche input.btn,
+.formulaire_recherche input.submit {
 	width: auto;
 	height: 32px;
 	vertical-align: middle;
