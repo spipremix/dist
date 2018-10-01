@@ -59,6 +59,7 @@ html[dir="rtl"] .info-publi { font-style: normal; }
 .notes { clear: both; font-size: .9em; }
 
 /* Listes et tableaux */
+.spip-puce { color:#db1762;}
 dl.spip dt { background: url(img/def.png) no-repeat 25px .5em; }
 dl.spip dd {}
 

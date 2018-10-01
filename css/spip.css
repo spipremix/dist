@@ -15,6 +15,24 @@ s, strike,del, .del { opacity:1;}
 /* Compatibilite ancienne dist */
 .on {font-weight:bold;}
 
+/* puce */
+.spip-puce b {display:none;}
+.spip-puce {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-style: normal;
+	font-weight: bold;
+	font-size: 1.4em;
+  line-height: 0.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.spip-puce:before {
+	content: "\203A";
+}
+
+
 /* Listes SPIP */
 ul.spip,
 ol.spip { margin-left: 50px; }
