@@ -59,7 +59,7 @@ html[dir="rtl"] .info-publi { font-style: normal; }
 .notes { clear: both; font-size: .9em; }
 
 /* Listes et tableaux */
-.spip-puce { color:#db1762;}
+.spip-puce { color: #db1762; }
 dl.spip dt { background: url(img/def.png) no-repeat 25px .5em; }
 dl.spip dd {}
 
@@ -213,9 +213,7 @@ html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: norma
 .aside a {text-decoration:none;}
 
 .footer a {text-decoration:none;}
-.footer a.spip_out:after {
-  content: "";
-}
+.footer a.spip_out:after { content: ""; }
 
 /* ------------------------------------------
 /* Autres medias
@@ -244,16 +242,15 @@ html[dir="rtl"] .formulaire_forum .saisie_texte .explication { font-style: norma
 
 /* largeur maximum 767px */
 @media (max-width: 767px) { 
-  .pagination {line-height:3;}
+	.pagination {line-height:3;}
 }
 
  
 /* largeur maximum 640px */
 @media (max-width: 640px) {
-  body {font-size:.95em;}
-  h1,.h1,
-  h2,.h2 { line-height:1;}
-
+	body { font-size: .95em; }
+	h1,.h1,
+	h2,.h2 { line-height: 1; }
 }
 
 
