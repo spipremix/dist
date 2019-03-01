@@ -41,7 +41,7 @@
 				#ANCRE_PAGINATION
 				<h2><:articles:></h2>
 				<ul>
-					<BOUCLE_articles(SYNDIC_ARTICLES) {id_syndic} {age<180} {!par date} {pagination 5}>
+					<BOUCLE_articles(SYNDIC_ARTICLES?) {id_syndic} {age<180} {!par date} {pagination 5}>
 					<li>
 						<h3><a href="#URL_ARTICLE" class="spip_out">#TITRE</a></h3>
 						[<div class="enclosures">(#TAGS|afficher_enclosures)</div>]
@@ -83,7 +83,7 @@
 			<div class="menu">
 				<h2><:mots_clefs:></h2>
 				<ul>
-					<BOUCLE_mots(MOTS) {id_syndic} {par titre}>
+					<BOUCLE_mots(MOTS?) {id_syndic} {par titre}>
 					<li><a href="#URL_MOT" rel="tag">#TITRE</a></li>
 					</BOUCLE_mots>
 				</ul>

@@ -35,7 +35,7 @@
 			<div class="menu menu_breves">
 				<h2><:dernieres_breves:></h2>
 				<ul>
-					<BOUCLE_breves(BREVES) {!par date} {0,3}>
+					<BOUCLE_breves(BREVES?) {!par date} {0,3}>
 					<li dir="#LANG_DIR" class="text-#LANG_LEFT">
 						[<small>(#DATE|affdate_jourcourt)</small>]
 						<h3><a href="#URL_BREVE">#TITRE</a></h3>
@@ -63,7 +63,7 @@
 			<div class="menu">
 				<h2><:nouveautes_web:></h2>
 				<ul>
-					<BOUCLE_syndic(SYNDIC_ARTICLES) {age<180} {!par date} {0,5}>
+					<BOUCLE_syndic(SYNDIC_ARTICLES?) {age<180} {!par date} {0,5}>
 					<li>[(#DATE|affdate_jourcourt) &ndash; ]<a href="#URL_ARTICLE"[ title="(#NOM_SITE|attribut_html|couper{80})"] class="spip_out">#TITRE</a></li>
 					</BOUCLE_syndic>
 				</ul>
