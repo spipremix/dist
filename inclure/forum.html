@@ -33,7 +33,7 @@ la premiere fois qu'un message est poste (cf. inc/invalideur). ]
 		</div>
 		<B_comments-fils>
 		<ul class="comments-items">
-			<BOUCLE_comments-fils(FORUMS){id_thread}{id_forum!=#_comments:ID_FORUM}{par date}>
+			<BOUCLE_comments-fils(FORUMS?){id_thread}{id_forum!=#_comments:ID_FORUM}{par date}>
 			<li class="comment-item comment-fil[ (#COMPTEUR_BOUCLE|=={1}|oui)first][ (#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|oui)last]">
 				<div class="comment hreview">
 					<a href="#comment#ID_FORUM" name="comment#ID_FORUM" id="comment#ID_FORUM"></a>

@@ -32,7 +32,7 @@
 	[(#REM) Afficher un moteur de recherche si plus de 50 signatures
 	ou s'il etait deja present au coup d'avant]
 	[(#ENV{recherche_signatures}|?{31,#_signatures:GRAND_TOTAL}|>{50}|oui)
-	<div class="formulaire_spip formulaire_recherche" id="formulaire_recherche_signatures"><label for="recherche_signatures"><:petitions:signatures_recherche_label:></label> <input type="text" class="text" size="10" name="recherche_signatures" id="recherche_signatures" value=""/> <input type="submit" class="submit" value="<:info_rechercher:>" /></div>
+	<div class="formulaire_spip formulaire_recherche" id="formulaire_recherche_signatures"><label for="recherche_signatures"><:petitions:signatures_recherche_label:></label> <input type="text" class="text" size="10" name="recherche_signatures" id="recherche_signatures" value=""/> <input type="btn submit" class="submit" value="<:info_rechercher:>" /></div>
 	]
 </div><!--#signatures-->
 </form>

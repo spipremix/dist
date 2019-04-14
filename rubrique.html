@@ -112,7 +112,7 @@
 			<div class="menu">
 				<h2><:mots_clefs:></h2>
 				<ul>
-					<BOUCLE_mots(MOTS) {id_rubrique} {par titre}>
+					<BOUCLE_mots(MOTS?) {id_rubrique} {par titre}>
 					<li><a href="#URL_MOT" rel="tag">#TITRE</a></li>
 					</BOUCLE_mots>
 				</ul>
@@ -124,7 +124,7 @@
 			<div class="menu menu_breves">
 				<h2><:breves:breves:></h2>
 				<ul>
-					<BOUCLE_breves(BREVES) {id_rubrique} {!par date} {0,5}>
+					<BOUCLE_breves(BREVES?) {id_rubrique} {!par date} {0,5}>
 					<li>[(#DATE|affdate_jourcourt) &ndash; ]<a href="#URL_BREVE">#TITRE</a></li>
 					</BOUCLE_breves>
 				</ul>
@@ -136,12 +136,12 @@
 			<div class="menu">
 				<h2><:sur_web:></h2>
 				<ul>
-					<BOUCLE_sites(SITES) {id_rubrique} {par nom_site}>
+					<BOUCLE_sites(SITES?) {id_rubrique} {par nom_site}>
 					<li>
 						<a href="[(#ID_SYNDIC|generer_url_entite{site,'','',#CONNECT})]">#NOM_SITE</a>
 						<B_syndic>
 						<ul>
-							<BOUCLE_syndic(SYNDIC_ARTICLES) {id_syndic} {age<180} {!par date} {0,3}>
+							<BOUCLE_syndic(SYNDIC_ARTICLES?) {id_syndic} {age<180} {!par date} {0,3}>
 							<li><a href="#URL_ARTICLE" class="spip_out">#TITRE</a></li>
 							</BOUCLE_syndic>
 						</ul>

@@ -15,7 +15,7 @@ DTEND:[(#DATE|date_ical{60})]
 CATEGORIES:<:articles|filtrer_ical:>
 URL:[(#URL_ARTICLE|url_absolue)]
 STATUS:CONFIRMED
-END:VEVENT</BOUCLE_articles><BOUCLE_breves(BREVES){!par date}{0,100}>
+END:VEVENT</BOUCLE_articles><BOUCLE_breves(BREVES?){!par date}{0,100}>
 BEGIN:VEVENT
 SUMMARY:[(#TITRE|filtrer_ical)] [[(#NOM_SITE_SPIP|filtrer_ical)]]
 UID:breve#ID_BREVE @ [(#URL_SITE_SPIP|filtrer_ical)]

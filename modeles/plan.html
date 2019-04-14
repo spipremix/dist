@@ -40,7 +40,7 @@
 <B_breves>
 <h3><:breves:breves:></h3>
 <ul class="spip">
-	<BOUCLE_breves(BREVES) {id_rubrique} {!par date}>
+	<BOUCLE_breves(BREVES?) {id_rubrique} {!par date}>
 	<li><a href="#URL_BREVE">#TITRE</a></li>
 	</BOUCLE_breves>
 </ul>
@@ -50,7 +50,7 @@
 <B_sites>
 <h3><:sites_web:></h3>
 <ul class="spip">
-	<BOUCLE_sites(SITES) {id_secteur} {par nom_site}>
+	<BOUCLE_sites(SITES?) {id_secteur} {par nom_site}>
 	<li><a href="[(#ID_SYNDIC|generer_url_entite{site,'','',#CONNECT})]">#NOM_SITE</a></li>
 	</BOUCLE_sites>
 </ul>

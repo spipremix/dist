@@ -62,7 +62,7 @@
 				#ANCRE_PAGINATION
 				<h2><:mots_clefs:> (#GRAND_TOTAL)</h2>
 				<ul class="spip">
-					<BOUCLE_mots(MOTS) {recherche} {!par points} {pagination 5}>
+					<BOUCLE_mots(MOTS?) {recherche} {!par points} {pagination 5}>
 					<li><a href="#URL_MOT">#TITRE</a></li>
 					</BOUCLE_mots>
 				</ul>
@@ -76,7 +76,7 @@
 				#ANCRE_PAGINATION
 				<h2><:breves:breves:> (#GRAND_TOTAL)</h2>
 				<ul class="spip">
-					<BOUCLE_breves(BREVES) {recherche} {!par points} {pagination 5}>
+					<BOUCLE_breves(BREVES?) {recherche} {!par points} {pagination 5}>
 					<li><a href="#URL_BREVE">#TITRE</a></li>
 					</BOUCLE_breves>
 				</ul>
@@ -104,7 +104,7 @@
 				#ANCRE_PAGINATION
 				<h2><:sites_web:> (#GRAND_TOTAL)</h2>
 				<ul class="spip">
-					<BOUCLE_sites(SITES) {recherche} {!par points} {pagination 5}>
+					<BOUCLE_sites(SITES?) {recherche} {!par points} {pagination 5}>
 					<li><a href="[(#ID_SYNDIC|generer_url_entite{site,'','',#CONNECT})]">#NOM_SITE</a></li>
 					</BOUCLE_sites>
 				</ul>

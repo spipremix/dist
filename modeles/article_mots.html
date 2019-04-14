@@ -11,7 +11,7 @@
 <div class="menu"[ style='float:(#ENV{align}|match{left|right});']>
 	<h2><:mots_clefs:></h2>
 	<ul>
-		<BOUCLE_mots(MOTS) {id_article} {par titre}>
+		<BOUCLE_mots(MOTS?) {id_article} {par titre}>
 		<li><a href="#URL_MOT" rel="tag">#TITRE</a></li>
 		</BOUCLE_mots>
 	</ul>
