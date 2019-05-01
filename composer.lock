@@ -1,0 +1,130 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "7d6a497124d1ae2b83e6304d319ef3d5",
+    "packages": [
+        {
+            "name": "spip/breves",
+            "version": "1.3.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spipremix/breves.git",
+                "reference": "366f0306302c21cb6e09c4b3c82757e038ed14a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spipremix/breves/zipball/366f0306302c21cb6e09c4b3c82757e038ed14a0",
+                "reference": "366f0306302c21cb6e09c4b3c82757e038ed14a0",
+                "shasum": ""
+            },
+            "type": "spip-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Collectif SPIP",
+                    "email": "spip-dev@rezo.net"
+                }
+            ],
+            "description": "Brèves",
+            "time": "2019-04-14T19:13:47+00:00"
+        },
+        {
+            "name": "spip/forum",
+            "version": "1.9.38",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spipremix/forum.git",
+                "reference": "0d09744867c6c645fbcd180faf532419df07a116"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spipremix/forum/zipball/0d09744867c6c645fbcd180faf532419df07a116",
+                "reference": "0d09744867c6c645fbcd180faf532419df07a116",
+                "shasum": ""
+            },
+            "type": "spip-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Collectif SPIP",
+                    "email": "spip-dev@rezo.net"
+                }
+            ],
+            "description": "Forum",
+            "time": "2019-04-14T22:47:30+00:00"
+        },
+        {
+            "name": "spip/medias",
+            "version": "2.11.48",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spipremix/medias.git",
+                "reference": "d55f4c02299a731e3f1cbc982c81a6ad77254f19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spipremix/medias/zipball/d55f4c02299a731e3f1cbc982c81a6ad77254f19",
+                "reference": "d55f4c02299a731e3f1cbc982c81a6ad77254f19",
+                "shasum": ""
+            },
+            "type": "spip-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Collectif SPIP",
+                    "email": "spip-dev@rezo.net"
+                }
+            ],
+            "description": "Gestion des medias dans SPIP",
+            "time": "2019-05-01T08:43:11+00:00"
+        },
+        {
+            "name": "spip/sites",
+            "version": "1.9.25",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spipremix/sites.git",
+                "reference": "5e879173fbe5fdf2a12f32ca1d088d7f9a69a9f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spipremix/sites/zipball/5e879173fbe5fdf2a12f32ca1d088d7f9a69a9f7",
+                "reference": "5e879173fbe5fdf2a12f32ca1d088d7f9a69a9f7",
+                "shasum": ""
+            },
+            "type": "spip-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Collectif SPIP",
+                    "email": "spip-dev@rezo.net"
+                }
+            ],
+            "description": "Sites",
+            "time": "2019-04-15T22:52:54+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

@@ -1,0 +1,16 @@
+{
+    "name": "spip/dist",
+    "type": "spip-plugin",
+    "description": "Squelettes par défaut de SPIP Classic",
+    "license": "GPL-3.0-or-later",
+    "authors": [{
+        "name": "Collectif SPIP",
+        "email": "spip-dev@rezo.net"
+    }],
+    "require": {
+        "spip/breves": "1.3.*",
+        "spip/sites": "1.9.*",
+        "spip/forum": "1.9.*",
+        "spip/medias": "2.11.*"
+    }
+}
