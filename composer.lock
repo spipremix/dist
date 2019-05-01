@@ -1,0 +1,171 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "a7e9eea0188e12c2ddccca564ae3a7ea",
+    "packages": [
+        {
+            "name": "spip/archiviste",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spipremix/archiviste.git",
+                "reference": "fafe5225a043c6c479efa1700094fd22f61c11ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spipremix/archiviste/zipball/fafe5225a043c6c479efa1700094fd22f61c11ac",
+                "reference": "fafe5225a043c6c479efa1700094fd22f61c11ac",
+                "shasum": ""
+            },
+            "type": "spip-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Collectif SPIP",
+                    "email": "spip-dev@rezo.net"
+                }
+            ],
+            "description": "Archiviste",
+            "time": "2019-04-14T20:40:36+00:00"
+        },
+        {
+            "name": "spip/breves",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spipremix/breves.git",
+                "reference": "cff6ff9929c49411e6f17cc61585231a497f3d17"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spipremix/breves/zipball/cff6ff9929c49411e6f17cc61585231a497f3d17",
+                "reference": "cff6ff9929c49411e6f17cc61585231a497f3d17",
+                "shasum": ""
+            },
+            "type": "spip-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Collectif SPIP",
+                    "email": "spip-dev@rezo.net"
+                }
+            ],
+            "description": "Brèves",
+            "time": "2019-04-14T19:13:46+00:00"
+        },
+        {
+            "name": "spip/forum",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spipremix/forum.git",
+                "reference": "48f63479db789162cbcd3f47d7499f832b0678fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spipremix/forum/zipball/48f63479db789162cbcd3f47d7499f832b0678fd",
+                "reference": "48f63479db789162cbcd3f47d7499f832b0678fd",
+                "shasum": ""
+            },
+            "type": "spip-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Collectif SPIP",
+                    "email": "spip-dev@rezo.net"
+                }
+            ],
+            "description": "Forum",
+            "time": "2019-04-14T22:47:11+00:00"
+        },
+        {
+            "name": "spip/medias",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spipremix/medias.git",
+                "reference": "e0513be57f351f1abe1af289444f4630e9309252"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spipremix/medias/zipball/e0513be57f351f1abe1af289444f4630e9309252",
+                "reference": "e0513be57f351f1abe1af289444f4630e9309252",
+                "shasum": ""
+            },
+            "require": {
+                "spip/archiviste": "dev-master"
+            },
+            "type": "spip-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.22.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Collectif SPIP",
+                    "email": "spip-dev@rezo.net"
+                }
+            ],
+            "description": "Gestion des medias dans SPIP",
+            "time": "2019-05-01T08:29:44+00:00"
+        },
+        {
+            "name": "spip/sites",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spipremix/sites.git",
+                "reference": "3afbfc3af3c3f9a423e02ee39676313c20d23c0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spipremix/sites/zipball/3afbfc3af3c3f9a423e02ee39676313c20d23c0c",
+                "reference": "3afbfc3af3c3f9a423e02ee39676313c20d23c0c",
+                "shasum": ""
+            },
+            "type": "spip-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Collectif SPIP",
+                    "email": "spip-dev@rezo.net"
+                }
+            ],
+            "description": "Sites",
+            "time": "2019-04-15T22:52:44+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "spip/breves": 20,
+        "spip/sites": 20,
+        "spip/forum": 20,
+        "spip/medias": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
